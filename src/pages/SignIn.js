@@ -4,6 +4,7 @@ function SignIn() {
 	return (
 		<div className='signin'>
 			<h1>Sign In</h1>
+			<Link to="/">Home</Link><br />
 			<Link to="/signup">Create account</Link>
 		</div>
 	);
