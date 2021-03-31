@@ -3,12 +3,14 @@ import { Route, Switch } from "react-router-dom";
 import "./App.css";
 // Pages
 import Home from "./pages/Home";
+
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import ForgotPassword from "./pages/ForgotPassword";
 import Profile from "./pages/Profile";
+
 import Exhibitions from "./pages/Exhibitions";
-import HostExhibition from "./pages/HostExhibition";
+import HostExhibition from "./pages/Exhibitions/Host";
 
 function App() {
 	return (
