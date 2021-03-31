@@ -1,4 +1,7 @@
+// Libraries
 import { Link } from "react-router-dom";
+// Styles
+import "./style.css";
 
 function SignUp() {
 	return (
