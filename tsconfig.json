@@ -70,5 +70,5 @@
   },
   "typeRoots": ["./node_modules"],
   "include": ["src/**/*"],
-  "exclude": ["node_modules", "build", "src/pages/**/*.js", "src/pages/**/*.jsx"],
+  "exclude": ["node_modules", "build"],
 }
