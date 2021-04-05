@@ -32,7 +32,24 @@ module.exports = {
 			{
 				test: /\.tsx?$/,
 				exclude: /node_modules/,
-				use: ["ts-loader"],
+				use: [
+					{
+						loader: "babel-loader",
+						options: {
+							presets: [
+								"@babel/preset-env",
+								"@babel/preset-typescript"
+							],
+							plugins: [
+								"@babel/plugin-transform-runtime",
+								"@babel/proposal-class-properties",
+								"@babel/proposal-object-rest-spread",
+								"@babel/plugin-proposal-optional-chaining"
+							],
+						}
+					},
+					"ts-loader"
+				],
 			},
 			{
 				test: /\.css$/i,
