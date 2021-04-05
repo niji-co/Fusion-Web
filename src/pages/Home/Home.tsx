@@ -1,9 +1,10 @@
 // Libraries
+import React from "react";
 import { Link } from "react-router-dom";
 // Styles
 import "./style.css";
 
-function Home() {
+const Home = () => {
 	return (
 		<div className="home">
 			<h1>Home</h1>

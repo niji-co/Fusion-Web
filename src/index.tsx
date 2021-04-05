@@ -1,10 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
-import reportWebVitals from "./reportWebVitals";
-// Routes
 import { BrowserRouter } from "react-router-dom";
+
+import "./index.css";
+// Routes
 import App from "./App";
+
+const reportWebVitals = require("./reportWebVitals");
 
 ReactDOM.render(
 	<BrowserRouter>
