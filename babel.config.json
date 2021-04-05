@@ -1,6 +1,5 @@
 {
   "presets": [
-	"@babel/preset-typescript",
     [
       "@babel/preset-env",
       {
@@ -8,10 +7,13 @@
         "corejs": 3
       }
     ],
+	  "@babel/preset-typescript",
     "@babel/preset-react"
   ],
   "plugins": [
+    "@babel/plugin-transform-runtime",
     "@babel/proposal-class-properties",
-    "@babel/proposal-object-rest-spread"
+    "@babel/proposal-object-rest-spread",
+    "@babel/plugin-proposal-optional-chaining"
   ]
 }
