@@ -6,6 +6,7 @@ module.exports = {
 
 	output: {
 		path: path.resolve(__dirname, "build"),
+		publicPath: "/build/",
 		filename: "index.js",
 	},
 
@@ -31,7 +32,7 @@ module.exports = {
 			{
 				test: /\.tsx?$/,
 				exclude: /node_modules/,
-				use: ["babel-loader", "ts-loader"],
+				use: ["ts-loader"],
 			},
 			{
 				test: /\.css$/i,
@@ -47,8 +48,7 @@ module.exports = {
 	devServer: {
 		compress: true,
 		contentBase: path.join(__dirname, "public"),
-		hot: true,
-		port: 8080,
+		port: 8000,
 	},
 
 };
