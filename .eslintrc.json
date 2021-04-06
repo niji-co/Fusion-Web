@@ -35,7 +35,7 @@
             "error",
             { "allowExpressions": true }
         ],
-        "react/jsx-filename-extension": ["warn", { "extensions": [".tsx"] }],
+        "react/jsx-filename-extension": ["warn", { "extensions": [".tsx", ".jsx"] }],
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "warn"
     },
