@@ -4,17 +4,17 @@ import { Link } from 'react-router-dom';
 // Styles
 import './style.css';
 
-function Profile() {
+function SignIn() {
   return (
-    <div className="profile">
-      <h1>Profile</h1>
+    <div className="signin">
+      <h1>Sign In</h1>
       <Link to="/">Home</Link>
       <br />
-      <Link to="/">Sign Out</Link>
+      <Link to="/forgot">Forgot password?</Link>
       <br />
-      <Link to="/exhibitions">Exhibitions</Link>
+      <Link to="/signup">Create account</Link>
     </div>
   );
 }
 
-export default Profile;
+export default SignIn;

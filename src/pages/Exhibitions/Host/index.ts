@@ -1,3 +1,3 @@
-import HostExhibition from "./HostExhibition";
+import HostExhibition from './HostExhibition';
 
 export default HostExhibition;
