@@ -11,6 +11,8 @@ import Profile from "./pages/Profile";
 import Exhibitions from "./pages/Exhibitions";
 import HostExhibition from "./pages/Exhibitions/Host";
 
+import Project from "./pages/Project";
+
 const AppRoutes = (): ReactElement => (
   <BrowserRouter>
     <Switch>
@@ -23,6 +25,8 @@ const AppRoutes = (): ReactElement => (
 
       <Route exact path="/exhibitions" component={Exhibitions} />
       <Route path="/exhibitions/host" component={HostExhibition} />
+
+      <Route exact path="/project" component={Project} />
     </Switch>
   </BrowserRouter>
 );
