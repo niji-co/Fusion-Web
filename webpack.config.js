@@ -1,15 +1,15 @@
-const path = require('path');
+const path = require("path");
 
-const ESLintPlugin = require('eslint-webpack-plugin');
+const ESLintPlugin = require("eslint-webpack-plugin");
 
 module.exports = {
   context: __dirname,
-  entry: './src/index.tsx',
+  entry: "./src/index.tsx",
 
   output: {
-    path: path.resolve(__dirname, 'build'),
-    publicPath: '/build/',
-    filename: 'index.js',
+    path: path.resolve(__dirname, "build"),
+    publicPath: "/build/",
+    filename: "index.js",
   },
 
   module: {
@@ -17,17 +17,14 @@ module.exports = {
       {
         test: /\.m?jsx?$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
+        loader: "babel-loader",
         options: {
-          presets: [
-            '@babel/preset-env',
-            '@babel/preset-react',
-          ],
+          presets: ["@babel/preset-env", "@babel/preset-react"],
           plugins: [
-            '@babel/plugin-transform-runtime',
-            '@babel/proposal-class-properties',
-            '@babel/proposal-object-rest-spread',
-            '@babel/plugin-proposal-optional-chaining',
+            "@babel/plugin-transform-runtime",
+            "@babel/proposal-class-properties",
+            "@babel/proposal-object-rest-spread",
+            "@babel/plugin-proposal-optional-chaining",
           ],
         },
       },
@@ -36,43 +33,41 @@ module.exports = {
         exclude: /node_modules/,
         use: [
           {
-            loader: 'babel-loader',
+            loader: "babel-loader",
             options: {
-              presets: [
-                '@babel/preset-env',
-                '@babel/preset-typescript',
-              ],
+              presets: ["@babel/preset-env", "@babel/preset-typescript"],
               plugins: [
-                '@babel/plugin-transform-runtime',
-                '@babel/proposal-class-properties',
-                '@babel/proposal-object-rest-spread',
-                '@babel/plugin-proposal-optional-chaining',
+                "@babel/plugin-transform-runtime",
+                "@babel/proposal-class-properties",
+                "@babel/proposal-object-rest-spread",
+                "@babel/plugin-proposal-optional-chaining",
               ],
             },
           },
-          'ts-loader',
+          "ts-loader",
         ],
       },
       {
         test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],
+        use: ["style-loader", "css-loader"],
       },
     ],
   },
 
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.json', '.jsx', '.css'],
+    extensions: [".ts", ".tsx", ".js", ".json", ".jsx", ".css"],
   },
 
-  plugins: [new ESLintPlugin({
-    extensions: ['js', 'jsx', 'ts', 'tsx'],
-    fix: true,
-  })],
+  plugins: [
+    new ESLintPlugin({
+      extensions: ["js", "jsx", "ts", "tsx"],
+      fix: true,
+    }),
+  ],
 
   devServer: {
     compress: true,
-    contentBase: path.join(__dirname, 'public'),
+    contentBase: path.join(__dirname, "public"),
     port: 8000,
   },
-
 };

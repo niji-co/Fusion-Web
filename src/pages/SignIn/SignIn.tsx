@@ -1,10 +1,10 @@
 // Libraries
-import React, { ReactElement } from 'react';
-import { Link } from 'react-router-dom';
+import React, { ReactElement } from "react";
+import { Link } from "react-router-dom";
 // Styles
-import './style.css';
+import "./style.css";
 
-const SignIn = () : ReactElement => (
+const SignIn = (): ReactElement => (
   <div className="signin">
     <h1>Sign In</h1>
     <Link to="/">Home</Link>

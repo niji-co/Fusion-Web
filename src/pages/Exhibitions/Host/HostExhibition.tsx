@@ -1,10 +1,10 @@
 // Libraries
-import React, { ReactElement } from 'react';
-import { Link } from 'react-router-dom';
+import React, { ReactElement } from "react";
+import { Link } from "react-router-dom";
 // Styles
-import './style.css';
+import "./style.css";
 
-const HostExhbition = () : ReactElement => (
+const HostExhbition = (): ReactElement => (
   <div className="host-exhibition">
     <h1>Host exhibition</h1>
     <Link to="/">Home</Link>

@@ -1,17 +1,17 @@
-import React, { ReactElement } from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import React, { ReactElement } from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-import Home from './pages/Home';
+import Home from "./pages/Home";
 
-import SignIn from './pages/SignIn';
-import SignUp from './pages/SignUp';
-import ForgotPassword from './pages/ForgotPassword';
-import Profile from './pages/Profile';
+import SignIn from "./pages/SignIn";
+import SignUp from "./pages/SignUp";
+import ForgotPassword from "./pages/ForgotPassword";
+import Profile from "./pages/Profile";
 
-import Exhibitions from './pages/Exhibitions';
-import HostExhibition from './pages/Exhibitions/Host';
+import Exhibitions from "./pages/Exhibitions";
+import HostExhibition from "./pages/Exhibitions/Host";
 
-const AppRoutes = () : ReactElement => (
+const AppRoutes = (): ReactElement => (
   <BrowserRouter>
     <Switch>
       <Route exact path="/" component={Home} />

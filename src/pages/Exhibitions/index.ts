@@ -1,3 +1,3 @@
-import Exhibitions from './Exhibitions';
+import Exhibitions from "./Exhibitions";
 
 export default Exhibitions;
