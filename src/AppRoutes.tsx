@@ -11,7 +11,7 @@ import Profile from './pages/Profile';
 import Exhibitions from './pages/Exhibitions';
 import HostExhibition from './pages/Exhibitions/Host';
 
-const AppRoutes = (): ReactElement => (
+const AppRoutes = () : ReactElement => (
   <BrowserRouter>
     <Switch>
       <Route exact path="/" component={Home} />

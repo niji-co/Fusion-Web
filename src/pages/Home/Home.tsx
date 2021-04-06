@@ -1,10 +1,10 @@
 // Libraries
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { Link } from 'react-router-dom';
 // Styles
 import './style.css';
 
-const Home = () => (
+const Home = () : ReactElement => (
   <div className="home">
     <h1>Home</h1>
     <Link to="/signin">Sign in</Link>

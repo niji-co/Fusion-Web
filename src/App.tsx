@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import './App.css';
 import AppRoutes from './AppRoutes';
 
-const App = () => (
+const App = () : ReactElement => (
   <AppRoutes />
 );
 
