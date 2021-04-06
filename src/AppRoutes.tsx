@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
 
@@ -12,7 +12,7 @@ import Exhibitions from "./pages/Exhibitions";
 import HostExhibition from "./pages/Exhibitions/Host";
 
 const AppRoutes = (): ReactElement => (
-  <BrowserRouter>
+  <HashRouter>
     <Switch>
       <Route exact path="/" component={Home} />
 
@@ -24,7 +24,7 @@ const AppRoutes = (): ReactElement => (
       <Route exact path="/exhibitions" component={Exhibitions} />
       <Route path="/exhibitions/host" component={HostExhibition} />
     </Switch>
-  </BrowserRouter>
+  </HashRouter>
 );
 
 export default AppRoutes;
