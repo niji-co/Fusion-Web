@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
@@ -11,7 +11,7 @@ import Profile from './pages/Profile';
 import Exhibitions from './pages/Exhibitions';
 import HostExhibition from './pages/Exhibitions/Host';
 
-const AppRoutes = () => (
+const AppRoutes = (): ReactElement => (
   <BrowserRouter>
     <Switch>
       <Route exact path="/" component={Home} />

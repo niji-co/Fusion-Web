@@ -4,8 +4,10 @@
         "es2021": true
     },
     "extends": [
+        "airbnb",
         "plugin:react/recommended",
-        "airbnb"
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -13,7 +15,8 @@
             "jsx": true
         },
         "ecmaVersion": 12,
-        "sourceType": "module"
+        "sourceType": "module",
+        "project": "./tsconfig.json"
     },
     "plugins": [
         "react",
@@ -30,11 +33,22 @@
             }
         ],
         "max-len": ["warn", { "code": 80 }],
+        "brace-style": [
+            "error",
+            "1tbs",
+            {
+                "allowSingleLine": true
+            }
+        ],
+        "comma-spacing": "error",
+
         "@typescript-eslint/no-use-before-define": ["error"],
         "@typescript-eslint/explicit-function-return-type": [
             "error",
             { "allowExpressions": true }
         ],
+        "@typescript-eslint/prefer-readonly": "error",
+        "@typescript-eslint/comma-spacing": "error",
         "react/jsx-filename-extension": ["warn", { "extensions": [".tsx", ".jsx"] }],
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "warn"
