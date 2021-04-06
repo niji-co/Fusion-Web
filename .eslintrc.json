@@ -21,7 +21,8 @@
     "plugins": [
         "react",
         "react-hooks",
-        "@typescript-eslint"
+        "@typescript-eslint",
+        "prettier"
     ],
     "rules": {
         "no-use-before-define": "off",
@@ -51,7 +52,8 @@
         "@typescript-eslint/comma-spacing": "error",
         "react/jsx-filename-extension": ["warn", { "extensions": [".tsx", ".jsx"] }],
         "react-hooks/rules-of-hooks": "error",
-        "react-hooks/exhaustive-deps": "warn"
+        "react-hooks/exhaustive-deps": "warn",
+        "prettier/prettier": "error"
     },
     "settings": {
         "import/resolver": {
