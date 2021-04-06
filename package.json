@@ -8,7 +8,8 @@
   "author": "Niji Co.",
   "scripts": {
     "start": "webpack serve --config webpack.config.js --mode development",
-    "build": "webpack serve"
+    "build": "webpack serve",
+    "lint": "npx eslint src/* --no-error-on-unmatched-pattern --fix --quiet"
   },
   "dependencies": {
     "react": "^17.0.2",
@@ -39,6 +40,7 @@
     "eslint-plugin-react": "^7.23.1",
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-import-resolver-typescript": "^2.4.0",
+    "eslint-webpack-plugin": "^2.5.3",
     "style-loader": "^2.0.0",
     "ts-loader": "^8.1.0",
     "typescript": "^4.2.3",
