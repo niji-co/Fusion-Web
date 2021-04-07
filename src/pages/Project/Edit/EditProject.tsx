@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { setTitle, selectProject } from "../projectSlice";
+import { setTitle, selectProject } from "../services/projectReducer";
 
 const EditProject = (): ReactElement => {
   const project = useSelector(selectProject);
