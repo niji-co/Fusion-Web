@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { setTitle } from "../services/projectReducer";
+import { onInputChange } from "../../../services/actions/inputActions";
 import selectProject from "../services/projectSelector";
 
 const EditProject = (): ReactElement => {
@@ -13,7 +13,7 @@ const EditProject = (): ReactElement => {
       <h1>Edit</h1>
       <input
         value={project.title}
-        onChange={event => dispatch(setTitle(event.target.value))}
+        onChange={event => dispatch(onInputChange(event))}
       />
       <p>Preview: {project.title}</p>
     </div>
