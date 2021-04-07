@@ -3,7 +3,7 @@ import Project from "./Project";
 import projectReducer, {
   setTitle as setProjectTitle,
   selectProject,
-} from "./projectSlice";
+} from "./services/projectReducer";
 
 export default Project;
 

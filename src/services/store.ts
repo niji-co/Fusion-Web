@@ -1,9 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-import rootReducer from "./rootReducer";
+import { projectReducer } from "../pages/Project";
 
 const store = configureStore({
-  reducer: rootReducer,
+  reducer: {
+    project: projectReducer,
+  },
 });
+
+export type RootState = ReturnType<typeof store.getState>;
 
 export default store;

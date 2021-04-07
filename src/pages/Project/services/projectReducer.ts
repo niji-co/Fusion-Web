@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { RootState } from "../../../services/rootReducer";
+import { RootState } from "../../../services/store";
 
 import IProject from "./IProject";
 
