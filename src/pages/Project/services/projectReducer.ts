@@ -1,5 +1,4 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { RootState } from "../../../services/store";
 
 import IProject from "./IProject";
 
@@ -18,8 +17,5 @@ const projectSlice = createSlice({
 });
 
 const { actions, reducer } = projectSlice;
-
 export const { setTitle } = actions;
-export const selectProject = (state: RootState): IProject => state.project;
-
 export default reducer;
