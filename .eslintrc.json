@@ -39,7 +39,9 @@
     "arrow-body-style": "off",
     "prefer-arrow-callback": "off",
     "no-param-reassign": ["error", { "props": true, "ignorePropertyModificationsFor": ["state"] }], 
+    "no-shadow": "off",
 
+    "@typescript-eslint/no-shadow": ["error"],
     "@typescript-eslint/no-use-before-define": ["error"],
     "@typescript-eslint/explicit-function-return-type": [
       "error",
