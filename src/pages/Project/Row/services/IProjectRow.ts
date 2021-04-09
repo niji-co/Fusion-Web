@@ -11,3 +11,5 @@ interface IProjectRow {
 }
 
 export default IProjectRow;
+
+export { ProjectRowType };

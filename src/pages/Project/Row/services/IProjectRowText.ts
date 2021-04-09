@@ -8,7 +8,7 @@ enum TextStyle {
 }
 
 interface IProjectRowText extends IProjectRow {
-  contents: string;
+  content: string;
   style: TextStyle;
 }
 
