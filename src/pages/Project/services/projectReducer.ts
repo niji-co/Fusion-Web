@@ -6,6 +6,7 @@ import { onInputChange } from "../../../services/actions/inputActions";
 
 const initialState: IProject = {
   title: "",
+  tags: [],
 };
 
 const projectSlice = createSlice({
