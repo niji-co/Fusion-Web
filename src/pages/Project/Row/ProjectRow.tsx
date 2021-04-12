@@ -1,7 +1,7 @@
 import React from "react";
 // model
-import IProjectRow, { ProjectRowType } from "./services/IProjectRow";
-import IProjectRowText from "./services/IProjectRowText";
+import IProjectRow, { ProjectRowType } from "./types/IProjectRow";
+import IProjectRowText from "./types/IProjectRowText";
 // views
 import ProjectRowText from "./ProjectRowText";
 // Styles

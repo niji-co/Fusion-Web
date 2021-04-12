@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react";
-import IProjectRowText from "./services/IProjectRowText";
+import IProjectRowText from "./types/IProjectRowText";
 
 const ProjectRowText = (props: IProjectRowText): ReactElement => {
   const { content } = props;
