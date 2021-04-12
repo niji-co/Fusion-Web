@@ -13,3 +13,4 @@ interface IProjectRowText extends IProjectRow {
 }
 
 export default IProjectRowText;
+export { TextStyle };
