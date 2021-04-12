@@ -1,6 +1,6 @@
 interface Asset {
-  url: string;
   name: string;
+  url: string;
 }
 
 export default Asset;
