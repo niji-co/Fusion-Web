@@ -1,13 +1,13 @@
-import React, { ReactElement } from "react";
+import React from "react";
 import ProjectRowTextProps from "./models/ProjectRowTextProps";
 
-const ProjectRowText = (props: ProjectRowTextProps): ReactElement => {
-  const { content } = props;
-  return (
-    <div className="project-row-text">
-      <p>{content}</p>
-    </div>
-  );
-};
+const ProjectRowText: React.FC<ProjectRowTextProps> = ({
+  content,
+  style,
+}: ProjectRowTextProps) => (
+  <div className="project-row-text">
+    <p>{content}</p>
+  </div>
+);
 
 export default ProjectRowText;
