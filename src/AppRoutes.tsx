@@ -11,6 +11,9 @@ import Profile from "./pages/Profile";
 import Exhibitions from "./pages/Exhibitions";
 import HostExhibition from "./pages/Exhibitions/Host";
 
+import Project from "./pages/Project";
+import EditProject from "./pages/Project/Edit";
+
 const AppRoutes = (): ReactElement => (
   <HashRouter>
     <Switch>
@@ -23,6 +26,9 @@ const AppRoutes = (): ReactElement => (
 
       <Route exact path="/exhibitions" component={Exhibitions} />
       <Route path="/exhibitions/host" component={HostExhibition} />
+
+      <Route exact path="/project" component={Project} />
+      <Route path="/project/edit" component={EditProject} />
     </Switch>
   </HashRouter>
 );
