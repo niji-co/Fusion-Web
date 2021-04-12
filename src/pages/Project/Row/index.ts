@@ -1,6 +1,6 @@
 import ProjectRow from "./ProjectRow";
-import IProjectRow, { ProjectRowType } from "./services/IProjectRow";
-import IProjectRowText, { TextStyle } from "./services/IProjectRowText";
+import ProjectRowProps, { ProjectRowType } from "./models/ProjectRowProps";
+import ProjectRowTextProps, { TextStyle } from "./models/ProjectRowTextProps";
 
 export default ProjectRow;
-export { IProjectRow, ProjectRowType, IProjectRowText, TextStyle };
+export { ProjectRowProps, ProjectRowType, ProjectRowTextProps, TextStyle };
