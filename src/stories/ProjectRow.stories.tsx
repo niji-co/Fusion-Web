@@ -5,8 +5,13 @@ import ProjectRow, {
   ProjectRowProps,
   ProjectRowType,
   ProjectRowTextProps,
+  ProjectRowImageProps,
+  ProjectRowVideoProps,
+  ProjectRowFileProps,
   TextStyle,
 } from "../pages/Project/Row";
+
+import Asset from "../models/Asset";
 
 export default {
   title: "Project/Row",
@@ -15,10 +20,41 @@ export default {
 
 const Template: Story<ProjectRowProps> = args => <ProjectRow {...args} />;
 
-export const Text = Template.bind({});
-Text.args = {
+export const TextRow = Template.bind({});
+TextRow.args = {
   index: 0,
   type: ProjectRowType.Text,
   content: "Hello there",
   style: TextStyle.p,
 } as ProjectRowTextProps;
+
+export const ImageRow = Template.bind({});
+ImageRow.args = {
+  index: 0,
+  type: ProjectRowType.Image,
+  asset: {
+    name: "Unsplash Image",
+    url:
+      "https://images.unsplash.com/photo-1618178911565-d456ae02c00f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1234&q=80",
+  } as Asset,
+} as ProjectRowImageProps;
+
+export const VideoRow = Template.bind({});
+VideoRow.args = {
+  index: 0,
+  type: ProjectRowType.Video,
+  asset: {
+    name: "YouTube Video",
+    url: "https://www.youtube.com/watch?v=0pzIBCdJ5Bs",
+  } as Asset,
+} as ProjectRowVideoProps;
+
+export const FileRow = Template.bind({});
+FileRow.args = {
+  index: 0,
+  type: ProjectRowType.File,
+  asset: {
+    name: "Discord File",
+    url: "https://google.com",
+  } as Asset,
+} as ProjectRowFileProps;
