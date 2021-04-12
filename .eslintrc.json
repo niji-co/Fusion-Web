@@ -50,6 +50,7 @@
     "@typescript-eslint/prefer-readonly": "error",
     "@typescript-eslint/comma-spacing": "error",
     "react/jsx-filename-extension": ["warn", { "extensions": [".tsx", ".jsx"] }],
+		"react/jsx-props-no-spreading": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "prettier/prettier": "error"
