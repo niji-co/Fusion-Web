@@ -1,4 +1,4 @@
-import React, { ReactElement } from "react";
+import React from "react";
 // model
 import IProjectRow, { ProjectRowType } from "./services/IProjectRow";
 import IProjectRowText from "./services/IProjectRowText";
@@ -7,7 +7,7 @@ import ProjectRowText from "./ProjectRowText";
 // Styles
 import "./style.css";
 
-const ProjectRow = (props: IProjectRow): ReactElement => {
+const ProjectRow: React.FC<IProjectRow> = (props: IProjectRow) => {
   let row = <div className="project-row-default" />;
 
   switch (props.type) {
