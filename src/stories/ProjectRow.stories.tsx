@@ -2,9 +2,9 @@ import React from "react";
 import { Story, Meta } from "@storybook/react";
 
 import ProjectRow, {
-  IProjectRow,
+  ProjectRowProps,
   ProjectRowType,
-  IProjectRowText,
+  ProjectRowTextProps,
   TextStyle,
 } from "../pages/Project/Row";
 
@@ -13,7 +13,7 @@ export default {
   component: ProjectRow,
 } as Meta;
 
-const Template: Story<IProjectRow> = args => <ProjectRow {...args} />;
+const Template: Story<ProjectRowProps> = args => <ProjectRow {...args} />;
 
 export const Text = Template.bind({});
 Text.args = {
@@ -21,4 +21,4 @@ Text.args = {
   type: ProjectRowType.Text,
   content: "Hello there",
   style: TextStyle.p,
-} as IProjectRowText;
+} as ProjectRowTextProps;

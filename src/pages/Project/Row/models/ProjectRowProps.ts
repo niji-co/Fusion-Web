@@ -5,11 +5,11 @@ enum ProjectRowType {
   File,
 }
 
-interface IProjectRow {
+interface ProjectRowProps {
   index: number;
   type: ProjectRowType;
 }
 
-export default IProjectRow;
+export default ProjectRowProps;
 
 export { ProjectRowType };
