@@ -1,10 +1,10 @@
-import React, { ReactElement } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { onInputChange } from "../../../services/actions/inputActions";
 import selectProject from "../services/projectSelector";
 
-const EditProject = (): ReactElement => {
+const EditProject: React.FC = () => {
   const project = useSelector(selectProject);
   const dispatch = useDispatch();
 

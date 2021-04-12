@@ -1,10 +1,10 @@
 // Libraries
-import React, { ReactElement } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 // Styles
 import "./style.css";
 
-const Exhibitions = (): ReactElement => (
+const Exhibitions: React.FC = () => (
   <div className="exhbitions">
     <h1>Exhibitions</h1>
     <Link to="/">Home</Link>
