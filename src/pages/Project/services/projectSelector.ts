@@ -1,7 +1,7 @@
 import { RootState } from "../../../services/store";
 
-import IProject from "./IProject";
+import ProjectProps from "../models/ProjectProps";
 
-const selectProject = (state: RootState): IProject => state.project;
+const selectProject = (state: RootState): ProjectProps => state.project;
 
 export default selectProject;

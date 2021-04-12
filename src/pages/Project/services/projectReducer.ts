@@ -1,10 +1,10 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-import IProject from "./IProject";
+import ProjectProps from "../models/ProjectProps";
 
 import { onInputChange } from "../../../services/actions/inputActions";
 
-const initialState: IProject = {
+const initialState: ProjectProps = {
   title: "",
   tags: [],
 };
