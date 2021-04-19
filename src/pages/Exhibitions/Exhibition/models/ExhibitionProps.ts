@@ -1,5 +1,5 @@
-import Section from "../../Section/Section";
-import Role from "../../Role/Role";
+import Section from "../../Section/models/SectionProps";
+import Role from "../../Role/models/RoleProps";
 
 enum VisibilityTypes {
   Public,
@@ -14,9 +14,8 @@ interface ExhibitionProps {
   title: string;
   description: string;
   keywords: string;
-  // these two cant find the components somehow
-  //sections: Section[];
-  //roles: Role[];
+  sections: Section[];
+  roles: Role[];
   openingDate: Date;
   closingDate: Date;
   visibility: VisibilityTypes;
