@@ -1,4 +1,4 @@
-enum RoleTypes{
+enum RoleTypes {
   Host,
   Exhibitor,
   Viewer,

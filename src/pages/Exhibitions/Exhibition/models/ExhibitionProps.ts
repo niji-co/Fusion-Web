@@ -1,7 +1,7 @@
 import Section from "../../Section/Section";
 import Role from "../../Role/Role";
 
-enum VisibilityTypes{
+enum VisibilityTypes {
   Public,
   Exclusive,
   Private,
