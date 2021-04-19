@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import "./style.css";
 
 const Exhibitions: React.FC = () => (
-  <div className="exhbitions">
+  <div className="exhibitions">
     <h1>Exhibitions</h1>
     <Link to="/">Home</Link>
     <br />
