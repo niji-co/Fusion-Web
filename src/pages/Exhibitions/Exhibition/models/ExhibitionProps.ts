@@ -1,5 +1,5 @@
-import Section from "../../Section/models/SectionProps";
-import Role from "../../Role/models/RoleProps";
+import { SectionProps } from "../../Section";
+import { RoleProps } from "../../Role";
 
 enum VisibilityTypes {
   Public,
@@ -14,8 +14,8 @@ interface ExhibitionProps {
   title: string;
   description: string;
   keywords: string;
-  sections: Section[];
-  roles: Role[];
+  sections: SectionProps[];
+  roles: RoleProps[];
   openingDate: Date;
   closingDate: Date;
   visibility: VisibilityTypes;
