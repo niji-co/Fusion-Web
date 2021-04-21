@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-import { projectReducer } from "../pages/Project";
+import { projectsReducer } from "../pages/Project";
 
 const store = configureStore({
   reducer: {
-    project: projectReducer,
+    projects: projectsReducer,
   },
 });
 

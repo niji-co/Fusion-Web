@@ -1,7 +1,11 @@
 import { RootState } from "../../../services/store";
 
-import ProjectProps from "../models/ProjectProps";
+import { projectsAdapter } from "./projectsReducer";
 
-const selectProject = (state: RootState): ProjectProps => state.project;
-
-export default selectProject;
+export const {
+  selectById: selectProjectById,
+  selectIds: selectProjectIds,
+  selectEntities: selectProjectEntities,
+  selectAll: selectAllProject,
+  selectTotal: selectTotalProjects,
+} = projectsAdapter.getSelectors((state: RootState) => state.projects);

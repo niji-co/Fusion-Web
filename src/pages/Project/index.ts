@@ -1,11 +1,29 @@
 import Project from "./Project";
 
-import projectReducer, {
-  setTitle as setProjectTitle,
-} from "./services/projectReducer";
+import projectsReducer, {
+  projectsAdapter,
+  fetchAllProjects,
+  fetchProjectWithTitle,
+} from "./services/projectsReducer";
 
-import selectProject from "./services/projectSelector";
+import {
+  selectProjectById,
+  selectProjectIds,
+  selectProjectEntities,
+  selectAllProject,
+  selectTotalProjects,
+} from "./services/projectSelector";
 
 export default Project;
 
-export { projectReducer, setProjectTitle, selectProject };
+export {
+  projectsReducer,
+  projectsAdapter,
+  fetchAllProjects,
+  fetchProjectWithTitle,
+  selectProjectById,
+  selectProjectIds,
+  selectProjectEntities,
+  selectAllProject,
+  selectTotalProjects,
+};
