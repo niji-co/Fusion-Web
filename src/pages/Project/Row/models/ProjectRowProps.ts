@@ -6,8 +6,8 @@ enum ProjectRowType {
 }
 
 interface ProjectRowProps {
-  index: number;
-  type: ProjectRowType;
+  id: string;
+  type: number;
 }
 
 export default ProjectRowProps;
