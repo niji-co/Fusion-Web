@@ -2,9 +2,10 @@ import React from "react";
 import ProjectRowVideoProps from "./models/ProjectRowVideoProps";
 
 const ProjectRowVideo: React.FC<ProjectRowVideoProps> = ({
+  id,
   asset,
 }: ProjectRowVideoProps) => (
-  <div className="project-row-video">
+  <div key={id} className="project-row-video">
     <p>#TODO CREATE VIDEO COMPONENT for &quot{asset.name}&quot</p>
   </div>
 );

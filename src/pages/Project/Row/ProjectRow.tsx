@@ -1,4 +1,4 @@
-import React, { ReactElement } from "react";
+import React from "react";
 // views
 import ProjectRowText from "./ProjectRowText";
 import ProjectRowImage from "./ProjectRowImage";
@@ -14,28 +14,18 @@ import ProjectRowFileProps from "./models/ProjectRowFileProps";
 import "./style.css";
 
 const ProjectRow: React.FC<ProjectRowProps> = (props: ProjectRowProps) => {
-  let row: ReactElement | null = null;
-
   switch (props.type) {
     case ProjectRowType.Text:
-      row = ProjectRowText(props as ProjectRowTextProps);
-      break;
+      return ProjectRowText(props as ProjectRowTextProps);
     case ProjectRowType.Image:
-      row = ProjectRowImage(props as ProjectRowImageProps);
-      break;
-      break;
+      return ProjectRowImage(props as ProjectRowImageProps);
     case ProjectRowType.Video:
-      row = ProjectRowVideo(props as ProjectRowVideoProps);
-      break;
-      break;
+      return ProjectRowVideo(props as ProjectRowVideoProps);
     case ProjectRowType.File:
-      row = ProjectRowFile(props as ProjectRowFileProps);
-      break;
+      return ProjectRowFile(props as ProjectRowFileProps);
     default:
-      break;
+      return null;
   }
-
-  return <div className="project-row">{row}</div>;
 };
 
 export default ProjectRow;
