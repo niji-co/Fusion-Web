@@ -1,5 +1,8 @@
 import { schema } from "normalizr";
 
-const projectEntity = new schema.Entity("projects");
+const projectRowEntity = new schema.Entity("projectRows");
+const projectEntity = new schema.Entity("projects", {
+  rows: [projectRowEntity],
+});
 
-export default projectEntity;
+export { projectRowEntity, projectEntity };
