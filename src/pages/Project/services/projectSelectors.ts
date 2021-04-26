@@ -3,7 +3,7 @@ import { createSelector, EntityState, OutputSelector } from "@reduxjs/toolkit";
 import { RootState } from "../../../services/store";
 import { projectsAdapter } from "./projectsReducer";
 import ProjectModel from "../models/ProjectModel";
-import { ProjectRowProps } from "../Row";
+import { ProjectRowModel } from "../Row";
 
 export const {
   selectById: selectProjectById,
@@ -18,13 +18,13 @@ export const selectRowsByProjectId = (
 ): OutputSelector<
   {
     projects: EntityState<ProjectModel>;
-    projectRows: EntityState<ProjectRowProps>;
+    projectRows: EntityState<ProjectRowModel>;
   },
-  ProjectRowProps[],
+  ProjectRowModel[],
   (
     res1: ProjectModel | undefined,
-    res2: (ProjectRowProps | undefined)[]
-  ) => ProjectRowProps[]
+    res2: (ProjectRowModel | undefined)[]
+  ) => ProjectRowModel[]
 > =>
   createSelector(
     [
@@ -32,14 +32,14 @@ export const selectRowsByProjectId = (
       (state: RootState) =>
         state.projectRows.ids.map(id => state.projectRows.entities[id]),
     ],
-    (project, rows): ProjectRowProps[] => {
+    (project, rows): ProjectRowModel[] => {
       if (project === undefined) {
         return [];
       }
 
-      const filtered: ProjectRowProps[] = rows.filter(
+      const filtered: ProjectRowModel[] = rows.filter(
         row => row !== undefined
-      ) as ProjectRowProps[];
+      ) as ProjectRowModel[];
 
       return filtered.filter(row => project.rows.includes(row.id));
     }

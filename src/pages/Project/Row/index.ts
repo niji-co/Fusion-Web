@@ -1,6 +1,7 @@
 import ProjectRow from "./ProjectRow";
 
 import ProjectRowProps, { ProjectRowType } from "./models/ProjectRowProps";
+import ProjectRowModel from "./models/ProjectRowModel";
 import ProjectRowImageProps from "./models/ProjectRowImageProps";
 import ProjectRowVideoProps from "./models/ProjectRowVideoProps";
 import ProjectRowFileProps from "./models/ProjectRowFileProps";
@@ -22,6 +23,7 @@ export default ProjectRow;
 export {
   ProjectRowProps,
   ProjectRowType,
+  ProjectRowModel,
   ProjectRowTextProps,
   TextStyle,
   ProjectRowImageProps,

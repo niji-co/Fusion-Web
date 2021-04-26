@@ -1,10 +1,10 @@
 import { createEntityAdapter, createSlice } from "@reduxjs/toolkit";
 
-import ProjectRowProps from "../models/ProjectRowProps";
+import ProjectRowModel from "../models/ProjectRowModel";
 
 import { fetchProjectWithTitle } from "../../services/projectsReducer";
 
-const projectRowsAdapter = createEntityAdapter<ProjectRowProps>({
+const projectRowsAdapter = createEntityAdapter<ProjectRowModel>({
   selectId: row => row.id,
   sortComparer: (a, b) => a.id.localeCompare(b.id),
 });
