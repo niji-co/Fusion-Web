@@ -14,6 +14,8 @@ import {
   selectRowsByProjectId,
 } from "./services/projectSelectors";
 
+import { ProjectRowProps } from "./Row";
+
 const Project: React.FC = () => {
   const dispatch = useDispatch();
   const query = new URLSearchParams(useLocation().search);
@@ -24,6 +26,10 @@ const Project: React.FC = () => {
     selectProjectById(state, titleParam)
   );
 
+  const rows = useSelector(selectRowsByProjectId(titleParam)).map(
+    (model): ProjectRowProps => model as ProjectRowProps
+  );
+
   let body: React.ReactElement;
 
   // check if null or undefined
@@ -32,7 +38,6 @@ const Project: React.FC = () => {
     body = <h1>Loading</h1>;
   } else {
     const { title, tags } = project;
-    const rows = useSelector(selectRowsByProjectId(titleParam));
     body = <ProjectPreviewLayout title={title} tags={tags} rows={rows} />;
   }
 
