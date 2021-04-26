@@ -1,12 +1,9 @@
+import { ProjectRowProps } from "../Row";
+
 interface ProjectProps {
   title: string;
   tags: string[];
+  rows: ProjectRowProps[];
 }
 
-const defaultValue: ProjectProps = {
-  title: "",
-  tags: [],
-};
-
 export default ProjectProps;
-export { defaultValue };
