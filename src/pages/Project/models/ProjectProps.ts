@@ -3,4 +3,10 @@ interface ProjectProps {
   tags: string[];
 }
 
+const defaultValue: ProjectProps = {
+  title: "",
+  tags: [],
+};
+
 export default ProjectProps;
+export { defaultValue };
