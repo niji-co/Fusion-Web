@@ -9,8 +9,6 @@ import { normalize } from "normalizr";
 import ProjectProps from "../models/ProjectProps";
 import projectEntity from "../ProjectSchemas";
 
-import { onInputChange } from "../../../services/actions/inputActions";
-
 import fakeProjectAPI from "./fakeProjectAPI";
 
 const projectsAdapter = createEntityAdapter<ProjectProps>({
@@ -26,7 +24,6 @@ const fetchAllProjects = createAsyncThunk(
       ProjectProps,
       { projects: { [key: string]: ProjectProps } }
     >(data, projectEntity);
-    console.log(normalized.entities);
     return normalized.entities;
   }
 );
@@ -39,7 +36,7 @@ const fetchProjectWithTitle = createAsyncThunk(
       ProjectProps,
       { projects: { [key: string]: ProjectProps } }
     >(data, projectEntity);
-    console.log(normalized);
+
     return normalized.entities;
   }
 );
@@ -47,16 +44,6 @@ const fetchProjectWithTitle = createAsyncThunk(
 const projectSlice = createSlice({
   name: "project",
   initialState: projectsAdapter.getInitialState(),
-  // reducers: {
-  //   setTitle: (state, action: PayloadAction<string>) => {
-  //     state.title = action.payload;
-  //   },
-  // },
-  // extraReducers: builder => {
-  //   builder.addCase(onInputChange, (state, action) => {
-  //     state.title = action.payload;
-  //   });
-  // },
   reducers: {},
   extraReducers: builder => {
     builder
@@ -70,6 +57,6 @@ const projectSlice = createSlice({
   },
 });
 
-const { actions, reducer } = projectSlice;
+const { reducer } = projectSlice;
 export { projectsAdapter, fetchAllProjects, fetchProjectWithTitle };
 export default reducer;
