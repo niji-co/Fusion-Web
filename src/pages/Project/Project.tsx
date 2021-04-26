@@ -9,7 +9,10 @@ import { RootState } from "../../services/store";
 import ProjectPreviewLayout from "./ProjectPreviewLayout";
 
 import { fetchProjectWithTitle } from "./services/projectsReducer";
-import { selectProjectById } from "./services/projectSelectors";
+import {
+  selectProjectById,
+  selectRowsByProjectId,
+} from "./services/projectSelectors";
 
 const Project: React.FC = () => {
   const dispatch = useDispatch();
@@ -24,12 +27,13 @@ const Project: React.FC = () => {
   let body: React.ReactElement;
 
   // check if null or undefined
-  if (project == null) {
+  if (project === undefined) {
     dispatch(fetchProjectWithTitle(titleParam));
     body = <h1>Loading</h1>;
   } else {
     const { title, tags } = project;
-    body = <ProjectPreviewLayout title={title} tags={tags} />;
+    const rows = useSelector(selectRowsByProjectId(titleParam));
+    body = <ProjectPreviewLayout title={title} tags={tags} rows={rows} />;
   }
 
   return (
