@@ -12,7 +12,7 @@ import {
   selectProjectEntities,
   selectAllProject,
   selectTotalProjects,
-} from "./services/projectSelector";
+} from "./services/projectSelectors";
 
 export default Project;
 

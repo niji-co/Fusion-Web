@@ -9,7 +9,7 @@ import { RootState } from "../../services/store";
 import ProjectPreviewLayout from "./ProjectPreviewLayout";
 
 import { fetchProjectWithTitle } from "./services/projectsReducer";
-import { selectProjectById } from "./services/projectSelector";
+import { selectProjectById } from "./services/projectSelectors";
 
 const Project: React.FC = () => {
   const dispatch = useDispatch();
