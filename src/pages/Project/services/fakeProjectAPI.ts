@@ -4,12 +4,12 @@ import ProjectProps from "../models/ProjectProps";
 const projectAPI = {
   fetchAll: async (): Promise<{ projects: ProjectProps[] }> => {
     // TODO(IRWEN): replace with actual API calls
-    await new Promise(resolve => setTimeout(resolve, 10));
+    await new Promise(resolve => setTimeout(resolve, 10000));
     return server;
   },
   fetchWithTitle: async (t: string): Promise<ProjectProps | undefined> => {
     // TODO(IRWEN): replace with actual API calls
-    await new Promise(resolve => setTimeout(resolve, 10));
+    await new Promise(resolve => setTimeout(resolve, 5000));
     return server.projects.find(({ title }) => title === t);
   },
 };
