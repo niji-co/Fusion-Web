@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-import { projectReducer } from "../pages/Project";
+import { projectsReducer } from "../pages/Project";
+import { projectRowsReducer } from "../pages/Project/Row";
 
 const store = configureStore({
   reducer: {
-    project: projectReducer,
+    projects: projectsReducer,
+    projectRows: projectRowsReducer,
   },
 });
 

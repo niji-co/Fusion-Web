@@ -6,7 +6,7 @@ enum ProjectRowType {
 }
 
 interface ProjectRowProps {
-  index: number;
+  id: string;
   type: ProjectRowType;
 }
 
