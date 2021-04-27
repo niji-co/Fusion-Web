@@ -1,8 +1,8 @@
 import ProjectRowProps from "./ProjectRowProps";
-import Asset from "../../../../models/Asset";
+import AssetModel from "../../../../models/AssetModel";
 
 interface ProjectRowImageProps extends ProjectRowProps {
-  asset: Asset;
+  asset: AssetModel;
 }
 
 export default ProjectRowImageProps;
