@@ -11,7 +11,7 @@ import ProjectRow, {
   TextStyle,
 } from "../pages/Project/Row";
 
-import Asset from "../models/Asset";
+import AssetModel from "../models/AssetModel";
 
 export default {
   title: "Project/Row",
@@ -36,7 +36,7 @@ ImageRow.args = {
     name: "Unsplash Image",
     url:
       "https://images.unsplash.com/photo-1618178911565-d456ae02c00f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1234&q=80",
-  } as Asset,
+  } as AssetModel,
 } as ProjectRowImageProps;
 
 export const VideoRow = Template.bind({});
@@ -46,7 +46,7 @@ VideoRow.args = {
   asset: {
     name: "YouTube Video",
     url: "https://www.youtube.com/watch?v=0pzIBCdJ5Bs",
-  } as Asset,
+  } as AssetModel,
 } as ProjectRowVideoProps;
 
 export const FileRow = Template.bind({});
@@ -56,5 +56,5 @@ FileRow.args = {
   asset: {
     name: "Discord File",
     url: "https://google.com",
-  } as Asset,
+  } as AssetModel,
 } as ProjectRowFileProps;
