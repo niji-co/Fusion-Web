@@ -15,7 +15,7 @@ const ProjectPreviewLayout: React.FC<ProjectProps> = ({
     <h1>{title}</h1>
     {tags.map(tag => (
       <Fragment key={tag}>
-        <Tag text={tag} />
+        <Tag value={tag} />
       </Fragment>
     ))}
     {rows.map(ProjectRow)}

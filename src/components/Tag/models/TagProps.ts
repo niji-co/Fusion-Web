@@ -1,7 +1,7 @@
 import { HTMLAttributes } from "react";
 
 interface TagProps extends HTMLAttributes<HTMLElement> {
-  text: string;
+  value: string;
 }
 
 export default TagProps;
