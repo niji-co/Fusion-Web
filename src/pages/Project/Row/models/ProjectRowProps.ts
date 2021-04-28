@@ -1,3 +1,5 @@
+import { HTMLAttributes } from "react";
+
 enum ProjectRowType {
   Text,
   Image,
@@ -5,8 +7,8 @@ enum ProjectRowType {
   File,
 }
 
-interface ProjectRowProps {
   id: string;
+interface ProjectRowProps extends HTMLAttributes<HTMLElement> {
   type: ProjectRowType;
 }
 
