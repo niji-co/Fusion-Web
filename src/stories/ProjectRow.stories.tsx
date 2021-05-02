@@ -25,7 +25,7 @@ TextRow.args = {
   id: "0",
   type: ProjectRowType.Text,
   content: "Hello there",
-  style: TextStyle.p,
+  textStyle: TextStyle.p,
 } as ProjectRowTextProps;
 
 export const ImageRow = Template.bind({});
