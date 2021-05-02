@@ -9,7 +9,7 @@ enum TextStyle {
 
 interface ProjectRowTextProps extends ProjectRowProps {
   content: string;
-  style: TextStyle;
+  textStyle: TextStyle;
 }
 
 export default ProjectRowTextProps;
