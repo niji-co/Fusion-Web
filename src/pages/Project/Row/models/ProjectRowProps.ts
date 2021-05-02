@@ -7,8 +7,8 @@ enum ProjectRowType {
   File,
 }
 
-  id: string;
 interface ProjectRowProps extends HTMLAttributes<HTMLElement> {
+  id: string;
   type: ProjectRowType;
 }
 
