@@ -5,10 +5,19 @@ const server = {
       tags: ["Web", "Mobile"],
       rows: [
         {
-          id: "12",
+          id: "0",
           type: 0,
           content: "Lorem ipsun",
-          style: 1,
+          textStyle: 1,
+        },
+        {
+          id: "1",
+          type: 1,
+          asset: {
+            name: "image",
+            url:
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png",
+          },
         },
       ],
     },
@@ -20,7 +29,7 @@ const server = {
           id: "1",
           type: 0,
           content: "This is another body",
-          style: 1,
+          textStyle: 1,
         },
       ],
     },
