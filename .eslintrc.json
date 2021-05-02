@@ -59,7 +59,17 @@
   },
   "settings": {
     "import/resolver": {
-      "typescript": {}
+      "typescript": {},
+      "alias": {
+        "map": [
+          ["components", "./src/components/"], 
+          ["dev", "./src/dev/"], 
+          ["models", "./src/models/"], 
+          ["pages", "./src/pages/"], 
+          ["services", "./src/services/"]
+        ],
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
     }
   }
 }
