@@ -1,4 +1,4 @@
-import server from "../../../dev/server";
+import server from "src/dev/server";
 
 const projectAPI = {
   fetchAll: async (): Promise<{ projects: any[] }> => {

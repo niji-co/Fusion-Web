@@ -1,6 +1,6 @@
 import { createSelector, EntityState, OutputSelector } from "@reduxjs/toolkit";
 
-import { RootState } from "../../../services/store";
+import { RootState } from "src/services/store";
 import { projectsAdapter } from "./projectsReducer";
 import ProjectModel from "../models/ProjectModel";
 import { ProjectRowModel } from "../Row";

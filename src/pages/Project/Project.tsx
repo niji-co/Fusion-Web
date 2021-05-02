@@ -1,10 +1,8 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
-// Styles
-import "./style.css";
 
-import { RootState } from "../../services/store";
+import { RootState } from "src/services/store";
 
 import ProjectPreviewLayout from "./ProjectPreviewLayout";
 
@@ -15,6 +13,8 @@ import {
 } from "./services/projectSelectors";
 
 import { ProjectRowProps } from "./Row";
+
+import "./style.css";
 
 const Project: React.FC = () => {
   const dispatch = useDispatch();
