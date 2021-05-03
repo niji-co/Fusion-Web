@@ -9,7 +9,7 @@ const ProjectRowImage: React.FC<ProjectRowImageProps> = ({
   model,
   ...rest
 }: ProjectRowImageProps) => (
-  <div key={model.id} className="project-row-image">
+  <div className="project-row-image">
     <img alt={model.asset.name} src={model.asset.url} />
   </div>
 );

@@ -9,7 +9,7 @@ const ProjectRowVideo: React.FC<ProjectRowVideoProps> = ({
   model,
   ...rest
 }: ProjectRowVideoProps) => (
-  <div key={model.id} className="project-row-video">
+  <div className="project-row-video">
     <p>#TODO CREATE VIDEO COMPONENT for &quot{model.asset.name}&quot</p>
   </div>
 );

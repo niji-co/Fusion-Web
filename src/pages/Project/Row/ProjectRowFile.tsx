@@ -9,7 +9,7 @@ const ProjectRowFile: React.FC<ProjectRowFileProps> = ({
   model,
   ...rest
 }: ProjectRowFileProps) => (
-  <div key={model.id} className="project-row-file">
+  <div className="project-row-file">
     <p>#TODO CREATE FILE COMPONENT for &quot{model.asset.name}&quot</p>
     <a href={model.asset.url}>{model.asset.name}</a>
   </div>
