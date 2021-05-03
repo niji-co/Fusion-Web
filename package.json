@@ -8,7 +8,7 @@
   "author": "Niji Co.",
   "scripts": {
     "start": "webpack serve --config webpack.config.js --mode development",
-    "build": "webpack serve",
+    "build": "webpack serve --config webpack.config.js --mode production",
     "lint": "npx eslint src/* --no-error-on-unmatched-pattern --fix --quiet",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
