@@ -1,7 +1,7 @@
 import AssetModel from "models/AssetModel";
-import ProjectRowProps from "./ProjectRowProps";
+import ProjectRowModel from "./ProjectRowModel";
 
-interface ProjectRowVideoProps extends ProjectRowProps {
+interface ProjectRowVideoProps extends ProjectRowModel {
   asset: AssetModel;
 }
 

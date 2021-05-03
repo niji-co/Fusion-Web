@@ -7,8 +7,8 @@ import {
 import { normalize } from "normalizr";
 
 import ProjectModel from "../models/ProjectModel";
-import ProjectRowProps from "../Row/models/ProjectRowProps";
 import { projectEntity } from "../ProjectSchemas";
+import { ProjectRowModel } from "../Row";
 
 import fakeProjectAPI from "./fakeProjectAPI";
 
@@ -24,7 +24,7 @@ const fetchAllProjects = createAsyncThunk(
       any,
       {
         projects: { [key: string]: ProjectModel };
-        projectRows: { [key: string]: ProjectRowProps };
+        projectRows: { [key: string]: ProjectRowModel };
       }
     >(await fakeProjectAPI.fetchAll(), projectEntity);
     return normalized.entities;
@@ -38,7 +38,7 @@ const fetchProjectWithTitle = createAsyncThunk(
       any,
       {
         projects: { [key: string]: ProjectModel };
-        projectRows: { [key: string]: ProjectRowProps };
+        projectRows: { [key: string]: ProjectRowModel };
       }
     >(await fakeProjectAPI.fetchWithTitle(title), projectEntity);
 

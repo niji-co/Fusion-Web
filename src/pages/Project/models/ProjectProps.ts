@@ -1,10 +1,10 @@
 import { HTMLAttributes } from "react";
-import { ProjectRowProps } from "../Row";
+import { ProjectRowModel } from "../Row";
 
 interface ProjectProps extends HTMLAttributes<HTMLElement> {
   title: string;
   tags: string[];
-  rows: ProjectRowProps[];
+  rows: ProjectRowModel[];
 }
 
 export default ProjectProps;

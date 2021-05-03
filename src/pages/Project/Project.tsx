@@ -12,7 +12,7 @@ import {
   selectRowsByProjectId,
 } from "./services/projectSelectors";
 
-import { ProjectRowProps } from "./Row";
+import { ProjectRowModel } from "./Row";
 
 import "./style.css";
 
@@ -27,7 +27,7 @@ const Project: React.FC = () => {
   );
 
   const rows = useSelector(selectRowsByProjectId(titleParam)).map(
-    (model): ProjectRowProps => model as ProjectRowProps
+    (model): ProjectRowModel => model
   );
 
   let body: React.ReactElement;
