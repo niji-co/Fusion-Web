@@ -7,9 +7,10 @@ interface ProjectRowImageProps extends HTMLAttributes<HTMLElement> {
 
 const ProjectRowImage: React.FC<ProjectRowImageProps> = ({
   model,
+  className,
   ...rest
 }: ProjectRowImageProps) => (
-  <div className="project-row-image">
+  <div className={`project-row-image ${className || ""}`} {...rest}>
     <img alt={model.asset.name} src={model.asset.url} />
   </div>
 );

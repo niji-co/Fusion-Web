@@ -7,9 +7,10 @@ interface ProjectRowVideoProps extends HTMLAttributes<HTMLElement> {
 
 const ProjectRowVideo: React.FC<ProjectRowVideoProps> = ({
   model,
+  className,
   ...rest
 }: ProjectRowVideoProps) => (
-  <div className="project-row-video">
+  <div className={`project-row-video ${className || ""}`} {...rest}>
     <p>#TODO CREATE VIDEO COMPONENT for &quot{model.asset.name}&quot</p>
   </div>
 );

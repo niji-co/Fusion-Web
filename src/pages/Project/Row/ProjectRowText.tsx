@@ -7,9 +7,10 @@ interface ProjectRowTextProps extends HTMLAttributes<HTMLElement> {
 
 const ProjectRowText: React.FC<ProjectRowTextProps> = ({
   model,
+  className,
   ...rest
 }: ProjectRowTextProps) => (
-  <div className="project-row-text">
+  <div className={`project-row-text ${className || ""}`} {...rest}>
     <p>{model.content}</p>
   </div>
 );
