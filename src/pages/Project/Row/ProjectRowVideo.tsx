@@ -1,12 +1,17 @@
-import React from "react";
-import ProjectRowVideoProps from "./models/ProjectRowVideoProps";
+import React, { HTMLAttributes } from "react";
+import ProjectRowVideoModel from "./models/ProjectRowVideoModel";
+
+interface ProjectRowVideoProps extends HTMLAttributes<HTMLElement> {
+  model: ProjectRowVideoModel;
+}
 
 const ProjectRowVideo: React.FC<ProjectRowVideoProps> = ({
-  id,
-  asset,
+  model,
+  className,
+  ...rest
 }: ProjectRowVideoProps) => (
-  <div key={id} className="project-row-video">
-    <p>#TODO CREATE VIDEO COMPONENT for &quot{asset.name}&quot</p>
+  <div className={`project-row-video ${className || ""}`} {...rest}>
+    <p>#TODO CREATE VIDEO COMPONENT for &quot{model.asset.name}&quot</p>
   </div>
 );
 

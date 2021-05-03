@@ -1,13 +1,17 @@
-import React from "react";
-import ProjectRowTextProps from "./models/ProjectRowTextProps";
+import React, { HTMLAttributes } from "react";
+import ProjectRowTextModel from "./models/ProjectRowTextModel";
+
+interface ProjectRowTextProps extends HTMLAttributes<HTMLElement> {
+  model: ProjectRowTextModel;
+}
 
 const ProjectRowText: React.FC<ProjectRowTextProps> = ({
-  id,
-  content,
-  style,
+  model,
+  className,
+  ...rest
 }: ProjectRowTextProps) => (
-  <div key={id} className="project-row-text">
-    <p>{content}</p>
+  <div className={`project-row-text ${className || ""}`} {...rest}>
+    <p>{model.content}</p>
   </div>
 );
 

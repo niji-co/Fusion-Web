@@ -1,11 +1,10 @@
 import ProjectRow from "./ProjectRow";
 
-import ProjectRowProps, { ProjectRowType } from "./models/ProjectRowProps";
-import ProjectRowModel from "./models/ProjectRowModel";
-import ProjectRowImageProps from "./models/ProjectRowImageProps";
-import ProjectRowVideoProps from "./models/ProjectRowVideoProps";
-import ProjectRowFileProps from "./models/ProjectRowFileProps";
-import ProjectRowTextProps, { TextStyle } from "./models/ProjectRowTextProps";
+import ProjectRowModel, { ProjectRowType } from "./models/ProjectRowModel";
+import ProjectRowImageModel from "./models/ProjectRowImageModel";
+import ProjectRowVideoModel from "./models/ProjectRowVideoModel";
+import ProjectRowFileModel from "./models/ProjectRowFileModel";
+import ProjectRowTextModel, { TextStyle } from "./models/ProjectRowTextModel";
 
 import projectRowsReducer, {
   projectRowsAdapter,
@@ -21,14 +20,13 @@ import {
 
 export default ProjectRow;
 export {
-  ProjectRowProps,
   ProjectRowType,
   ProjectRowModel,
-  ProjectRowTextProps,
+  ProjectRowTextModel,
   TextStyle,
-  ProjectRowImageProps,
-  ProjectRowVideoProps,
-  ProjectRowFileProps,
+  ProjectRowImageModel,
+  ProjectRowVideoModel,
+  ProjectRowFileModel,
   projectRowsReducer,
   projectRowsAdapter,
   selectProjectRowById,

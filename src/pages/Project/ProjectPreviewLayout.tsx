@@ -1,9 +1,7 @@
 import React, { Fragment } from "react";
+import Tag from "components/Tag";
 import ProjectProps from "./models/ProjectProps";
-
 import ProjectRow from "./Row";
-import Tag from "../../components/Tag";
-
 import "./style.css";
 
 const ProjectPreviewLayout: React.FC<ProjectProps> = ({
@@ -18,7 +16,9 @@ const ProjectPreviewLayout: React.FC<ProjectProps> = ({
         <Tag value={tag} />
       </Fragment>
     ))}
-    {rows.map(ProjectRow)}
+    {rows.map(row => (
+      <ProjectRow key={row.id} model={row} />
+    ))}
   </div>
 );
 

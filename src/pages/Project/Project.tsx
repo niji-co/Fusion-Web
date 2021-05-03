@@ -1,10 +1,8 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
-// Styles
-import "./style.css";
 
-import { RootState } from "../../services/store";
+import { RootState } from "services/store";
 
 import ProjectPreviewLayout from "./ProjectPreviewLayout";
 
@@ -14,7 +12,9 @@ import {
   selectRowsByProjectId,
 } from "./services/projectSelectors";
 
-import { ProjectRowProps } from "./Row";
+import { ProjectRowModel } from "./Row";
+
+import "./style.css";
 
 const Project: React.FC = () => {
   const dispatch = useDispatch();
@@ -27,7 +27,7 @@ const Project: React.FC = () => {
   );
 
   const rows = useSelector(selectRowsByProjectId(titleParam)).map(
-    (model): ProjectRowProps => model as ProjectRowProps
+    (model): ProjectRowModel => model
   );
 
   let body: React.ReactElement;

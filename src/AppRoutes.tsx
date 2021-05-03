@@ -12,7 +12,6 @@ import Exhibitions from "./pages/Exhibitions";
 import HostExhibition from "./pages/Exhibitions/Host";
 
 import Project from "./pages/Project";
-import EditProject from "./pages/Project/Edit";
 
 const AppRoutes = (): ReactElement => (
   <HashRouter>
@@ -28,7 +27,6 @@ const AppRoutes = (): ReactElement => (
       <Route path="/exhibitions/host" component={HostExhibition} />
 
       <Route exact path="/project" component={Project} />
-      <Route path="/project/edit" component={EditProject} />
     </Switch>
   </HashRouter>
 );

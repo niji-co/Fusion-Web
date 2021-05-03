@@ -1,12 +1,17 @@
-import React from "react";
-import ProjectRowImageProps from "./models/ProjectRowImageProps";
+import React, { HTMLAttributes } from "react";
+import ProjectRowImageModel from "./models/ProjectRowImageModel";
+
+interface ProjectRowImageProps extends HTMLAttributes<HTMLElement> {
+  model: ProjectRowImageModel;
+}
 
 const ProjectRowImage: React.FC<ProjectRowImageProps> = ({
-  id,
-  asset,
+  model,
+  className,
+  ...rest
 }: ProjectRowImageProps) => (
-  <div key={id} className="project-row-image">
-    <img alt={asset.name} src={asset.url} />
+  <div className={`project-row-image ${className || ""}`} {...rest}>
+    <img alt={model.asset.name} src={model.asset.url} />
   </div>
 );
 
