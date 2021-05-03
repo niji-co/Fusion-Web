@@ -2,12 +2,12 @@ import React from "react";
 import { Story, Meta } from "@storybook/react";
 
 import ProjectRow, {
-  ProjectRowProps,
   ProjectRowType,
-  ProjectRowTextProps,
-  ProjectRowImageProps,
-  ProjectRowVideoProps,
-  ProjectRowFileProps,
+  ProjectRowModel,
+  ProjectRowTextModel,
+  ProjectRowImageModel,
+  ProjectRowVideoModel,
+  ProjectRowFileModel,
   TextStyle,
 } from "../pages/Project/Row";
 
@@ -18,7 +18,7 @@ export default {
   component: ProjectRow,
 } as Meta;
 
-const Template: Story<ProjectRowProps> = args => <ProjectRow {...args} />;
+const Template: Story<ProjectRowModel> = args => <ProjectRow model={args} />;
 
 export const TextRow = Template.bind({});
 TextRow.args = {
@@ -26,7 +26,7 @@ TextRow.args = {
   type: ProjectRowType.Text,
   content: "Hello there",
   textStyle: TextStyle.p,
-} as ProjectRowTextProps;
+} as ProjectRowTextModel;
 
 export const ImageRow = Template.bind({});
 ImageRow.args = {
@@ -37,7 +37,7 @@ ImageRow.args = {
     url:
       "https://images.unsplash.com/photo-1618178911565-d456ae02c00f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1234&q=80",
   } as AssetModel,
-} as ProjectRowImageProps;
+} as ProjectRowImageModel;
 
 export const VideoRow = Template.bind({});
 VideoRow.args = {
@@ -47,7 +47,7 @@ VideoRow.args = {
     name: "YouTube Video",
     url: "https://www.youtube.com/watch?v=0pzIBCdJ5Bs",
   } as AssetModel,
-} as ProjectRowVideoProps;
+} as ProjectRowVideoModel;
 
 export const FileRow = Template.bind({});
 FileRow.args = {
@@ -57,4 +57,4 @@ FileRow.args = {
     name: "Discord File",
     url: "https://google.com",
   } as AssetModel,
-} as ProjectRowFileProps;
+} as ProjectRowFileModel;

@@ -16,7 +16,9 @@ const ProjectPreviewLayout: React.FC<ProjectProps> = ({
         <Tag value={tag} />
       </Fragment>
     ))}
-    {rows.map(ProjectRow)}
+    {rows.map(row => (
+      <ProjectRow key={row.id} model={row} />
+    ))}
   </div>
 );
 
