@@ -1,4 +1,3 @@
-import React, { Fragment } from "react";
 import Tag from "components/Tag";
 import ProjectProps from "./models/ProjectProps";
 import ProjectRow from "./Row";
