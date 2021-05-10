@@ -26,7 +26,7 @@ const AppRoutes = (): ReactElement => (
       <Route exact path="/exhibitions" component={Exhibitions} />
       <Route path="/exhibitions/host" component={HostExhibition} />
 
-      <Route exact path="/project" component={Project} />
+      <Route exact path="/project/:title" component={Project} />
     </Switch>
   </HashRouter>
 );
