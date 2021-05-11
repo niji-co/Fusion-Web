@@ -1,10 +1,12 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 import { RootState } from "services/store";
 
 import ProjectPreviewLayout from "./ProjectPreviewLayout";
+
+import ProjectQueryModel from "./models/ProjectQueryModel";
 
 import { fetchProjectWithTitle } from "./services/projectsReducer";
 import {
@@ -18,15 +20,14 @@ import "./style.css";
 
 const Project: React.FC = () => {
   const dispatch = useDispatch();
-  const query = new URLSearchParams(useLocation().search);
 
-  const titleParam = query.get("title") || "";
+  const { title } = useParams<ProjectQueryModel>();
 
   const project = useSelector((state: RootState) =>
-    selectProjectById(state, titleParam)
+    selectProjectById(state, title)
   );
 
-  const rows = useSelector(selectRowsByProjectId(titleParam)).map(
+  const rows = useSelector(selectRowsByProjectId(title)).map(
     (model): ProjectRowModel => model
   );
 
@@ -34,11 +35,16 @@ const Project: React.FC = () => {
 
   // check if null or undefined
   if (project === undefined) {
-    dispatch(fetchProjectWithTitle(titleParam));
+    dispatch(fetchProjectWithTitle(title));
     body = <h1>Loading</h1>;
   } else {
-    const { title, tags } = project;
-    body = <ProjectPreviewLayout title={title} tags={tags} rows={rows} />;
+    body = (
+      <ProjectPreviewLayout
+        title={project.title}
+        tags={project.tags}
+        rows={rows}
+      />
+    );
   }
 
   return (
