@@ -3,4 +3,3 @@ interface ProjectQueryModel {
 }
 
 export default ProjectQueryModel;
-

@@ -24,4 +24,3 @@ const { reducer } = projectRowSlice;
 
 export default reducer;
 export { projectRowsAdapter };
-

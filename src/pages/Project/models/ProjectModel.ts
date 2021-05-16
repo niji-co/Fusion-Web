@@ -5,4 +5,3 @@ interface ProjectModel {
 }
 
 export default ProjectModel;
-
