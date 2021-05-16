@@ -62,5 +62,6 @@ const projectSlice = createSlice({
 });
 
 const { reducer } = projectSlice;
-export { projectsAdapter, fetchAllProjects, fetchProjectWithTitle };
+
 export default reducer;
+export { projectsAdapter, fetchAllProjects, fetchProjectWithTitle };

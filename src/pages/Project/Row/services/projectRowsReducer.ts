@@ -21,5 +21,7 @@ const projectRowSlice = createSlice({
 });
 
 const { reducer } = projectRowSlice;
-export { projectRowsAdapter };
+
 export default reducer;
+export { projectRowsAdapter };
+
