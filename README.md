@@ -1,5 +1,15 @@
 # Niji / Fusion / Web
 
+## Project Setup
+
+Scripts to be ran for setting up a local environment.
+
+### `npm install`
+
+Installs all dependencies to local environment.
+
+**To be also called when a new package is added.**
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -24,4 +34,5 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### `npm run lint`
 
-Use linter on project to validate formattting.
+Use linter on project to validate formattting.\
+The `--fix` flag is not enabled for this script.
