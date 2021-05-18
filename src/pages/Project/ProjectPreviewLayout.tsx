@@ -1,8 +1,13 @@
-import React, { Fragment } from "react";
+import React, { Fragment, HTMLAttributes } from "react";
 import Tag from "components/Tag";
-import ProjectProps from "./models/ProjectProps";
-import ProjectRow from "./Row";
+import ProjectRow, { ProjectRowModel } from "./Row";
 import "./style.css";
+
+interface ProjectProps extends HTMLAttributes<HTMLElement> {
+  title: string;
+  tags: string[];
+  rows: ProjectRowModel[];
+}
 
 const ProjectPreviewLayout: React.FC<ProjectProps> = ({
   title,
