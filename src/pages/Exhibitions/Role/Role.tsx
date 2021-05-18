@@ -1,8 +1,18 @@
 // Libraries
 import React from "react";
-import RoleProps from "./models/RoleProps";
 // Styles
 import "./style.css";
+
+enum RoleTypes {
+  Host,
+  Exhibitor,
+  Viewer,
+  Public,
+}
+
+interface RoleProps {
+  role: RoleTypes;
+}
 
 const Role: React.FC<RoleProps> = ({ role }: RoleProps) => (
   <div>
