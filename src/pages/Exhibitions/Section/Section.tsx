@@ -1,12 +1,8 @@
 // Libraries
 import React from "react";
+import SectionProps from "./models/SectionProps";
 // Styles
 import "./style.css";
-
-interface SectionProps {
-  sectionName: string;
-  exhibitor: string;
-}
 
 const Section: React.FC<SectionProps> = ({
   sectionName,
