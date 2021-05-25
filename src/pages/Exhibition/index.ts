@@ -1,5 +1,5 @@
-import Exhibitions from "./Exhibitions";
+import Exhibition from "./Exhibition";
 import ExhibitionModel, { VisibilityTypes } from "./models/ExhibitionModel";
 
-export default Exhibitions;
+export default Exhibition;
 export { ExhibitionModel, VisibilityTypes };

@@ -5,7 +5,7 @@ import "./style.css";
 
 type ExhibitionProps = ExhibitionModel & HTMLAttributes<HTMLElement>;
 
-const Exhibitions: React.FC = () => (
+const Exhibition: React.FC = () => (
   <div className="exhibitions">
     <h1>Exhibitions</h1>
     <Link to="/">Home</Link>
@@ -17,4 +17,4 @@ const Exhibitions: React.FC = () => (
   </div>
 );
 
-export default Exhibitions;
+export default Exhibition;
