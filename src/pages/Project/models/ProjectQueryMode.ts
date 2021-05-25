@@ -3,4 +3,3 @@ interface ProjectQueryMode {
 }
 
 export default ProjectQueryMode;
-
