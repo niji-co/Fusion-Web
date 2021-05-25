@@ -1,5 +1,5 @@
-import SectionModel from "../Section";
-import RoleModel from "../Role";
+import { SectionModel }  from "../Section";
+import { RoleModel } from "../Role";
 
 enum VisibilityTypes {
   Public,
