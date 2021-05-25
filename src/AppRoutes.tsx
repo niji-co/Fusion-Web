@@ -23,8 +23,8 @@ const AppRoutes = (): ReactElement => (
       <Route path="/forgot" component={ForgotPassword} />
       <Route path="/profile" component={Profile} />
 
-      <Route exact path="/exhibitions" component={Exhibition} />
-      <Route path="/exhibitions/host" component={HostExhibition} />
+      <Route exact path="/exhibition" component={Exhibition} />
+      <Route path="/exhibition/host" component={HostExhibition} />
 
       <Route exact path="/project/:title" component={Project} />
     </Switch>
