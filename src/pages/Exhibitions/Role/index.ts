@@ -1,5 +1,5 @@
 import Role from "./Role";
-import RoleProps, { RoleTypes } from "./models/RoleProps";
+import RoleModel, { RoleTypes } from "./models/RoleModel";
 
 export default Role;
-export { RoleProps, RoleTypes };
+export { RoleModel, RoleTypes };
