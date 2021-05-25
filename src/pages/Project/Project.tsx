@@ -42,6 +42,7 @@ const Project: React.FC = () => {
       <ProjectPreviewLayout
         title={project.title}
         tags={project.tags}
+        thumbnail={project.thumbnail}
         rows={rows}
       />
     );
