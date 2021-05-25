@@ -1,6 +1,7 @@
 import Project from "./Project";
 
 import ProjectModel from "./models/ProjectModel";
+import ProjectQueryModel from "./models/ProjectQueryModel";
 
 import projectsReducer, {
   projectsAdapter,
@@ -20,6 +21,7 @@ export default Project;
 
 export {
   ProjectModel,
+  ProjectQueryModel,
   projectsReducer,
   projectsAdapter,
   fetchAllProjects,
