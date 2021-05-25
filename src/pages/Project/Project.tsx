@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 
@@ -31,7 +31,7 @@ const Project: React.FC = () => {
     (model): ProjectRowModel => model
   );
 
-  let body: React.ReactElement;
+  let body: ReactElement;
 
   // check if null or undefined
   if (project === undefined) {
