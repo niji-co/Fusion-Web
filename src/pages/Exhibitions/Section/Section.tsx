@@ -1,5 +1,5 @@
 // Libraries
-import React , { HTMLAttributes } from "react";
+import React, { HTMLAttributes } from "react";
 import SectionModel from "./models/SectionModel";
 // Styles
 import "./style.css";
