@@ -1,5 +1,5 @@
-import { SectionProps } from "../../Section";
-import { RoleProps } from "../../Role";
+import { SectionModel } from "../Section";
+import { RoleModel } from "../Role";
 
 enum VisibilityTypes {
   Public,
@@ -7,21 +7,21 @@ enum VisibilityTypes {
   Private,
 }
 
-interface ExhibitionProps {
+interface ExhibitionModel {
   UUID: string;
   host: string;
   coHost: string[];
   title: string;
   description: string;
   keywords: string;
-  sections: SectionProps[];
-  roles: RoleProps[];
+  sections: SectionModel[];
+  roles: RoleModel[];
   openingDate: Date;
   closingDate: Date;
   visibility: VisibilityTypes;
   invitedAttendees: string[];
 }
 
-export default ExhibitionProps;
+export default ExhibitionModel;
 
 export { VisibilityTypes };

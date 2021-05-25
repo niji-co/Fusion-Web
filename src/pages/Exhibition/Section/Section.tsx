@@ -1,8 +1,8 @@
-// Libraries
-import React from "react";
-import SectionProps from "./models/SectionProps";
-// Styles
+import React, { HTMLAttributes } from "react";
+import SectionModel from "./models/SectionModel";
 import "./style.css";
+
+type SectionProps = SectionModel & HTMLAttributes<HTMLElement>;
 
 const Section: React.FC<SectionProps> = ({
   sectionName,

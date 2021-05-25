@@ -5,10 +5,10 @@ enum RoleTypes {
   Public,
 }
 
-interface RoleProps {
+interface RoleModel {
   role: RoleTypes;
 }
 
-export default RoleProps;
+export default RoleModel;
 
 export { RoleTypes };
