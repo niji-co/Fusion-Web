@@ -1,7 +1,6 @@
 // Libraries
-import React from "react";
+import React , { HTMLAttributes } from "react";
 import { Link } from "react-router-dom";
-import { HTMLAttributes } from "react";
 import ExhibitionModel from "./Exhibition/models/ExhibitionModel";
 // Styles
 import "./style.css";

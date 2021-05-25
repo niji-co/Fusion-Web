@@ -1,6 +1,5 @@
 // Libraries
-import React from "react";
-import { HTMLAttributes } from "react";
+import React , { HTMLAttributes } from "react";
 import RoleModel from "./models/RoleModel";
 // Styles
 import "./style.css";
