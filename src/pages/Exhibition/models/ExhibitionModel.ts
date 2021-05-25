@@ -1,4 +1,4 @@
-import { SectionModel }  from "../Section";
+import { SectionModel } from "../Section";
 import { RoleModel } from "../Role";
 
 enum VisibilityTypes {
