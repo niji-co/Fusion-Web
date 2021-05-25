@@ -1,5 +1,5 @@
 import Section from "./Section";
-import SectionProps from "./models/SectionProps";
+import SectionModel from "./models/SectionModel";
 
 export default Section;
-export { SectionProps };
+export { SectionModel };
