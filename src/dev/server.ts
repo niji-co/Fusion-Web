@@ -27,6 +27,10 @@ const server = {
     {
       title: "Project B",
       tags: ["Mobile", "Server"],
+      thumbnail: {
+        name: "image",
+        url: "https://i.ytimg.com/an_webp/mI6s6RBV1Jw/mqdefault_6s.webp?du=3000&sqp=CMygsoUG&rs=AOn4CLBH6bCxCqFAjqvy6qvezXq3qAVsSg",
+      },
       rows: [
         {
           id: "1",
