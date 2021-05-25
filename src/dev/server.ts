@@ -3,6 +3,10 @@ const server = {
     {
       title: "Project A",
       tags: ["Web", "Mobile"],
+      thumbnail: {
+        name: "image",
+        url: "https://i.ytimg.com/vi/cpb8pKFzd0s/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD6MIHKER3EoS8xZ99e2Wqa9niqTw",
+      },
       rows: [
         {
           id: "0",
