@@ -6,7 +6,7 @@ import { RootState } from "services/store";
 
 import ProjectPreviewLayout from "./ProjectPreviewLayout";
 
-import ProjectQueryModel from "./models/ProjectQueryModel";
+import ProjectQueryModel from "./models/ProjectQueryMode";
 
 import { fetchProjectWithTitle } from "./services/projectsReducer";
 import {
