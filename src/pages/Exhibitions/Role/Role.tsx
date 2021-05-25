@@ -1,7 +1,5 @@
-// Libraries
 import React, { HTMLAttributes } from "react";
 import RoleModel from "./models/RoleModel";
-// Styles
 import "./style.css";
 
 type RoleProps = RoleModel & HTMLAttributes<HTMLElement>;

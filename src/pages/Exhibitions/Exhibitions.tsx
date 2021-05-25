@@ -1,8 +1,6 @@
-// Libraries
 import React, { HTMLAttributes } from "react";
 import { Link } from "react-router-dom";
 import ExhibitionModel from "./models/ExhibitionModel";
-// Styles
 import "./style.css";
 
 type ExhibitionProps = ExhibitionModel & HTMLAttributes<HTMLElement>;
