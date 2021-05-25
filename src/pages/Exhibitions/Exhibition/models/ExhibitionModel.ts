@@ -23,4 +23,5 @@ interface ExhibitionModel {
 }
 
 export default ExhibitionModel;
+
 export { VisibilityTypes };
