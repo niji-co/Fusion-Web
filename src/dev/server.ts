@@ -3,6 +3,10 @@ const server = {
     {
       title: "Project A",
       tags: ["Web", "Mobile"],
+      thumbnail: {
+        name: "image",
+        url: "https://i.ytimg.com/vi/cpb8pKFzd0s/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD6MIHKER3EoS8xZ99e2Wqa9niqTw",
+      },
       rows: [
         {
           id: "0",
@@ -23,6 +27,10 @@ const server = {
     {
       title: "Project B",
       tags: ["Mobile", "Server"],
+      thumbnail: {
+        name: "image",
+        url: "https://i.ytimg.com/an_webp/mI6s6RBV1Jw/mqdefault_6s.webp?du=3000&sqp=CMygsoUG&rs=AOn4CLBH6bCxCqFAjqvy6qvezXq3qAVsSg",
+      },
       rows: [
         {
           id: "1",
