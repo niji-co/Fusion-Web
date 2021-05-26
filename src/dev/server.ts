@@ -12,7 +12,7 @@ const server = {
           id: "0",
           type: 0,
           content: "Lorem ipsun",
-          textStyle: 1,
+          style: 1,
         },
         {
           id: "1",
@@ -36,7 +36,7 @@ const server = {
           id: "1",
           type: 0,
           content: "This is another body",
-          textStyle: 1,
+          style: 1,
         },
       ],
     },
