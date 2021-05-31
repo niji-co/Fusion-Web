@@ -1,4 +1,6 @@
-import AssetModel from "models/AssetModel";
+import AssetModel from "models/Asset";
+
+import ProjectQueryModel from "./ProjectQueryModel";
 
 interface ProjectModel {
   title: string;
@@ -8,3 +10,4 @@ interface ProjectModel {
 }
 
 export default ProjectModel;
+export { ProjectQueryModel };
