@@ -1,4 +1,4 @@
-import AssetModel from "models/AssetModel";
+import AssetModel from "models/Asset";
 import ProjectRowModel from "./ProjectRowModel";
 
 interface ProjectRowVideoProps extends ProjectRowModel {
