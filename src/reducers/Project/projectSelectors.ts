@@ -1,9 +1,10 @@
 import { createSelector, EntityState, OutputSelector } from "@reduxjs/toolkit";
 
-import { RootState } from "services/store";
-import { projectsAdapter } from "./projectsReducer";
-import ProjectModel from "../models/ProjectModel";
-import { ProjectRowModel } from "../Row";
+import ProjectModel from "models/Project";
+import ProjectRowModel from "models/Project/Row";
+import { RootState } from "@/store";
+
+import { projectsAdapter } from "./projectsSlice";
 
 export const {
   selectById: selectProjectById,

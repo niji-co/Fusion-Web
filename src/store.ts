@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-import { projectsReducer } from "../pages/Project";
+import projectsReducer from "reducers/projectsReducer";
 import { projectRowsReducer } from "../pages/Project/Row";
 
 const store = configureStore({
