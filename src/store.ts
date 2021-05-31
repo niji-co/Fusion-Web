@@ -1,7 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-import projectsReducer from "reducers/projectsReducer";
-import { projectRowsReducer } from "../pages/Project/Row";
+import projectsReducer from "reducers/Project";
+import projectRowsReducer from "reducers/Project/Row";
 
 const store = configureStore({
   reducer: {

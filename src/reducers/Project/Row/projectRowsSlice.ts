@@ -1,8 +1,8 @@
 import { createEntityAdapter, createSlice } from "@reduxjs/toolkit";
 
-import ProjectRowModel from "../models/ProjectRowModel";
+import ProjectRowModel from "models/Project/Row";
 
-import { fetchProjectWithTitle } from "../../services/projectsReducer";
+import { fetchProjectWithTitle } from "../projectsSlice";
 
 const projectRowsAdapter = createEntityAdapter<ProjectRowModel>({
   selectId: row => row.id,
@@ -20,7 +20,5 @@ const projectRowSlice = createSlice({
   },
 });
 
-const { reducer } = projectRowSlice;
-
-export default reducer;
+export default projectRowSlice;
 export { projectRowsAdapter };

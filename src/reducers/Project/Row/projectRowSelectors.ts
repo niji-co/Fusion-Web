@@ -1,4 +1,4 @@
-import { RootState } from "services/store";
+import { RootState } from "@/store";
 
 import { projectRowsAdapter } from "./projectRowsReducer";
 
