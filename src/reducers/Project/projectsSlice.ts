@@ -6,11 +6,11 @@ import {
 
 import { normalize } from "normalizr";
 
-import ProjectModel from "../models/ProjectModel";
-import { projectEntity } from "../ProjectSchemas";
-import { ProjectRowModel } from "../Row";
+import ProjectModel from "models/Project";
+import ProjectRowModel from "models/Project/Row";
+import fakeProjectAPI from "api/fakeProjectAPI";
 
-import fakeProjectAPI from "./fakeProjectAPI";
+import { projectEntity } from "./ProjectSchemas";
 
 const projectsAdapter = createEntityAdapter<ProjectModel>({
   selectId: project => project.title,
@@ -46,7 +46,7 @@ const fetchProjectWithTitle = createAsyncThunk(
   }
 );
 
-const projectSlice = createSlice({
+const projectsSlice = createSlice({
   name: "projects",
   initialState: projectsAdapter.getInitialState(),
   reducers: {},
@@ -61,7 +61,5 @@ const projectSlice = createSlice({
   },
 });
 
-const { reducer } = projectSlice;
-
-export default reducer;
+export default projectsSlice;
 export { projectsAdapter, fetchAllProjects, fetchProjectWithTitle };
