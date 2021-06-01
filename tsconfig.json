@@ -49,6 +49,7 @@
       "@/*": ["src/*"],
       "actions/*": ["src/actions/*"],
       "api/*": ["src/api/*"],
+      "components/*": ["src/components/*"],
       "dev/*": ["src/dev/*"],
       "layouts/*": ["src/layouts/*"],
       "models/*": ["src/models/*"],
