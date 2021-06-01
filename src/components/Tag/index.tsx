@@ -1,5 +1,4 @@
 import React, { HTMLAttributes } from "react";
-import "./style.css";
 
 interface TagProps extends HTMLAttributes<HTMLElement> {
   value: string;
