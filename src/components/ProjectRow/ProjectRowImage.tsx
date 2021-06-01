@@ -1,5 +1,5 @@
 import React, { HTMLAttributes } from "react";
-import ProjectRowImageModel from "./models/ProjectRowImageModel";
+import { ProjectRowImageModel } from "models/ProjectRow";
 
 interface ProjectRowImageProps extends HTMLAttributes<HTMLElement> {
   model: ProjectRowImageModel;

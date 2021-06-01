@@ -7,7 +7,7 @@ import {
 import { normalize } from "normalizr";
 
 import ProjectModel from "models/Project";
-import ProjectRowModel from "models/Project/Row";
+import ProjectRowModel from "models/ProjectRow";
 import fakeProjectAPI from "api/fakeProjectAPI";
 
 import { projectEntity } from "./ProjectSchemas";

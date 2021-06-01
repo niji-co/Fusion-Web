@@ -2,21 +2,18 @@ import React, { ReactElement } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 
-import { RootState } from "services/store";
+import { RootState } from "@/store";
 
-import ProjectPreviewLayout from "./ProjectPreviewLayout";
+import ProjectPreviewLayout from "layouts/ProjectPreviewLayout";
 
-import ProjectQueryModel from "./models/ProjectQueryModel";
+import { ProjectQueryModel } from "models/Project";
+import ProjectRowModel from "models/ProjectRow";
 
-import { fetchProjectWithTitle } from "./services/projectsReducer";
 import {
+  fetchProjectWithTitle,
   selectProjectById,
   selectRowsByProjectId,
-} from "./services/projectSelectors";
-
-import { ProjectRowModel } from "./Row";
-
-import "./style.css";
+} from "reducers/Project";
 
 const Project: React.FC = () => {
   const dispatch = useDispatch();

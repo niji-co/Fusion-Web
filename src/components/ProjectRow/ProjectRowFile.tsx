@@ -1,5 +1,5 @@
 import React, { HTMLAttributes } from "react";
-import ProjectRowFileModel from "./models/ProjectRowFileModel";
+import { ProjectRowFileModel } from "models/ProjectRow";
 
 interface ProjectRowFileProps extends HTMLAttributes<HTMLElement> {
   model: ProjectRowFileModel;

@@ -1,4 +1,4 @@
-import { projectRowEntity, projectEntity } from "./ProjectSchemas"
+import { projectRowEntity, projectEntity } from "./ProjectSchemas";
 
 import projectsSlice, {
   projectsAdapter,
@@ -12,6 +12,7 @@ import {
   selectProjectEntities,
   selectAllProject,
   selectTotalProjects,
+  selectRowsByProjectId,
 } from "./projectSelectors";
 
 const { reducer } = projectsSlice;
@@ -28,4 +29,5 @@ export {
   selectProjectEntities,
   selectAllProject,
   selectTotalProjects,
+  selectRowsByProjectId,
 };

@@ -1,5 +1,5 @@
 import React, { ReactElement, HTMLAttributes } from "react";
-import ProjectRowTextModel, { TextStyle } from "./models/ProjectRowTextModel";
+import { ProjectRowTextModel, TextStyle } from "models/ProjectRow";
 
 interface ProjectRowTextProps extends HTMLAttributes<HTMLElement> {
   model: ProjectRowTextModel;

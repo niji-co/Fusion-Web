@@ -1,7 +1,8 @@
 import React, { Fragment, HTMLAttributes } from "react";
+import AssetModel from "models/Asset";
+import ProjectRowModel from "models/ProjectRow";
 import Tag from "components/Tag";
-import AssetModel from "models/AssetModel";
-import ProjectRow, { ProjectRowModel } from "./Row";
+import ProjectRow from "components/ProjectRow";
 
 interface ProjectProps extends HTMLAttributes<HTMLElement> {
   title: string;

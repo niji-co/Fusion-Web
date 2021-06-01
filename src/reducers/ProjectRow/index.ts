@@ -1,6 +1,4 @@
-import projectRowsSlice, {
-  projectRowsAdapter,
-} from "./projectRowsSlice";
+import projectRowsSlice, { projectRowsAdapter } from "./projectRowsSlice";
 
 import {
   selectProjectRowById,
@@ -10,9 +8,9 @@ import {
   selectTotalProjectRows,
 } from "./projectRowSelectors";
 
-const { reducer } = projectRowsSlice
+const { reducer } = projectRowsSlice;
 
-export default reducer; 
+export default reducer;
 export {
   projectRowsAdapter,
   selectProjectRowById,
@@ -20,4 +18,4 @@ export {
   selectProjectRowEntities,
   selectAllProjectRows,
   selectTotalProjectRows,
-}
+};
