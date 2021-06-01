@@ -50,6 +50,7 @@
       "actions/*": ["src/actions/*"],
       "api/*": ["src/api/*"],
       "dev/*": ["src/dev/*"],
+      "layouts/*": ["src/layouts/*"],
       "models/*": ["src/models/*"],
       "pages/*": ["src/pages/*"],
       "reducers/*": ["src/reducers/*"]

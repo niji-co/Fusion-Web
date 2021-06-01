@@ -15,6 +15,7 @@ module.exports = {
     "^api/(.*)":  "<rootDir>/src/api/$1",
     "^components/(.*)":  "<rootDir>/src/components/$1",
     "^dev/(.*)":  "<rootDir>/src/dev/$1",
+    "^layouts/(.*)":  "<rootDir>/src/layouts/$1",
     "^models/(.*)":  "<rootDir>/src/models/$1",
     "^pages/(.*)":  "<rootDir>/src/pages/$1",
     "^reducers/(.*)":  "<rootDir>/src/reducers/$1",
