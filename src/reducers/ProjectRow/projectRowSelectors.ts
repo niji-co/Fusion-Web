@@ -1,6 +1,6 @@
 import { RootState } from "@/store";
 
-import { projectRowsAdapter } from "./projectRowsReducer";
+import { projectRowsAdapter } from "./projectRowsSlice";
 
 export const {
   selectById: selectProjectRowById,
