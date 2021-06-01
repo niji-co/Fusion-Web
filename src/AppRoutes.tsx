@@ -9,7 +9,7 @@ import ForgotPassword from "pages/ForgotPassword";
 import Profile from "pages/Profile";
 
 import Exhibition from "pages/Exhibition";
-import HostExhibition from "pages/HostExhibition";
+import HostExhibition from "pages/Exhibition/Host";
 
 import Project from "pages/Project";
 
