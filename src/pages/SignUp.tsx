@@ -1,8 +1,5 @@
-// Libraries
 import React from "react";
 import { Link } from "react-router-dom";
-// Styles
-import "./style.css";
 
 const SignUp: React.FC = () => (
   <div className="signup">
