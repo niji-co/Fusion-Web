@@ -1,6 +1,5 @@
 import React, { HTMLAttributes } from "react";
-import SectionModel from "./models/SectionModel";
-import "./style.css";
+import SectionModel from "models/ExhibitionSection";
 
 type SectionProps = SectionModel & HTMLAttributes<HTMLElement>;
 
