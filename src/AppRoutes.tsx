@@ -1,17 +1,17 @@
 import React, { ReactElement } from "react";
 import { HashRouter, Switch, Route } from "react-router-dom";
 
-import Home from "./pages/Home";
+import Home from "pages/Home";
 
-import SignIn from "./pages/SignIn";
-import SignUp from "./pages/SignUp";
-import ForgotPassword from "./pages/ForgotPassword";
-import Profile from "./pages/Profile";
+import SignIn from "pages/SignIn";
+import SignUp from "pages/SignUp";
+import ForgotPassword from "pages/ForgotPassword";
+import Profile from "pages/Profile";
 
-import Exhibition from "./pages/Exhibition";
-import HostExhibition from "./pages/Exhibition/Host";
+import Exhibition from "pages/Exhibition";
+import HostExhibition from "pages/Exhibition/Host";
 
-import Project from "./pages/Project";
+import Project from "pages/Project";
 
 const AppRoutes = (): ReactElement => (
   <HashRouter>
