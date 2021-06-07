@@ -1,56 +1,18 @@
-import React, { ReactElement, Fragment, HTMLAttributes } from "react";
+import React, { Fragment, HTMLAttributes } from "react";
 import { Link } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
 
-import ProjectPreview from "components/ProjectPreview";
+import { ProjectQueryModel } from "models/Project";
+import ProjectLoader from "components/ProjectLoader";
 
-import AssetModel from "models/Asset";
-import ProjectRowModel from "models/ProjectRow";
+type ProjectLayoutProps = ProjectQueryModel & HTMLAttributes<HTMLElement>;
 
-import { RootState } from "@/store";
-
-import {
-  fetchProjectWithTitle,
-  selectProjectById,
-  selectRowsByProjectId,
-} from "reducers/Project";
-
-interface ProjectProps extends HTMLAttributes<HTMLElement> {
-  title: string;
-}
-
-const ProjectLayout: React.FC<ProjectProps> = ({ title }: ProjectProps) => {
-  const dispatch = useDispatch();
-  const project = useSelector((state: RootState) =>
-    selectProjectById(state, title)
-  );
-
-  const rows = useSelector(selectRowsByProjectId(title)).map(
-    (model): ProjectRowModel => model
-  );
-
-  let body: ReactElement;
-
-  if (project === undefined) {
-    dispatch(fetchProjectWithTitle(title));
-    body = <h1>Loading</h1>;
-  } else {
-    body = (
-      <ProjectPreview
-        title={project.title}
-        tags={project.tags}
-        thumbnail={project.thumbnail}
-        rows={rows}
-      />
-    );
-  }
-
-  return (
-    <>
-      <Link to="/">Home</Link>
-      {body}
-    </>
-  );
-}
+const ProjectLayout: React.FC<ProjectLayoutProps> = ({
+  title,
+}: ProjectLayoutProps) => (
+  <>
+    <Link to="/">Home</Link>
+    <ProjectLoader title={title} />
+  </>
+);
 
 export default ProjectLayout;
