@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 
 import ProjectPreview from "components/ProjectPreview";
-
 import ProjectModel, { ProjectQueryModel } from "models/Project";
-
 import api from "api/fakeProjectAPI";
 
 const ProjectLoader: React.FC<ProjectQueryModel> = ({
@@ -19,14 +17,7 @@ const ProjectLoader: React.FC<ProjectQueryModel> = ({
     return <h1>Loading</h1>;
   }
 
-  return (
-    <ProjectPreview
-      title={project.title}
-      tags={project.tags}
-      thumbnail={project.thumbnail}
-      rows={project.rows}
-    />
-  );
+  return <ProjectPreview {...project} />;
 };
 
 export default ProjectLoader;
