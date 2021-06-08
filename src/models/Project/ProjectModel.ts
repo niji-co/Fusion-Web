@@ -1,10 +1,11 @@
 import AssetModel from "models/Asset";
+import ProjectRowModel from "models/ProjectRow";
 
 interface ProjectModel {
   title: string;
   tags: string[];
   thumbnail: AssetModel;
-  rows: string[];
+  rows: ProjectRowModel[];
 }
 
 export default ProjectModel;
