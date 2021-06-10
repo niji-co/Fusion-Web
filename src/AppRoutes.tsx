@@ -21,7 +21,7 @@ const AppRoutes = (): ReactElement => (
       <Route path="/signin" component={SignIn} />
       <Route path="/signup" component={SignUp} />
       <Route path="/forgot" component={ForgotPassword} />
-      <Route path="/profile" component={Profile} />
+      <Route path="/profile/:username" component={Profile} />
 
       <Route exact path="/exhibition" component={Exhibition} />
       <Route path="/exhibition/host" component={HostExhibition} />
