@@ -1,8 +1,8 @@
 import React, { Fragment, HTMLAttributes } from "react";
 import { Link } from "react-router-dom";
 
-import { ProjectQueryModel } from "models/Project";
 import ProjectLoader from "components/ProjectLoader";
+import { ProjectQueryModel } from "models/Project";
 
 type ProjectLayoutProps = ProjectQueryModel & HTMLAttributes<HTMLElement>;
 

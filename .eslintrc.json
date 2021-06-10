@@ -36,6 +36,17 @@
         "tsx": "never"
       }
     ],
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "internal", "parent", "sibling", "index" ],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ],
     "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
     "comma-spacing": "error",
     "arrow-body-style": "off",

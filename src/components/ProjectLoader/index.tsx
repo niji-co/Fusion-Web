@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
+import api from "api/fakeProjectAPI";
 import ProjectView from "components/ProjectView";
 import ProjectModel, { ProjectQueryModel } from "models/Project";
-import api from "api/fakeProjectAPI";
 
 const ProjectLoader: React.FC<ProjectQueryModel> = ({
   title,

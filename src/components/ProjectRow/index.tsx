@@ -8,10 +8,10 @@ import ProjectRowModel, {
   ProjectRowFileModel,
 } from "models/ProjectRow";
 
-import ProjectRowText from "./ProjectRowText";
-import ProjectRowImage from "./ProjectRowImage";
-import ProjectRowVideo from "./ProjectRowVideo";
 import ProjectRowFile from "./ProjectRowFile";
+import ProjectRowImage from "./ProjectRowImage";
+import ProjectRowText from "./ProjectRowText";
+import ProjectRowVideo from "./ProjectRowVideo";
 
 interface ProjectRowProps extends HTMLAttributes<HTMLElement> {
   model: ProjectRowModel;
