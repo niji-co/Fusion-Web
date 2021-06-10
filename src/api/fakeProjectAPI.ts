@@ -1,15 +1,15 @@
 import server from "dev/server";
 
 const projectAPI = {
-  fetchAll: async (): Promise<{ projects: any[] }> => {
+  fetchAll: async (): Promise<any[] | undefined> => {
     // TODO(IRWEN): replace with actual API calls
     await new Promise(resolve => setTimeout(resolve, 10000));
-    return server;
+    return server.projects;
   },
-  fetchWithTitle: async (t: string): Promise<any | undefined> => {
+  fetchWithTitle: async (_title: string): Promise<any | undefined> => {
     // TODO(IRWEN): replace with actual API calls
     await new Promise(resolve => setTimeout(resolve, 1000));
-    return server.projects.find(({ title }) => title === t);
+    return server.projects.find(({ title }) => title === _title);
   },
 };
 
