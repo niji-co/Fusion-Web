@@ -4,6 +4,7 @@ const server = {
       uuid: "0",
       username: "breadandjams",
       email: "hidden_email@gmail.com",
+      password: "",
       profilePicture: {
         name: "profile picture",
         url: "https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png",
