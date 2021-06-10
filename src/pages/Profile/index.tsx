@@ -1,15 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
-const Profile: React.FC = () => (
-  <div className="profile">
-    <h1>Profile</h1>
-    <Link to="/">Home</Link>
-    <br />
-    <Link to="/">Sign Out</Link>
-    <br />
-    <Link to="/exhibitions">Exhibitions</Link>
-  </div>
-);
+import ProfileLayout from "layouts/Profile";
+import { ProfileQueryModel } from "models/User";
+
+const Profile: React.FC = () => {
+  const { username } = useParams<ProfileQueryModel>();
+  return <ProfileLayout username={username} />;
+};
 
 export default Profile;
