@@ -1,12 +1,9 @@
-import AssetModel from "models/Asset";
+import ProfileModel from "./Profile";
 
-interface UserModel {
-  uuid: string;
-  profilePicture: AssetModel;
-  displayName: string;
-  bio: string;
-  contactEmail: string;
-  contactNumber: string;
+interface UserModel extends ProfileModel {
+  email: string;
+  password: string;
 }
 
 export default UserModel;
+export { ProfileModel };
