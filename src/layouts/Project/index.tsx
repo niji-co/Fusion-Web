@@ -2,7 +2,7 @@ import React, { ReactElement, Fragment, HTMLAttributes } from "react";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
-import ProjectPreview from "components/ProjectPreview";
+import ProjectView from "components/ProjectView";
 
 import AssetModel from "models/Asset";
 import ProjectRowModel from "models/ProjectRow";
@@ -36,7 +36,7 @@ const ProjectLayout: React.FC<ProjectProps> = ({ title }: ProjectProps) => {
     body = <h1>Loading</h1>;
   } else {
     body = (
-      <ProjectPreview
+      <ProjectView
         title={project.title}
         tags={project.tags}
         thumbnail={project.thumbnail}
