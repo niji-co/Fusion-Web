@@ -1,4 +1,5 @@
 import React, { HTMLAttributes } from "react";
+
 import { ProfileModel } from "models/User";
 
 type ProfileProps = ProfileModel & HTMLAttributes<HTMLElement>;
