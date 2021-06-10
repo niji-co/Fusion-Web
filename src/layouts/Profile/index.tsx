@@ -1,10 +1,12 @@
 import React, { Fragment, HTMLAttributes } from "react";
 import { Link } from "react-router-dom";
 
-import ProfileLoader from "components/ProfileLoader";
 import { ProfileQueryModel } from "models/User";
+import ProfileLoader from "components/ProfileLoader";
 
-const ProjectLayout: React.FC<ProfileQueryModel> = ({
+type ProfileLayoutProps = ProfileQueryModel & HTMLAttributes<HTMLElement>;
+
+const ProfileLayout: React.FC<ProfileLayoutProps> = ({
   username,
 }: ProfileQueryModel) => (
   <>
@@ -13,4 +15,4 @@ const ProjectLayout: React.FC<ProfileQueryModel> = ({
   </>
 );
 
-export default ProjectLayout;
+export default ProfileLayout;
