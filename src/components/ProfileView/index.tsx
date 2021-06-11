@@ -7,6 +7,7 @@ type ProfileProps = ProfileModel & HTMLAttributes<HTMLElement>;
 
 const ProfileView: React.FC<ProfileProps> = ({
   profilePicture,
+  username,
   displayName,
   bio,
   contactEmail,

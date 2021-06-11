@@ -3,7 +3,6 @@ import ProfileQueryModel from "./ProfileQueryModel";
 
 interface UserModel extends ProfileModel {
   uuid: string;
-  username: string;
   email: string;
   password: string;
 }
