@@ -2,18 +2,13 @@ import React, { Fragment, HTMLAttributes } from "react";
 
 import ProjectRow from "components/ProjectRow";
 import Tag from "components/Tag";
-import AssetModel from "models/Asset";
-import ProjectRowModel from "models/ProjectRow";
+import ProjectModel from "models/Project";
 
-interface ProjectProps extends HTMLAttributes<HTMLElement> {
-  title: string;
-  tags: string[];
-  thumbnail: AssetModel;
-  rows: ProjectRowModel[];
-}
+type ProjectProps = ProjectModel & HTMLAttributes<HTMLElement>;
 
 const ProjectView: React.FC<ProjectProps> = ({
   title,
+  author,
   tags,
   thumbnail,
   rows,
