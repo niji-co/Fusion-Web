@@ -1,8 +1,8 @@
 import React, { Fragment, HTMLAttributes } from "react";
 import { Link } from "react-router-dom";
 
-import { ProfileQueryModel } from "models/User";
 import ProfileLoader from "components/ProfileLoader";
+import { ProfileQueryModel } from "models/User";
 
 type ProfileLayoutProps = ProfileQueryModel & HTMLAttributes<HTMLElement>;
 

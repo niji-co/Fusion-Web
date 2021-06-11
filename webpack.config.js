@@ -72,7 +72,6 @@ module.exports = {
   plugins: [
     new ESLintPlugin({
       extensions: ["js", "jsx", "ts", "tsx"],
-      fix: true,
     }),
   ],
 
@@ -80,6 +79,6 @@ module.exports = {
     compress: true,
     contentBase: path.join(__dirname, "public"),
     port: 8000,
-		hot: true,
+	hot: true,
   },
 };

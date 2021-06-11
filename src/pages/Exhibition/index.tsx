@@ -1,5 +1,6 @@
 import React, { HTMLAttributes } from "react";
 import { Link } from "react-router-dom";
+
 import ExhibitionModel from "models/Exhibition";
 
 type ExhibitionProps = ExhibitionModel & HTMLAttributes<HTMLElement>;
