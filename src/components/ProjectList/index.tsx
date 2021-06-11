@@ -1,14 +1,14 @@
 import React, { HTMLAttributes } from "react";
 
+import ProjectModel from "models/Project";
+
 import ProjectListItem from "./ProjectListItem";
 
 interface ProjectListProps extends HTMLAttributes<HTMLElement> {
-  username: string;
-  projects: string[];
+  projects: ProjectModel[];
 }
 
 const ProjectList: React.FC<ProjectListProps> = ({
-  username,
   projects,
   className,
   ...rest
@@ -16,7 +16,7 @@ const ProjectList: React.FC<ProjectListProps> = ({
   <div className={`user-projects-list ${className || ""}`} {...rest}>
     <ul>
       {projects.map(project => (
-        <ProjectListItem key={project} username={username} title={project} />
+        <ProjectListItem key={project.title} {...project} />
       ))}
     </ul>
   </div>

@@ -1,18 +1,17 @@
 import React, { HTMLAttributes } from "react";
 import { Link } from "react-router-dom";
 
-interface ProjectListItemProps extends HTMLAttributes<HTMLElement> {
-  username: string;
-  title: string;
-}
+import ProjectModel from "models/Project";
+
+type ProjectListItemProps = ProjectModel & HTMLAttributes<HTMLElement>;
 
 const ProjectListItem: React.FC<ProjectListItemProps> = ({
-  username,
+  author,
   title,
   ...rest
 }: ProjectListItemProps) => (
   <li {...rest}>
-    <Link to={`${username}/${title}`}>{title}</Link>
+    <Link to={`${author}/${title}`}>{title}</Link>
   </li>
 );
 
