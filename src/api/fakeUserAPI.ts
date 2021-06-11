@@ -19,6 +19,11 @@ const userAPI = {
     await new Promise(resolve => setTimeout(resolve, 1000));
     return server.users.find(({ username }) => username === _username);
   },
+  fetchUUID: async (_username: string): Promise<string | undefined> => {
+    // TODO(IRWEN): replace with actual API calls
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    return server.users.find(({ username }) => username === _username)?.uuid;
+  },
   fetchUsername: async (_uuid: string): Promise<string | undefined> => {
     // TODO(IRWEN): replace with actual API calls
     await new Promise(resolve => setTimeout(resolve, 1000));
