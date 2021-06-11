@@ -1,4 +1,5 @@
 import React, { Fragment, HTMLAttributes } from "react";
+import { Link } from "react-router-dom";
 
 import ProjectRow from "components/ProjectRow";
 import Tag from "components/Tag";
@@ -16,7 +17,7 @@ const ProjectView: React.FC<ProjectProps> = ({
   <div className="project">
     <img alt={thumbnail.name} src={thumbnail.url} />
     <h1>{title}</h1>
-    <a href={`#/profile/${author}`}>{author}</a>
+    <Link to={`/profile/${author}`}>{author}</Link>
     <br />
     {tags.map(tag => (
       <Fragment key={tag}>
