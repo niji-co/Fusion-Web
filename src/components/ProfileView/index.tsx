@@ -1,4 +1,5 @@
-import React, { HTMLAttributes } from "react";
+import React, { Fragment, HTMLAttributes } from "react";
+import { Link } from "react-router-dom";
 
 import { ProfileModel } from "models/User";
 
@@ -10,6 +11,7 @@ const ProfileView: React.FC<ProfileProps> = ({
   bio,
   contactEmail,
   contactNumber,
+  projects,
   className,
   ...rest
 }: ProfileProps) => (
@@ -19,6 +21,12 @@ const ProfileView: React.FC<ProfileProps> = ({
     <p>{bio}</p>
     <p>{contactEmail}</p>
     <p>{contactNumber}</p>
+    {projects.map(project => (
+      <Fragment key={project}>
+        <Link to={`/projects/${project}`}>{project}</Link>
+        <br />
+      </Fragment>
+    ))}
   </div>
 );
 
