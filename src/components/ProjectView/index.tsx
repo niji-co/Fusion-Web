@@ -16,7 +16,7 @@ const ProjectView: React.FC<ProjectProps> = ({
   <div className="project">
     <img alt={thumbnail.name} src={thumbnail.url} />
     <h1>{title}</h1>
-    <a href={`#/profile/${author}`}>{author}</a>
+    <a href={`#/profile/${author}`}>{author}</a><br />
     {tags.map(tag => (
       <Fragment key={tag}>
         <Tag value={tag} />
