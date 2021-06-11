@@ -13,12 +13,12 @@ const ProjectLoader: React.FC<ProjectQueryModel> = ({
   const [rows, setRows] = useState<ProjectRowModel[]>();
 
   if (project === undefined) {
-    const fetchProject = api.fetchWithTitle(author, title);
+    const fetchProject = api.fetchProject(author, title);
     fetchProject
       .then(setProject)
       .catch(err => console.log("Error fetching project", err));
 
-    const fetchRows = api.fetchRowsWithTitle(author, title);
+    const fetchRows = api.fetchProjectRows(author, title);
     fetchRows
       .then(setRows)
       .catch(err => console.log("Error fetching project rows", err));
