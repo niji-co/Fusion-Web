@@ -1,19 +1,15 @@
 import React, { Fragment, HTMLAttributes } from "react";
+import { Link } from "react-router-dom";
 
 import ProjectRow from "components/ProjectRow";
 import Tag from "components/Tag";
-import AssetModel from "models/Asset";
-import ProjectRowModel from "models/ProjectRow";
+import ProjectModel from "models/Project";
 
-interface ProjectProps extends HTMLAttributes<HTMLElement> {
-  title: string;
-  tags: string[];
-  thumbnail: AssetModel;
-  rows: ProjectRowModel[];
-}
+type ProjectProps = ProjectModel & HTMLAttributes<HTMLElement>;
 
-const ProjectPreview: React.FC<ProjectProps> = ({
+const ProjectView: React.FC<ProjectProps> = ({
   title,
+  author,
   tags,
   thumbnail,
   rows,
@@ -21,6 +17,8 @@ const ProjectPreview: React.FC<ProjectProps> = ({
   <div className="project">
     <img alt={thumbnail.name} src={thumbnail.url} />
     <h1>{title}</h1>
+    <Link to={`/profile/${author}`}>{author}</Link>
+    <br />
     {tags.map(tag => (
       <Fragment key={tag}>
         <Tag value={tag} />
@@ -32,4 +30,4 @@ const ProjectPreview: React.FC<ProjectProps> = ({
   </div>
 );
 
-export default ProjectPreview;
+export default ProjectView;

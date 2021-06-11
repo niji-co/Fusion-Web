@@ -18,6 +18,7 @@ const server = {
   projects: [
     {
       title: "Project A",
+      author: "0",
       tags: ["Web", "Mobile"],
       thumbnail: {
         name: "image",
@@ -42,6 +43,7 @@ const server = {
     },
     {
       title: "Project B",
+      author: "0",
       tags: ["Mobile", "Server"],
       thumbnail: {
         name: "image",
