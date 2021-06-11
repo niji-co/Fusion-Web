@@ -12,7 +12,7 @@ interface ProjectProps extends HTMLAttributes<HTMLElement> {
   rows: ProjectRowModel[];
 }
 
-const ProjectPreview: React.FC<ProjectProps> = ({
+const ProjectView: React.FC<ProjectProps> = ({
   title,
   tags,
   thumbnail,
@@ -32,4 +32,4 @@ const ProjectPreview: React.FC<ProjectProps> = ({
   </div>
 );
 
-export default ProjectPreview;
+export default ProjectView;
