@@ -5,12 +5,13 @@ import ProjectView from "components/ProjectView";
 import ProjectModel, { ProjectQueryModel } from "models/Project";
 
 const ProjectLoader: React.FC<ProjectQueryModel> = ({
+  author,
   title,
 }: ProjectQueryModel) => {
   const [project, setProject] = useState<ProjectModel>();
 
   if (project === undefined) {
-    const fetchProject = api.fetchWithTitle(title);
+    const fetchProject = api.fetchWithTitle(author, title);
     fetchProject
       .then(setProject)
       .catch(err => console.log("Error fetching project", err));

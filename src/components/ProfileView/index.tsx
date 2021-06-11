@@ -24,7 +24,7 @@ const ProfileView: React.FC<ProfileProps> = ({
     <p>{contactNumber}</p>
     {projects.map(project => (
       <Fragment key={project}>
-        <Link to={`/projects/${project}`}>{project}</Link>
+        <Link to={`${username}/${project}`}>{project}</Link>
         <br />
       </Fragment>
     ))}
