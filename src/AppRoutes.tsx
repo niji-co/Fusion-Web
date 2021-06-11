@@ -18,12 +18,12 @@ const AppRoutes = (): ReactElement => (
       <Route path="/signin" component={SignIn} />
       <Route path="/signup" component={SignUp} />
       <Route path="/forgot" component={ForgotPassword} />
-      <Route path="/profile/:username" component={Profile} />
 
       <Route exact path="/exhibition" component={Exhibition} />
       <Route path="/exhibition/host" component={HostExhibition} />
 
-      <Route exact path="/project/:title" component={Project} />
+      <Route exact path="/:username" component={Profile} />
+      <Route exact path="/:author/:title" component={Project} />
     </Switch>
   </HashRouter>
 );

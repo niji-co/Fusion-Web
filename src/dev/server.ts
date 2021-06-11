@@ -13,6 +13,7 @@ const server = {
       bio: "Hey how ya doing",
       contactEmail: "demo_email@gmail.com",
       contactNumber: "+65 98765432",
+      projects: ["Project A", "Project B"],
     },
   ],
   projects: [

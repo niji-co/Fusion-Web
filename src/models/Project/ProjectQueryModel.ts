@@ -1,4 +1,5 @@
 interface ProjectQueryModel {
+  author: string;
   title: string;
 }
 
