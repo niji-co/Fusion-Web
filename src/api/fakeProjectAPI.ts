@@ -5,7 +5,20 @@ import ProjectRowModel from "models/ProjectRow";
 import userAPI from "./fakeUserAPI";
 
 const projectAPI = {
-  fetchWithTitle: async (
+  fetchProjects: async (
+    _author: string
+  ): Promise<ProjectModel[] | undefined> => {
+    const authorUUID = await userAPI.fetchUUID(_author);
+    if (authorUUID === undefined) return undefined;
+
+    // TODO(IRWEN): replace with actual API calls
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    return server.projects
+      .filter(({ author }) => author === authorUUID)
+      .map(project => ({ ...project, author: _author }));
+  },
+
+  fetchProject: async (
     _author: string,
     _title: string
   ): Promise<ProjectModel | undefined> => {
@@ -24,7 +37,8 @@ const projectAPI = {
       author: _author,
     };
   },
-  fetchRowsWithTitle: async (
+
+  fetchProjectRows: async (
     _author: string,
     _title: string
   ): Promise<ProjectRowModel[] | undefined> => {
