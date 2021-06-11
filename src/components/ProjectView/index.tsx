@@ -4,8 +4,11 @@ import { Link } from "react-router-dom";
 import ProjectRow from "components/ProjectRow";
 import Tag from "components/Tag";
 import ProjectModel from "models/Project";
+import ProjectRowModel from "models/ProjectRow";
 
-type ProjectProps = ProjectModel & HTMLAttributes<HTMLElement>;
+type ProjectProps = ProjectModel & {
+  rows: ProjectRowModel[];
+} & HTMLAttributes<HTMLElement>;
 
 const ProjectView: React.FC<ProjectProps> = ({
   title,
@@ -13,8 +16,9 @@ const ProjectView: React.FC<ProjectProps> = ({
   tags,
   thumbnail,
   rows,
+  ...rest
 }: ProjectProps) => (
-  <div className="project">
+  <div {...rest}>
     <img alt={thumbnail.name} src={thumbnail.url} />
     <h1>{title}</h1>
     <Link to={`/${author}`}>{author}</Link>
