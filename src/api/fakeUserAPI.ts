@@ -1,5 +1,5 @@
 import server from "dev/server";
-import UserModel, { ProfileModel } from "models/User";
+import { ProfileModel } from "models/User";
 
 const userAPI = {
   fetchWithUUID: async (_uuid: string): Promise<ProfileModel | undefined> => {
