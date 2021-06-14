@@ -5,7 +5,7 @@ import ProjectView from "components/ProjectView";
 import ProjectModel, { ProjectQueryModel } from "models/Project";
 import ProjectRowModel from "models/ProjectRow";
 
-const ProjectLoader: React.FC<ProjectQueryModel> = ({
+const ProjectViewContainer: React.FC<ProjectQueryModel> = ({
   author,
   title,
 }: ProjectQueryModel) => {
@@ -29,4 +29,4 @@ const ProjectLoader: React.FC<ProjectQueryModel> = ({
   return <ProjectView {...project} rows={rows || []} />;
 };
 
-export default ProjectLoader;
+export default ProjectViewContainer;
