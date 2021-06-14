@@ -9,7 +9,7 @@ import { ProfileModel } from "models/User";
 
 type ProjectProps = ProjectModel & {
   authorProfile: ProfileModel | undefined;
-  rows: ProjectRowModel[];
+  rows: ProjectRowModel[] | undefined;
 } & HTMLAttributes<HTMLElement>;
 
 const ProjectView: React.FC<ProjectProps> = ({
@@ -34,7 +34,7 @@ const ProjectView: React.FC<ProjectProps> = ({
           <Tag value={tag} />
         </Fragment>
       ))}
-      {rows.map(row => (
+      {rows?.map(row => (
         <ProjectRow key={row.id} model={row} />
       ))}
     </div>

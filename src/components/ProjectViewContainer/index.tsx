@@ -8,22 +8,22 @@ import ProjectRowModel from "models/ProjectRow";
 import { ProfileModel } from "models/User";
 
 const ProjectViewContainer: React.FC<ProjectQueryModel> = ({
-  author,
-  title,
+  authorUsername,
+  projectTitle,
 }: ProjectQueryModel) => {
   const [profile, setProfile] = useState<ProfileModel>();
   const [project, setProject] = useState<ProjectModel>();
   const [rows, setRows] = useState<ProjectRowModel[]>();
 
   if (profile === undefined) {
-    const fetchProfile = userAPI.fetchWithUsername(author);
+    const fetchProfile = userAPI.fetchWithUsername(authorUsername);
     fetchProfile
       .then(setProfile)
       .catch(err => console.log("Error fetching profile", err));
   }
 
   if (project === undefined) {
-    const fetchProject = projectAPI.fetchProject(author, title);
+    const fetchProject = projectAPI.fetchProject(authorUsername, projectTitle);
     fetchProject
       .then(setProject)
       .catch(err => console.log("Error fetching project", err));
@@ -32,13 +32,13 @@ const ProjectViewContainer: React.FC<ProjectQueryModel> = ({
   }
 
   if (rows === undefined) {
-    const fetchRows = projectAPI.fetchProjectRows(author, title);
+    const fetchRows = projectAPI.fetchProjectRows(authorUsername, projectTitle);
     fetchRows
       .then(setRows)
       .catch(err => console.log("Error fetching project rows", err));
   }
 
-  return <ProjectView {...project} authorProfile={profile} rows={rows || []} />;
+  return <ProjectView {...project} authorProfile={profile} rows={rows} />;
 };
 
 export default ProjectViewContainer;
