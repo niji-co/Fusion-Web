@@ -7,12 +7,15 @@ import { ProjectQueryModel } from "models/Project";
 type ProjectLayoutProps = ProjectQueryModel & HTMLAttributes<HTMLElement>;
 
 const ProjectLayout: React.FC<ProjectLayoutProps> = ({
-  author,
-  title,
+  authorUsername,
+  projectTitle,
 }: ProjectLayoutProps) => (
   <>
     <Link to="/">Home</Link>
-    <ProjectViewContainer author={author} title={title} />
+    <ProjectViewContainer
+      authorUsername={authorUsername}
+      projectTitle={projectTitle}
+    />
   </>
 );
 
