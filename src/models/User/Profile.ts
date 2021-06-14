@@ -6,6 +6,7 @@ interface ProfileModel {
   bio: string;
   contactEmail: string;
   contactNumber: string;
+  tags: string[];
 }
 
 export default ProfileModel;

@@ -13,14 +13,14 @@ const server = {
       bio: "Hey how ya doing",
       contactEmail: "demo_email@gmail.com",
       contactNumber: "+65 98765432",
-      projects: ["Project A", "Project B"],
+      tags: ["Web", "Mobile", "Server"],
     },
   ],
   projects: [
     {
       title: "Project A",
       author: "0",
-      tags: ["Web", "Mobile"],
+      tagFlags: 0b011,
       thumbnail: {
         name: "image",
         url: "https://i.ytimg.com/vi/cpb8pKFzd0s/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD6MIHKER3EoS8xZ99e2Wqa9niqTw",
@@ -45,7 +45,7 @@ const server = {
     {
       title: "Project B",
       author: "0",
-      tags: ["Mobile", "Server"],
+      tagFlags: 0b011,
       thumbnail: {
         name: "image",
         url: "https://i.ytimg.com/an_webp/mI6s6RBV1Jw/mqdefault_6s.webp?du=3000&sqp=CMygsoUG&rs=AOn4CLBH6bCxCqFAjqvy6qvezXq3qAVsSg",
