@@ -6,49 +6,49 @@ import userAPI from "./fakeUserAPI";
 
 const projectAPI = {
   fetchProjects: async (
-    _author: string
+    authorUsername: string
   ): Promise<ProjectModel[] | undefined> => {
-    const authorUUID = await userAPI.fetchUUID(_author);
+    const authorUUID = await userAPI.fetchUUID(authorUsername);
     if (authorUUID === undefined) return undefined;
 
     // TODO(IRWEN): replace with actual API calls
     await new Promise(resolve => setTimeout(resolve, 1000));
     return server.projects
       .filter(({ author }) => author === authorUUID)
-      .map(project => ({ ...project, author: _author }));
+      .map(project => ({ ...project, author: authorUsername }));
   },
 
   fetchProject: async (
-    _author: string,
-    _title: string
+    authorUsername: string,
+    projectTitle: string
   ): Promise<ProjectModel | undefined> => {
-    const authorUUID = await userAPI.fetchUUID(_author);
+    const authorUUID = await userAPI.fetchUUID(authorUsername);
     if (authorUUID === undefined) return undefined;
 
     // TODO(IRWEN): replace with actual API calls
     await new Promise(resolve => setTimeout(resolve, 1000));
     const project = server.projects.find(
-      ({ author, title }) => author === authorUUID && title === _title
+      ({ author, title }) => author === authorUUID && title === projectTitle
     );
     if (project === undefined) return undefined;
 
     return {
       ...project,
-      author: _author,
+      author: authorUsername,
     };
   },
 
   fetchProjectRows: async (
-    _author: string,
-    _title: string
+    authorUsername: string,
+    projectTitle: string
   ): Promise<ProjectRowModel[] | undefined> => {
-    const authorUUID = await userAPI.fetchUUID(_author);
+    const authorUUID = await userAPI.fetchUUID(authorUsername);
     if (authorUUID === undefined) return undefined;
 
     // TODO(IRWEN): replace with actual API calls
     await new Promise(resolve => setTimeout(resolve, 1000));
     const project = server.projects.find(
-      ({ author, title }) => author === authorUUID && title === _title
+      ({ author, title }) => author === authorUUID && title === projectTitle
     );
 
     return project?.rows;

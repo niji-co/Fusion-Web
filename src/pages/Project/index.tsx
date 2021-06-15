@@ -5,8 +5,8 @@ import ProjectLayout from "layouts/Project";
 import { ProjectQueryModel } from "models/Project";
 
 const Project: React.FC = () => {
-  const { author, title } = useParams<ProjectQueryModel>();
-  return <ProjectLayout author={author} title={title} />;
+  const params = useParams<ProjectQueryModel>();
+  return <ProjectLayout {...params} />;
 };
 
 export default Project;
