@@ -51,6 +51,7 @@
     "comma-spacing": "error",
     "arrow-body-style": "off",
     "prefer-arrow-callback": "off",
+    "no-bitwise": "off",
     "no-param-reassign": ["error", { "props": true, "ignorePropertyModificationsFor": ["state"] }], 
     "no-shadow": "off",
 
