@@ -1,6 +1,6 @@
 interface ProjectQueryModel {
-  author: string;
-  title: string;
+  authorUsername: string;
+  projectTitle: string;
 }
 
 export default ProjectQueryModel;

@@ -3,7 +3,7 @@ import AssetModel from "models/Asset";
 interface ProjectModel {
   author: string;
   title: string;
-  tags: string[];
+  tagFlags: number;
   thumbnail: AssetModel;
 }
 
