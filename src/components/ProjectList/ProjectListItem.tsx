@@ -8,10 +8,16 @@ type ProjectListItemProps = ProjectModel & HTMLAttributes<HTMLElement>;
 const ProjectListItem: React.FC<ProjectListItemProps> = ({
   author,
   title,
+  thumbnail,
   ...rest
 }: ProjectListItemProps) => (
   <li {...rest}>
-    <Link to={`${author}/${title}`}>{title}</Link>
+    <Link to={`${author}/${title}`}>
+      <div>
+        <img alt={thumbnail.name} src={thumbnail.url} />
+        <h1>{title}</h1>
+      </div>
+    </Link>
   </li>
 );
 
