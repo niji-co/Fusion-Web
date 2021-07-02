@@ -25,7 +25,7 @@ const ProjectView: React.FC<ProjectProps> = ({
     <br />
     {tags.map(tag => (
       <Fragment key={tag}>
-        <Tag value={tag} />
+        <Tag>{tag}</Tag>
       </Fragment>
     ))}
     {rows.map(row => (
