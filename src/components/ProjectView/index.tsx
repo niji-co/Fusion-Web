@@ -1,4 +1,4 @@
-import React, { Fragment, HTMLAttributes } from "react";
+import React, { HTMLAttributes } from "react";
 import { Link } from "react-router-dom";
 
 import ProjectRow from "components/ProjectRow";
