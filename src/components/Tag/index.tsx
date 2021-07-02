@@ -1,9 +1,15 @@
 import React, { HTMLAttributes } from "react";
 
-interface TagProps extends HTMLAttributes<HTMLElement> {
-  value: string;
-}
-
-const Tag: React.FC<TagProps> = ({ value }: TagProps) => <span>{value}</span>;
+const Tag: React.FC<HTMLAttributes<HTMLButtonElement>> = ({
+  className,
+  children,
+  ...rest
+}: HTMLAttributes<HTMLButtonElement>) => (
+  <li className={`tag ${className || ""}`}>
+    <button type="button" {...rest}>
+      {children}
+    </button>
+  </li>
+);
 
 export default Tag;
