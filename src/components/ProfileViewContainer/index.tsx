@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import api from "api/fakeUserAPI";
 import ProfileView from "components/ProfileView";
@@ -9,15 +9,18 @@ const ProfileLoader: React.FC<ProfileQueryModel> = ({
 }: ProfileQueryModel) => {
   const [profile, setProfile] = useState<ProfileModel>();
 
-  if (profile === undefined) {
-    const fetchProfile = api.fetchWithUsername(username);
-    fetchProfile
+  useEffect(() => {
+    api
+      .fetchWithUsername(username)
       .then(setProfile)
-      .catch(err => console.log("Error fetching profile", err));
-    return <h1>Loading</h1>;
-  }
+      .catch(err => console.error("Error fetching profile", err));
+  }, [username]);
 
-  return <ProfileView {...profile} />;
+  return profile === undefined ? (
+    <h1>Loading</h1>
+  ) : (
+    <ProfileView {...profile} />
+  );
 };
 
 export default ProfileLoader;
