@@ -1,8 +1,8 @@
-import React, { Fragment, HTMLAttributes } from "react";
+import React, { HTMLAttributes } from "react";
 import { Link } from "react-router-dom";
 
 import ProjectRow from "components/ProjectRow";
-import Tag from "components/Tag";
+import TagList from "components/TagList";
 import ProjectModel from "models/Project";
 import ProjectRowModel from "models/ProjectRow";
 import { ProfileModel } from "models/User";
@@ -29,11 +29,7 @@ const ProjectView: React.FC<ProjectProps> = ({
       <h1>{title}</h1>
       <Link to={`/${author}`}>{authorProfile?.displayName || author}</Link>
       <br />
-      {tags.map(tag => (
-        <Fragment key={tag}>
-          <Tag value={tag} />
-        </Fragment>
-      ))}
+      <TagList tags={tags} />
       {rows?.map(row => (
         <ProjectRow key={row.id} model={row} />
       ))}
