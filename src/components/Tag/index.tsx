@@ -5,9 +5,11 @@ const Tag: React.FC<HTMLAttributes<HTMLButtonElement>> = ({
   children,
   ...rest
 }: HTMLAttributes<HTMLButtonElement>) => (
-  <button className={`tag ${className || ""}`} type="button" {...rest}>
-    {children}
-  </button>
+  <li className={`tag ${className || ""}`}>
+    <button type="button" {...rest}>
+      {children}
+    </button>
+  </li>
 );
 
 export default Tag;
