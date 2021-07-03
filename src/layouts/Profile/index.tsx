@@ -1,4 +1,4 @@
-import React, { Fragment, HTMLAttributes } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 import ProfileViewContainer from "components/ProfileViewContainer";
