@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import api from "api/fakeProjectAPI";
 import ProjectList from "components/ProjectList";
@@ -10,16 +10,18 @@ const ProjectListLoader: React.FC<ProfileQueryModel> = ({
 }: ProfileQueryModel) => {
   const [projects, setProjects] = useState<ProjectModel[]>();
 
-  if (projects === undefined) {
-    const fetchProjects = api.fetchProjects(username);
-    fetchProjects
+  useEffect(() => {
+    api
+      .fetchProjects(username)
       .then(setProjects)
-      .catch(err => console.log("Error fetching projects", err));
+      .catch(err => console.error("Error fetching projects", err));
+  }, [username]);
 
-    return <h1>Loading</h1>;
-  }
-
-  return <ProjectList projects={projects} />;
+  return projects === undefined ? (
+    <h1>Loading</h1>
+  ) : (
+    <ProjectList projects={projects} />
+  );
 };
 
 export default ProjectListLoader;
