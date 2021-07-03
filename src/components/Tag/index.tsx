@@ -15,7 +15,7 @@ const Tag: React.FC<TagProps> = ({
   ...rest
 }: TagProps) => (
   <li {...rest}>
-    <Link to={`/${username}?tags=${flag | currentFilter}`}>{name}</Link>
+    <Link to={`/${username}?tags=${flag ^ currentFilter}`}>{name}</Link>
   </li>
 );
 
