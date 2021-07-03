@@ -13,10 +13,16 @@ const Tag: React.FC<TagProps> = ({
   username,
   currentFilter,
   ...rest
-}: TagProps) => (
-  <li {...rest}>
-    <Link to={`/${username}?tags=${flag ^ currentFilter}`}>{name}</Link>
-  </li>
-);
+}: TagProps) => {
+  return flag & currentFilter ? (
+    <li {...rest}>
+      <Link to={`/${username}?tags=${flag ^ currentFilter}`}>[{name}]</Link>
+    </li>
+  ) : (
+    <li {...rest}>
+      <Link to={`/${username}?tags=${flag ^ currentFilter}`}>{name}</Link>
+    </li>
+  );
+};
 
 export default Tag;
