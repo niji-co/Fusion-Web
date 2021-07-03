@@ -1,12 +1,18 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 
 import ProfileLayout from "layouts/Profile";
 import { ProfileQueryModel } from "models/User";
 
 const Profile: React.FC = () => {
   const { username } = useParams<ProfileQueryModel>();
-  return <ProfileLayout username={username} />;
+  const query = new URLSearchParams(useLocation().search);
+  return (
+    <ProfileLayout
+      username={username}
+      tags={parseInt(query.get("tags") || "0", 10)}
+    />
+  );
 };
 
 export default Profile;
