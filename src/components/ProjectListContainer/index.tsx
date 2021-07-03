@@ -7,7 +7,7 @@ import { ProfileQueryModel } from "models/User";
 
 type ProfileListProps = ProfileQueryModel & ProjectFilterModel;
 
-const ProjectListLoader: React.FC<ProfileListProps> = ({
+const ProjectListContainer: React.FC<ProfileListProps> = ({
   username,
   tags,
 }: ProfileListProps) => {
@@ -31,4 +31,4 @@ const ProjectListLoader: React.FC<ProfileListProps> = ({
   );
 };
 
-export default ProjectListLoader;
+export default ProjectListContainer;
