@@ -1,7 +1,7 @@
 import React from "react";
 
 import TagList from "components/TagList";
-import useProfileWithUsername from "hooks/Profile";
+import useProfileWithUsername from "hooks/useProfileWithUsername";
 import { ProjectFilterModel } from "models/Project";
 import { ProfileQueryModel } from "models/User";
 

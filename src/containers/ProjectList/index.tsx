@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
-import api from "api/fakeProjectAPI";
 import ProjectList from "components/ProjectList";
-import ProjectModel, { ProjectFilterModel } from "models/Project";
+import useUserProjects from "hooks/useUserProjects";
+import { ProjectFilterModel } from "models/Project";
 import { ProfileQueryModel } from "models/User";
 
 type ProfileListProps = ProfileQueryModel & ProjectFilterModel;
@@ -11,14 +11,7 @@ const ProjectListContainer: React.FC<ProfileListProps> = ({
   username,
   tags,
 }: ProfileListProps) => {
-  const [projects, setProjects] = useState<ProjectModel[]>();
-
-  useEffect(() => {
-    api
-      .fetchProjects(username)
-      .then(setProjects)
-      .catch(err => console.error("Error fetching projects", err));
-  }, [username]);
+  const projects = useUserProjects(username);
 
   if (projects === undefined) {
     return <h1>Loading</h1>;
