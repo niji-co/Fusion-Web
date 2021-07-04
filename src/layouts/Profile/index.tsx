@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import ProfileViewContainer from "components/ProfileViewContainer";
-import ProjectListContainer from "components/ProjectListContainer";
-import TagListContainer from "components/TagListContainer";
+import ProfileViewContainer from "containers/ProfileView";
+import ProjectListContainer from "containers/ProjectList";
+import TagListContainer from "containers/TagList";
 import { ProjectFilterModel } from "models/Project";
 import { ProfileQueryModel } from "models/User";
 

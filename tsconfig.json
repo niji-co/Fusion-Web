@@ -50,6 +50,7 @@
       "actions/*": ["src/actions/*"],
       "api/*": ["src/api/*"],
       "components/*": ["src/components/*"],
+      "containers/*": ["src/containers/*"],
       "dev/*": ["src/dev/*"],
       "layouts/*": ["src/layouts/*"],
       "models/*": ["src/models/*"],
