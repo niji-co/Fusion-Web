@@ -52,6 +52,7 @@
       "components/*": ["src/components/*"],
       "containers/*": ["src/containers/*"],
       "dev/*": ["src/dev/*"],
+      "hooks/*": ["src/hooks/*"],
       "layouts/*": ["src/layouts/*"],
       "models/*": ["src/models/*"],
       "pages/*": ["src/pages/*"],
