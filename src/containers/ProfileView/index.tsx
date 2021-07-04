@@ -1,7 +1,7 @@
 import React from "react";
 
 import ProfileView from "components/ProfileView";
-import useProfileWithUsername from "hooks/Profile";
+import useProfileWithUsername from "hooks/useProfileWithUsername";
 import { ProfileQueryModel } from "models/User";
 
 const ProfileViewContainer: React.FC<ProfileQueryModel> = ({
