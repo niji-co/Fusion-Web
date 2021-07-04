@@ -5,7 +5,7 @@ import ProjectRowModel from "models/ProjectRow";
 import userAPI from "./fakeUserAPI";
 
 const projectAPI = {
-  fetchProjects: async (
+  fetchUserProjects: async (
     authorUsername: string
   ): Promise<ProjectModel[] | undefined> => {
     const authorUUID = await userAPI.fetchUUID(authorUsername);

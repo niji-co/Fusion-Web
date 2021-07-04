@@ -8,7 +8,7 @@ const useUserProjects = (username: string): ProjectModel[] | undefined => {
 
   useEffect(() => {
     api
-      .fetchProjects(username)
+      .fetchUserProjects(username)
       .then(setUserProjects)
       .catch(err => console.error("Error fetching project", err));
   }, [username]);
