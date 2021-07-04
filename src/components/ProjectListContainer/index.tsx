@@ -2,12 +2,15 @@ import React, { useState, useEffect } from "react";
 
 import api from "api/fakeProjectAPI";
 import ProjectList from "components/ProjectList";
-import ProjectModel from "models/Project";
+import ProjectModel, { ProjectFilterModel } from "models/Project";
 import { ProfileQueryModel } from "models/User";
 
-const ProjectListLoader: React.FC<ProfileQueryModel> = ({
+type ProfileListProps = ProfileQueryModel & ProjectFilterModel;
+
+const ProjectListContainer: React.FC<ProfileListProps> = ({
   username,
-}: ProfileQueryModel) => {
+  tags,
+}: ProfileListProps) => {
   const [projects, setProjects] = useState<ProjectModel[]>();
 
   useEffect(() => {
@@ -17,11 +20,15 @@ const ProjectListLoader: React.FC<ProfileQueryModel> = ({
       .catch(err => console.error("Error fetching projects", err));
   }, [username]);
 
-  return projects === undefined ? (
-    <h1>Loading</h1>
-  ) : (
+  if (projects === undefined) {
+    return <h1>Loading</h1>;
+  }
+
+  return tags === 0 ? (
     <ProjectList projects={projects} />
+  ) : (
+    <ProjectList projects={projects.filter(p => p.tagFlags & tags)} />
   );
 };
 
-export default ProjectListLoader;
+export default ProjectListContainer;

@@ -20,7 +20,7 @@ const server = {
     {
       title: "Project A",
       author: "0",
-      tagFlags: 0b011,
+      tagFlags: 0b101,
       thumbnail: {
         name: "image",
         url: "https://i.ytimg.com/vi/cpb8pKFzd0s/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD6MIHKER3EoS8xZ99e2Wqa9niqTw",

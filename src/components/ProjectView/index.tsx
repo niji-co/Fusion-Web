@@ -5,6 +5,7 @@ import ProjectRow from "components/ProjectRow";
 import TagList from "components/TagList";
 import ProjectModel from "models/Project";
 import ProjectRowModel from "models/ProjectRow";
+import TagModel from "models/Tag";
 import { ProfileModel } from "models/User";
 
 type ProjectProps = ProjectModel & {
@@ -21,7 +22,15 @@ const ProjectView: React.FC<ProjectProps> = ({
   rows,
   ...rest
 }: ProjectProps) => {
-  const tags = authorProfile?.tags.filter((t, i) => (1 << i) & tagFlags) || [];
+  const allTagNames = authorProfile?.tags || [];
+  const allTags = allTagNames.map(
+    (t, i): TagModel => ({
+      flag: 1 << i,
+      name: t,
+      username: author,
+    })
+  );
+  const filteredTags = allTags.filter(t => t.flag & tagFlags);
 
   return (
     <div {...rest}>
@@ -29,7 +38,7 @@ const ProjectView: React.FC<ProjectProps> = ({
       <h1>{title}</h1>
       <Link to={`/${author}`}>{authorProfile?.displayName || author}</Link>
       <br />
-      <TagList tags={tags} />
+      <TagList tags={filteredTags} />
       {rows?.map(row => (
         <ProjectRow key={row.id} model={row} />
       ))}

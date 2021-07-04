@@ -4,7 +4,7 @@ import api from "api/fakeUserAPI";
 import ProfileView from "components/ProfileView";
 import { ProfileModel, ProfileQueryModel } from "models/User";
 
-const ProfileLoader: React.FC<ProfileQueryModel> = ({
+const ProfileViewContainer: React.FC<ProfileQueryModel> = ({
   username,
 }: ProfileQueryModel) => {
   const [profile, setProfile] = useState<ProfileModel>();
@@ -23,4 +23,4 @@ const ProfileLoader: React.FC<ProfileQueryModel> = ({
   );
 };
 
-export default ProfileLoader;
+export default ProfileViewContainer;

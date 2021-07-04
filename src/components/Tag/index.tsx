@@ -1,15 +1,28 @@
 import React, { HTMLAttributes } from "react";
+import { Link } from "react-router-dom";
 
-const Tag: React.FC<HTMLAttributes<HTMLButtonElement>> = ({
-  className,
-  children,
+import TagModel from "models/Tag";
+
+type TagProps = TagModel & {
+  currentFilter: number;
+} & HTMLAttributes<HTMLElement>;
+
+const Tag: React.FC<TagProps> = ({
+  flag,
+  name,
+  username,
+  currentFilter,
   ...rest
-}: HTMLAttributes<HTMLButtonElement>) => (
-  <li className={`tag ${className || ""}`}>
-    <button type="button" {...rest}>
-      {children}
-    </button>
-  </li>
-);
+}: TagProps) => {
+  return flag & currentFilter ? (
+    <li {...rest}>
+      <Link to={`/${username}?tags=${flag ^ currentFilter}`}>[{name}]</Link>
+    </li>
+  ) : (
+    <li {...rest}>
+      <Link to={`/${username}?tags=${flag ^ currentFilter}`}>{name}</Link>
+    </li>
+  );
+};
 
 export default Tag;
