@@ -14,6 +14,7 @@ module.exports = {
     "^actions/(.*)":  "<rootDir>/src/actions/$1",
     "^api/(.*)":  "<rootDir>/src/api/$1",
     "^components/(.*)":  "<rootDir>/src/components/$1",
+    "^containers/(.*)":  "<rootDir>/src/containers/$1",
     "^dev/(.*)":  "<rootDir>/src/dev/$1",
     "^layouts/(.*)":  "<rootDir>/src/layouts/$1",
     "^models/(.*)":  "<rootDir>/src/models/$1",
