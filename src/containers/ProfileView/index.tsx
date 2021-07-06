@@ -1,4 +1,4 @@
-import React, { HTMLAttributes } from "react";
+import React, { ReactElement, HTMLAttributes } from "react";
 
 import ProfileView from "components/ProfileView";
 import useProfileWithUsername from "hooks/useProfileWithUsername";
@@ -6,10 +6,10 @@ import { ProfileQueryModel } from "models/User";
 
 type ProfileViewProps = ProfileQueryModel & HTMLAttributes<HTMLElement>;
 
-const ProfileViewContainer: React.FC<ProfileViewProps> = ({
+const ProfileViewContainer = ({
   username,
   ...rest
-}: ProfileViewProps) => {
+}: ProfileViewProps): ReactElement => {
   const profile = useProfileWithUsername(username);
 
   return profile === undefined ? (

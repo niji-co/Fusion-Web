@@ -1,4 +1,4 @@
-import React, { HTMLAttributes } from "react";
+import React, { ReactElement, HTMLAttributes } from "react";
 
 import ProjectView from "components/ProjectView";
 import useProfileWithUsername from "hooks/useProfileWithUsername";
@@ -8,11 +8,11 @@ import { ProjectQueryModel } from "models/Project";
 
 type ProjectViewProps = ProjectQueryModel & HTMLAttributes<HTMLElement>;
 
-const ProjectViewContainer: React.FC<ProjectViewProps> = ({
+const ProjectViewContainer = ({
   authorUsername,
   projectTitle,
   ...rest
-}: ProjectViewProps) => {
+}: ProjectViewProps): ReactElement => {
   const profile = useProfileWithUsername(authorUsername);
   const project = useProject(authorUsername, projectTitle);
   const rows = useProjectRows(authorUsername, projectTitle);

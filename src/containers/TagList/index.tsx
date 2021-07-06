@@ -1,4 +1,4 @@
-import React, { HTMLAttributes } from "react";
+import React, { ReactElement, HTMLAttributes } from "react";
 
 import TagList from "components/TagList";
 import useProfileWithUsername from "hooks/useProfileWithUsername";
@@ -9,11 +9,11 @@ type ProfileListProps = ProfileQueryModel &
   ProjectFilterModel &
   HTMLAttributes<HTMLElement>;
 
-const TagListContainer: React.FC<ProfileListProps> = ({
+const TagListContainer = ({
   username,
   tags,
   ...rest
-}: ProfileListProps) => {
+}: ProfileListProps): ReactElement => {
   const profile = useProfileWithUsername(username);
 
   if (profile === undefined) {
