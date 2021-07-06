@@ -1,10 +1,10 @@
-import React, { HTMLAttributes } from "react";
+import React, { ReactElement, HTMLAttributes } from "react";
 
 import { ProfileModel } from "models/User";
 
 type ProfileProps = ProfileModel & HTMLAttributes<HTMLElement>;
 
-const ProfileView: React.FC<ProfileProps> = ({
+const ProfileView = ({
   profilePicture,
   displayName,
   bio,
@@ -12,7 +12,7 @@ const ProfileView: React.FC<ProfileProps> = ({
   contactNumber,
   className,
   ...rest
-}: ProfileProps) => (
+}: ProfileProps): ReactElement => (
   <div className={`profile ${className || ""}`} {...rest}>
     <img alt={profilePicture.name} src={profilePicture.url} />
     <h1>{displayName}</h1>
