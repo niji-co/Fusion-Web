@@ -1,4 +1,4 @@
-import React, { HTMLAttributes } from "react";
+import React, { ReactElement, HTMLAttributes } from "react";
 
 import ProjectRowModel, {
   ProjectRowType,
@@ -17,10 +17,10 @@ interface ProjectRowProps extends HTMLAttributes<HTMLElement> {
   model: ProjectRowModel;
 }
 
-const ProjectRow: React.FC<ProjectRowProps> = ({
+const ProjectRow = ({
   model,
   ...rest
-}: ProjectRowProps) => {
+}: ProjectRowProps): ReactElement | null => {
   switch (model.type) {
     case ProjectRowType.Text:
       return <ProjectRowText model={model as ProjectRowTextModel} {...rest} />;

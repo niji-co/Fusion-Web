@@ -1,4 +1,4 @@
-import React, { HTMLAttributes } from "react";
+import React, { ReactElement, HTMLAttributes } from "react";
 import { Link } from "react-router-dom";
 
 import ProjectRow from "components/ProjectRow";
@@ -13,7 +13,7 @@ type ProjectProps = ProjectModel & {
   rows: ProjectRowModel[] | undefined;
 } & HTMLAttributes<HTMLElement>;
 
-const ProjectView: React.FC<ProjectProps> = ({
+const ProjectView = ({
   author,
   title,
   tagFlags,
@@ -21,7 +21,7 @@ const ProjectView: React.FC<ProjectProps> = ({
   authorProfile,
   rows,
   ...rest
-}: ProjectProps) => {
+}: ProjectProps): ReactElement => {
   const allTagNames = authorProfile?.tags || [];
   const allTags = allTagNames.map(
     (t, i): TagModel => ({
