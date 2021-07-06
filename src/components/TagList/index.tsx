@@ -1,4 +1,4 @@
-import React, { HTMLAttributes } from "react";
+import React, { ReactElement, HTMLAttributes } from "react";
 
 import Tag from "components/Tag";
 import TagModel from "models/Tag";
@@ -8,11 +8,11 @@ interface TagListProps extends HTMLAttributes<HTMLElement> {
   currentFilter?: number;
 }
 
-const TagList: React.FC<TagListProps> = ({
+const TagList = ({
   tags,
   currentFilter,
   ...rest
-}: TagListProps) => (
+}: TagListProps): ReactElement => (
   <ul {...rest}>
     {tags.map(tag => (
       <Tag
