@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
-import api from "api/fakeUserAPI";
 import TagList from "components/TagList";
+import useProfileWithUsername from "hooks/useProfileWithUsername";
 import { ProjectFilterModel } from "models/Project";
-import { ProfileModel, ProfileQueryModel } from "models/User";
+import { ProfileQueryModel } from "models/User";
 
 type ProfileListProps = ProfileQueryModel & ProjectFilterModel;
 
@@ -11,14 +11,7 @@ const TagListContainer: React.FC<ProfileListProps> = ({
   username,
   tags,
 }: ProfileListProps) => {
-  const [profile, setProfile] = useState<ProfileModel>();
-
-  useEffect(() => {
-    api
-      .fetchWithUsername(username)
-      .then(setProfile)
-      .catch(err => console.error("Error fetching profile", err));
-  }, [username]);
+  const profile = useProfileWithUsername(username);
 
   if (profile === undefined) {
     return <h1>Loading</h1>;

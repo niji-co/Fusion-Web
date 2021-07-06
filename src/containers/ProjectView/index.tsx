@@ -1,36 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
-import projectAPI from "api/fakeProjectAPI";
-import userAPI from "api/fakeUserAPI";
 import ProjectView from "components/ProjectView";
-import ProjectModel, { ProjectQueryModel } from "models/Project";
-import ProjectRowModel from "models/ProjectRow";
-import { ProfileModel } from "models/User";
+import useProfileWithUsername from "hooks/useProfileWithUsername";
+import useProject from "hooks/useProject";
+import useProjectRows from "hooks/useProjectRows";
+import { ProjectQueryModel } from "models/Project";
 
 const ProjectViewContainer: React.FC<ProjectQueryModel> = ({
   authorUsername,
   projectTitle,
 }: ProjectQueryModel) => {
-  const [profile, setProfile] = useState<ProfileModel>();
-  const [project, setProject] = useState<ProjectModel>();
-  const [rows, setRows] = useState<ProjectRowModel[]>();
-
-  useEffect(() => {
-    userAPI
-      .fetchWithUsername(authorUsername)
-      .then(setProfile)
-      .catch(err => console.error("Error fetching profile", err));
-
-    projectAPI
-      .fetchProject(authorUsername, projectTitle)
-      .then(setProject)
-      .catch(err => console.error("Error fetching project", err));
-
-    projectAPI
-      .fetchProjectRows(authorUsername, projectTitle)
-      .then(setRows)
-      .catch(err => console.error("Error fetching project rows", err));
-  }, [authorUsername, projectTitle]);
+  const profile = useProfileWithUsername(authorUsername);
+  const project = useProject(authorUsername, projectTitle);
+  const rows = useProjectRows(authorUsername, projectTitle);
 
   return project === undefined ? (
     <h1>Loading</h1>
