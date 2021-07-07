@@ -4,7 +4,7 @@ import RoleModel from "models/ExhibitionRole";
 
 type RoleProps = RoleModel & HTMLAttributes<HTMLElement>;
 
-const Role = ({ role, className }: RoleProps): ReactElement => (
+const Role = ({ role }: RoleProps): ReactElement => (
   <div>
     <h3>{role}</h3>
   </div>
