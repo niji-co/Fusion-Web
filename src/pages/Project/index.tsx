@@ -1,10 +1,10 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import { useParams } from "react-router-dom";
 
 import ProjectLayout from "layouts/Project";
 import { ProjectQueryModel } from "models/Project";
 
-const Project: React.FC = () => {
+const Project = (): ReactElement => {
   const { authorUsername, projectTitle } = useParams<ProjectQueryModel>();
   return (
     <ProjectLayout

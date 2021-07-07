@@ -1,4 +1,4 @@
-import React, { HTMLAttributes } from "react";
+import React, { ReactElement, HTMLAttributes } from "react";
 import { Link } from "react-router-dom";
 
 import TagModel from "models/Tag";
@@ -7,13 +7,13 @@ type TagProps = TagModel & {
   currentFilter: number;
 } & HTMLAttributes<HTMLElement>;
 
-const Tag: React.FC<TagProps> = ({
+const Tag = ({
   flag,
   name,
   username,
   currentFilter,
   ...rest
-}: TagProps) => {
+}: TagProps): ReactElement => {
   return flag & currentFilter ? (
     <li {...rest}>
       <Link to={`/${username}?tags=${flag ^ currentFilter}`}>[{name}]</Link>

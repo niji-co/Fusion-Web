@@ -1,7 +1,7 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import { Link } from "react-router-dom";
 
-const SignIn: React.FC = () => (
+const SignIn = (): ReactElement => (
   <div className="signin">
     <h1>Sign In</h1>
     <Link to="/">Home</Link>

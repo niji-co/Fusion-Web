@@ -1,16 +1,16 @@
-import React, { HTMLAttributes } from "react";
+import React, { ReactElement, HTMLAttributes } from "react";
 import { Link } from "react-router-dom";
 
 import ProjectModel from "models/Project";
 
 type ProjectListItemProps = ProjectModel & HTMLAttributes<HTMLElement>;
 
-const ProjectListItem: React.FC<ProjectListItemProps> = ({
+const ProjectListItem = ({
   author,
   title,
   thumbnail,
   ...rest
-}: ProjectListItemProps) => (
+}: ProjectListItemProps): ReactElement => (
   <li {...rest}>
     <Link to={`${author}/${title}`}>
       <div>

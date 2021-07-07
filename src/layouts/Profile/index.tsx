@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import { Link } from "react-router-dom";
 
 import ProfileViewContainer from "containers/ProfileView";
@@ -7,12 +7,10 @@ import TagListContainer from "containers/TagList";
 import { ProjectFilterModel } from "models/Project";
 import { ProfileQueryModel } from "models/User";
 
-type ProfileLayoutProps = ProfileQueryModel & ProjectFilterModel;
-
-const ProfileLayout: React.FC<ProfileLayoutProps> = ({
+const ProfileLayout = ({
   username,
   tags,
-}: ProfileLayoutProps) => (
+}: ProfileQueryModel & ProjectFilterModel): ReactElement => (
   <>
     <Link to="/">Home</Link>
     <ProfileViewContainer username={username} />

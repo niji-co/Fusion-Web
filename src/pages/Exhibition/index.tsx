@@ -1,11 +1,11 @@
-import React, { HTMLAttributes } from "react";
+import React, { ReactElement, HTMLAttributes } from "react";
 import { Link } from "react-router-dom";
 
-import ExhibitionModel from "models/Exhibition";
+// import ExhibitionModel from "models/Exhibition";
 
-type ExhibitionProps = ExhibitionModel & HTMLAttributes<HTMLElement>;
+// type ExhibitionProps = ExhibitionModel & HTMLAttributes<HTMLElement>;
 
-const Exhibition: React.FC = () => (
+const Exhibition = (): ReactElement => (
   <div className="exhibition">
     <h1>Exhibitions</h1>
     <Link to="/">Home</Link>

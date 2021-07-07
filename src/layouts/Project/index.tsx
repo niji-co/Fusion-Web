@@ -1,13 +1,13 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import { Link } from "react-router-dom";
 
 import ProjectViewContainer from "containers/ProjectView";
 import { ProjectQueryModel } from "models/Project";
 
-const ProjectLayout: React.FC<ProjectQueryModel> = ({
+const ProjectLayout = ({
   authorUsername,
   projectTitle,
-}: ProjectQueryModel) => (
+}: ProjectQueryModel): ReactElement => (
   <>
     <Link to="/">Home</Link>
     <ProjectViewContainer

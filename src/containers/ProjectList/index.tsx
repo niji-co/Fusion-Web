@@ -1,4 +1,4 @@
-import React, { HTMLAttributes } from "react";
+import React, { ReactElement, HTMLAttributes } from "react";
 
 import ProjectList from "components/ProjectList";
 import useUserProjects from "hooks/useUserProjects";
@@ -9,11 +9,11 @@ type ProfileListProps = ProfileQueryModel &
   ProjectFilterModel &
   HTMLAttributes<HTMLElement>;
 
-const ProjectListContainer: React.FC<ProfileListProps> = ({
+const ProjectListContainer = ({
   username,
   tags,
   ...rest
-}: ProfileListProps) => {
+}: ProfileListProps): ReactElement => {
   const projects = useUserProjects(username);
 
   if (projects === undefined) {

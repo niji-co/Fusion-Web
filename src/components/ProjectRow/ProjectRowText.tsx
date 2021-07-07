@@ -6,11 +6,11 @@ interface ProjectRowTextProps extends HTMLAttributes<HTMLElement> {
   model: ProjectRowTextModel;
 }
 
-const ProjectRowText: React.FC<ProjectRowTextProps> = ({
+const ProjectRowText = ({
   model,
   className,
   ...rest
-}: ProjectRowTextProps) => {
+}: ProjectRowTextProps): ReactElement => {
   let body: ReactElement;
   switch (model.style) {
     case TextStyle.h1:

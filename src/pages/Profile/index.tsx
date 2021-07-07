@@ -1,10 +1,10 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import { useParams, useLocation } from "react-router-dom";
 
 import ProfileLayout from "layouts/Profile";
 import { ProfileQueryModel } from "models/User";
 
-const Profile: React.FC = () => {
+const Profile = (): ReactElement => {
   const { username } = useParams<ProfileQueryModel>();
   const query = new URLSearchParams(useLocation().search);
   return (

@@ -1,4 +1,4 @@
-import React, { HTMLAttributes } from "react";
+import React, { ReactElement, HTMLAttributes } from "react";
 
 import ProjectModel from "models/Project";
 
@@ -8,11 +8,11 @@ interface ProjectListProps extends HTMLAttributes<HTMLElement> {
   projects: ProjectModel[];
 }
 
-const ProjectList: React.FC<ProjectListProps> = ({
+const ProjectList = ({
   projects,
   className,
   ...rest
-}: ProjectListProps) => (
+}: ProjectListProps): ReactElement => (
   <div className={`user-projects-list ${className || ""}`} {...rest}>
     <ul>
       {projects.map(project => (

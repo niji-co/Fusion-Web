@@ -1,7 +1,7 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import { Link } from "react-router-dom";
 
-const HostExhibition: React.FC = () => (
+const HostExhibition = (): ReactElement => (
   <div className="host-exhibition">
     <h1>Host exhibition</h1>
     <Link to="/">Home</Link>
