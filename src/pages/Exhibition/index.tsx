@@ -5,21 +5,21 @@ import ExhibitionLayout from "layouts/Exhibition";
 import { ExhibitionModel } from "models/Exhibition";
 
 const Exhibition = (): ReactElement => {
-  const { 
-    UUID, 
-    host, 
+  const {
+    UUID,
+    host,
     coHost,
     title,
     description,
-    keywords, 
+    keywords,
     sections,
     roles,
     openingDate,
     closingDate,
-    visibility, 
+    visibility,
     invitedAttendees,
   } = useParams<ExhibitionModel>();
-  return ( 
+  return (
     <ExhibitionLayout
       UUID={UUID}
       host={host}

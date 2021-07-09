@@ -9,12 +9,12 @@ const ExhibitionLayout = ({
   coHost,
   title,
   description,
-  keywords, 
+  keywords,
   sections,
   roles,
   openingDate,
   closingDate,
-  visibility, 
+  visibility,
   invitedAttendees, // will add these variables below later if this is done correctly
 }: ExhibitionModel): ReactElement => (
   <>
