@@ -7,7 +7,7 @@ import TagListContainer from "containers/TagList";
 import { ProjectFilterModel } from "models/Project";
 import { ProfileQueryModel } from "models/User";
 
-const ProfileLayout = ({
+const UserLayout = ({
   username,
   tags,
 }: ProfileQueryModel & ProjectFilterModel): ReactElement => (
@@ -19,4 +19,4 @@ const ProfileLayout = ({
   </>
 );
 
-export default ProfileLayout;
+export default UserLayout;
