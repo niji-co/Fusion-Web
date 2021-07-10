@@ -1,8 +1,8 @@
-import ProjectRowFileModel from "./ProjectRowFileModel";
-import ProjectRowImageModel from "./ProjectRowImageModel";
-import ProjectRowModel, { ProjectRowType } from "./ProjectRowModel";
-import ProjectRowTextModel, { TextStyle } from "./ProjectRowTextModel";
-import ProjectRowVideoModel from "./ProjectRowVideoModel";
+import ProjectRowFileModel from "./_ProjectRowFileModel";
+import ProjectRowImageModel from "./_ProjectRowImageModel";
+import ProjectRowModel, { ProjectRowType } from "./_ProjectRowModel";
+import ProjectRowTextModel, { TextStyle } from "./_ProjectRowTextModel";
+import ProjectRowVideoModel from "./_ProjectRowVideoModel";
 
 export default ProjectRowModel;
 export {
