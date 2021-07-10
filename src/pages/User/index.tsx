@@ -18,15 +18,12 @@ const User = (): ReactElement => {
     return <h1>Loading</h1>;
   }
 
-  const filteredProjects =
-    tags === 0 ? projects : projects?.filter(p => p.tagFlags & tags);
-
   return (
     <UserLayout
       username={username}
       profile={profile}
       tags={tags}
-      projects={filteredProjects || []}
+      projects={projects || []}
     />
   );
 };

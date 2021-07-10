@@ -2,7 +2,7 @@ import React, { ReactElement } from "react";
 import { Link } from "react-router-dom";
 
 import ProfileView from "components/ProfileView";
-import ProjectList from "components/ProjectList";
+import FilteredProjectList from "containers/FilteredProjectList";
 import UserTagList from "containers/UserTagList";
 import ProjectModel from "models/Project";
 import { ProfileModel } from "models/User";
@@ -24,7 +24,7 @@ const UserLayout = ({
     <Link to="/">Home</Link>
     <ProfileView {...profile} />
     <UserTagList tags={tags} username={username} profile={profile} />
-    <ProjectList projects={projects} />
+    <FilteredProjectList projects={projects} tags={tags} />
   </>
 );
 
