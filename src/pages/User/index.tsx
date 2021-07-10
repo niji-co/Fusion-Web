@@ -9,7 +9,7 @@ import { ProfileQueryModel } from "models/User";
 const User = (): ReactElement => {
   const { username } = useParams<ProfileQueryModel>();
   const query = new URLSearchParams(useLocation().search);
-  const tags = parseInt(query.get("tags") || "0", 10);
+  const tagFlags = parseInt(query.get("tags") || "0", 10);
 
   const profile = useProfileWithUsername(username);
   const projects = useUserProjects(username);
@@ -18,21 +18,12 @@ const User = (): ReactElement => {
     return <h1>Loading</h1>;
   }
 
-  const tagObjects = profile.tags.map((t, i) => ({
-    flag: 1 << i,
-    name: t,
-    username,
-  }));
-
-  const filteredProjects =
-    tags === 0 ? projects : projects?.filter(p => p.tagFlags & tags);
-
   return (
     <UserLayout
+      username={username}
       profile={profile}
-      tagObjects={tagObjects}
-      tags={tags}
-      projects={filteredProjects || []}
+      tagFlags={tagFlags}
+      projects={projects || []}
     />
   );
 };
