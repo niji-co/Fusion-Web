@@ -5,18 +5,21 @@ import ProjectModel from "models/Project";
 
 interface FilteredProjectListProps extends HTMLAttributes<HTMLElement> {
   projects: ProjectModel[];
-  tags: number;
+  tagFilter: number;
 }
 
 const FilteredProjectList = ({
   projects,
-  tags,
+  tagFilter,
   ...rest
 }: FilteredProjectListProps): ReactElement => {
-  return tags === 0 ? (
+  return tagFilter === 0 ? (
     <ProjectList projects={projects} {...rest} />
   ) : (
-    <ProjectList projects={projects.filter(p => p.tagFlags & tags)} {...rest} />
+    <ProjectList
+      projects={projects.filter(p => p.tagFlags & tagFilter)}
+      {...rest}
+    />
   );
 };
 

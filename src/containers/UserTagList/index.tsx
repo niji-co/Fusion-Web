@@ -1,16 +1,16 @@
 import React, { ReactElement, HTMLAttributes } from "react";
 
 import TagList from "components/TagList";
-import { ProjectFilterModel } from "models/Project";
 import { ProfileModel } from "models/User";
 
-type UserTagListProps = ProjectFilterModel & {
+interface UserTagListProps extends HTMLAttributes<HTMLElement> {
+  tagFlags: number;
   username: string;
   profile: ProfileModel;
-} & HTMLAttributes<HTMLElement>;
+}
 
 const UserTagList = ({
-  tags,
+  tagFlags,
   username,
   profile,
   ...rest
@@ -21,7 +21,7 @@ const UserTagList = ({
     username,
   }));
 
-  return <TagList tags={tagObjects} currentFilter={tags} {...rest} />;
+  return <TagList tags={tagObjects} currentFilter={tagFlags} {...rest} />;
 };
 
 export default UserTagList;

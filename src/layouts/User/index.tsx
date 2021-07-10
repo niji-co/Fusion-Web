@@ -10,21 +10,21 @@ import { ProfileModel } from "models/User";
 interface UserLayoutProps {
   username: string;
   profile: ProfileModel;
-  tags: number;
+  tagFlags: number;
   projects: ProjectModel[];
 }
 
 const UserLayout = ({
   username,
   profile,
-  tags,
+  tagFlags,
   projects,
 }: UserLayoutProps): ReactElement => (
   <>
     <Link to="/">Home</Link>
     <ProfileView {...profile} />
-    <UserTagList tags={tags} username={username} profile={profile} />
-    <FilteredProjectList projects={projects} tags={tags} />
+    <UserTagList tagFlags={tagFlags} username={username} profile={profile} />
+    <FilteredProjectList projects={projects} tags={tagFlags} />
   </>
 );
 

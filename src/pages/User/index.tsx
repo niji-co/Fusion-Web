@@ -9,7 +9,7 @@ import { ProfileQueryModel } from "models/User";
 const User = (): ReactElement => {
   const { username } = useParams<ProfileQueryModel>();
   const query = new URLSearchParams(useLocation().search);
-  const tags = parseInt(query.get("tags") || "0", 10);
+  const tagFlags = parseInt(query.get("tags") || "0", 10);
 
   const profile = useProfileWithUsername(username);
   const projects = useUserProjects(username);
@@ -22,7 +22,7 @@ const User = (): ReactElement => {
     <UserLayout
       username={username}
       profile={profile}
-      tags={tags}
+      tagFlags={tagFlags}
       projects={projects || []}
     />
   );
