@@ -1,5 +1,5 @@
-import ProfileModel from "./Profile";
-import ProfileQueryModel from "./ProfileQueryModel";
+import ProfileModel from "./_Profile";
+import ProfileQueryModel from "./_ProfileQueryModel";
 
 interface UserModel extends ProfileModel {
   uuid: string;

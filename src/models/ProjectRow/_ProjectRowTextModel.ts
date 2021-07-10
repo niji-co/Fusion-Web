@@ -1,4 +1,4 @@
-import ProjectRowModel from "./ProjectRowModel";
+import ProjectRowModel from "./_ProjectRowModel";
 
 enum TextStyle {
   h1,

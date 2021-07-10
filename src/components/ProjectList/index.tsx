@@ -2,7 +2,7 @@ import React, { ReactElement, HTMLAttributes } from "react";
 
 import ProjectModel from "models/Project";
 
-import ProjectListItem from "./ProjectListItem";
+import ProjectListItem from "./_ProjectListItem";
 
 interface ProjectListProps extends HTMLAttributes<HTMLElement> {
   projects: ProjectModel[];
@@ -33,4 +33,3 @@ ProjectList.defaultProps = {
 };
 
 export default ProjectList;
-export { ProjectListItem };
