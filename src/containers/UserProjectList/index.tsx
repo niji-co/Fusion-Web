@@ -3,24 +3,25 @@ import React, { ReactElement, HTMLAttributes } from "react";
 import ProjectList from "components/ProjectList";
 import ProjectModel from "models/Project";
 
-interface FilteredProjectListProps extends HTMLAttributes<HTMLElement> {
+interface UserProjectListProps extends HTMLAttributes<HTMLElement> {
   projects: ProjectModel[];
   tagFilter: number;
 }
 
-const FilteredProjectList = ({
+const UserProjectList = ({
   projects,
   tagFilter,
   ...rest
-}: FilteredProjectListProps): ReactElement => {
+}: UserProjectListProps): ReactElement => {
   return tagFilter === 0 ? (
     <ProjectList projects={projects} {...rest} />
   ) : (
     <ProjectList
-      projects={projects.filter(p => p.tagFlags & tagFilter)}
+      projects={projects}
+      predicate={p => (p.tagFlags & tagFilter) !== 0}
       {...rest}
     />
   );
 };
 
-export default FilteredProjectList;
+export default UserProjectList;
