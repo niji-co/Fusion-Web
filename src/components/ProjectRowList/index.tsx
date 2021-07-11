@@ -1,7 +1,8 @@
 import React, { ReactElement, HTMLAttributes } from "react";
 
-import ProjectRow from "components/ProjectRow";
 import ProjectRowModel from "models/ProjectRow";
+
+import ProjectRow from "./_ProjectRow";
 
 interface ProjectRowListProps extends HTMLAttributes<HTMLElement> {
   rows: ProjectRowModel[] | undefined;
