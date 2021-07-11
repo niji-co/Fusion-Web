@@ -1,7 +1,8 @@
 import React, { ReactElement } from "react";
 import { Link } from "react-router-dom";
 
-import ProjectView from "components/ProjectView";
+import ProjectHeader from "components/ProjectHeader";
+import ProjectRowList from "components/ProjectRowList";
 import ProjectModel from "models/Project";
 import ProjectRowModel from "models/ProjectRow";
 import { ProfileModel } from "models/User";
@@ -19,7 +20,8 @@ const ProjectLayout = ({
 }: ProjectLayoutProps): ReactElement => (
   <>
     <Link to="/">Home</Link>
-    <ProjectView {...project} authorProfile={authorProfile} rows={rows} />
+    <ProjectHeader {...project} authorProfile={authorProfile} />
+    <ProjectRowList rows={rows} />
   </>
 );
 
