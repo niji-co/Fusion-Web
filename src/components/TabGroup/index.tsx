@@ -1,4 +1,4 @@
-import React, { ReactElement, HTMLAttributes } from "react";
+import React, { ReactElement, HTMLAttributes, useState } from "react";
 
 import Navbar from "components/Navbar";
 
@@ -9,15 +9,19 @@ interface TabGroupProps extends HTMLAttributes<HTMLElement> {
 }
 
 const TabGroup = ({ children }: TabGroupProps): ReactElement => {
-  const tabs = React.Children.map(children, child => child.props.title);
+  const childrenArray = React.Children.map(children, child => child);
+  const tabs = childrenArray.map(child => child.props.title);
+
+  const [index, setIndex] = useState(0);
 
   return (
     <div>
-      <Navbar>
+      <Navbar onNavbarClick={setIndex}>
         {tabs.map(tab => (
           <Navbar.Item key={tab}>{tab}</Navbar.Item>
         ))}
       </Navbar>
+      {childrenArray[index].props.children}
     </div>
   );
 };

@@ -6,10 +6,7 @@ interface TabGroupItemProps extends HTMLAttributes<HTMLElement> {
 }
 
 const TabGroupItem = ({ title, children }: TabGroupItemProps): ReactElement => (
-  <div>
-    <p>{title}</p>
-    {children}
-  </div>
+  <div id={title}>{children}</div>
 );
 
 TabGroupItem.defaultProps = {
