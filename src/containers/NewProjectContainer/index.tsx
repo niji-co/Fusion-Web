@@ -1,5 +1,6 @@
-import React, { ReactElement, HTMLAttributes } from "react";
+import React, { ReactElement, HTMLAttributes, useState } from "react";
 
+import ProjectHeader from "components/ProjectHeader";
 import TabGroup from "components/TabGroup";
 
 type NewProjectContainerProps = HTMLAttributes<HTMLElement>;
@@ -7,6 +8,9 @@ type NewProjectContainerProps = HTMLAttributes<HTMLElement>;
 const NewProjectContainer = ({
   ...rest
 }: NewProjectContainerProps): ReactElement => {
+  const [title, setTitle] = useState("");
+  const [tagFlags, setTagFlags] = useState(0);
+
   return (
     <div {...rest}>
       <TabGroup>
@@ -14,7 +18,13 @@ const NewProjectContainer = ({
           <h1>Edit</h1>
         </TabGroup.Item>
         <TabGroup.Item title="Preview">
-          <h1>Preview</h1>
+          <ProjectHeader
+            author="James"
+            title={title}
+            tagFlags={tagFlags}
+            thumbnail={{ url: "", name: "" }}
+            authorProfile={undefined}
+          />
         </TabGroup.Item>
       </TabGroup>
     </div>
