@@ -1,7 +1,8 @@
 import React, { ReactElement, HTMLAttributes } from "react";
 
-import Tag from "components/Tag";
 import TagModel from "models/Tag";
+
+import TagListItem from "./_TagListItem";
 
 interface TagListProps extends HTMLAttributes<HTMLElement> {
   tags: TagModel[];
@@ -15,7 +16,7 @@ const TagList = ({
 }: TagListProps): ReactElement => (
   <ul {...rest}>
     {tags.map(tag => (
-      <Tag
+      <TagListItem
         flag={tag.flag}
         name={tag.name}
         username={tag.username}
