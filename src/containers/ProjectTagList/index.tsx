@@ -16,17 +16,21 @@ const ProjectTagList = ({
   authorProfile,
   ...rest
 }: ProjectTagListProps): ReactElement => {
-  const allTagNames = authorProfile?.tags || [];
-  const allTags = allTagNames.map(
+  const tagObjects = authorProfile?.tags?.map(
     (tag, index): TagModel => ({
       flag: 1 << index,
       name: tag,
       username: author,
     })
   );
-  const filteredTags = allTags.filter(t => t.flag & tagFlags);
 
-  return <TagList tags={filteredTags} {...rest} />;
+  return (
+    <TagList
+      tags={tagObjects ?? []}
+      predicate={t => (t.flag & tagFlags) !== 0}
+      {...rest}
+    />
+  );
 };
 
 export default ProjectTagList;
