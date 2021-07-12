@@ -1,5 +1,6 @@
 import React, { ReactElement, HTMLAttributes } from "react";
 
+import ListView from "components/ListView";
 import ProjectRowModel from "models/ProjectRow";
 
 import ProjectRow from "./_ProjectRow";
@@ -12,11 +13,12 @@ const ProjectRowList = ({
   rows,
   ...rest
 }: ProjectRowListProps): ReactElement => (
-  <div {...rest}>
-    {rows?.map(row => (
-      <ProjectRow key={row.id} model={row} />
-    ))}
-  </div>
+  <ListView
+    items={rows}
+    getItemKey={row => row.id}
+    onRenderRow={model => <ProjectRow model={model} />}
+    {...rest}
+  />
 );
 
 export default ProjectRowList;
