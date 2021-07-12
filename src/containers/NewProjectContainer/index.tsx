@@ -1,11 +1,18 @@
 import React, { ReactElement, HTMLAttributes, useState } from "react";
 
+import EditProjectHeader from "components/EditProjectHeader";
 import ProjectHeader from "components/ProjectHeader";
 import TabGroup from "components/TabGroup";
+import { ProfileModel } from "models/User";
 
-type NewProjectContainerProps = HTMLAttributes<HTMLElement>;
+interface NewProjectContainerProps extends HTMLAttributes<HTMLElement> {
+  username: string;
+  profile: ProfileModel;
+}
 
 const NewProjectContainer = ({
+  username,
+  profile,
   ...rest
 }: NewProjectContainerProps): ReactElement => {
   const [title, setTitle] = useState("");
@@ -16,14 +23,23 @@ const NewProjectContainer = ({
       <TabGroup>
         <TabGroup.Item title="Edit">
           <h1>Edit</h1>
-        </TabGroup.Item>
-        <TabGroup.Item title="Preview">
-          <ProjectHeader
-            author="James"
+          <EditProjectHeader
+            author={username}
             title={title}
             tagFlags={tagFlags}
             thumbnail={{ url: "", name: "" }}
-            authorProfile={undefined}
+            authorProfile={profile}
+            setTitle={setTitle}
+            setTagFlags={setTagFlags}
+          />
+        </TabGroup.Item>
+        <TabGroup.Item title="Preview">
+          <ProjectHeader
+            author={username}
+            title={title}
+            tagFlags={tagFlags}
+            thumbnail={{ url: "", name: "" }}
+            authorProfile={profile}
           />
         </TabGroup.Item>
       </TabGroup>
