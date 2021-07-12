@@ -1,8 +1,9 @@
 import React, { ReactElement, HTMLAttributes } from "react";
 
+import ListView from "components/ListView";
 import ProjectModel from "models/Project";
 
-import ProjectListItem from "./_ProjectListItem";
+import ProjectListRow from "./_ProjectListRow";
 
 interface ProjectListProps extends HTMLAttributes<HTMLElement> {
   projects: ProjectModel[];
@@ -12,21 +13,16 @@ interface ProjectListProps extends HTMLAttributes<HTMLElement> {
 const ProjectList = ({
   projects,
   predicate,
-  className,
   ...rest
-}: ProjectListProps): ReactElement => {
-  const list = predicate === undefined ? projects : projects.filter(predicate);
-
-  return (
-    <div className={`user-projects-list ${className || ""}`} {...rest}>
-      <ul>
-        {list.map(project => (
-          <ProjectListItem key={project.title} {...project} />
-        ))}
-      </ul>
-    </div>
-  );
-};
+}: ProjectListProps): ReactElement => (
+  <ListView
+    items={projects}
+    getItemKey={project => project.title}
+    onRenderRow={ProjectListRow}
+    predicate={predicate}
+    {...rest}
+  />
+);
 
 ProjectList.defaultProps = {
   predicate: undefined,
