@@ -4,13 +4,13 @@ import EditTagList from "containers/EditProjectTagList";
 import ProjectModel from "models/Project";
 import { ProfileModel } from "models/User";
 
-type ProjectHeaderProps = ProjectModel & {
+type EditProjectHeaderProps = ProjectModel & {
   authorProfile: ProfileModel | undefined;
   setTitle: (value: string) => void;
   setTagFlags: (value: number) => void;
 } & HTMLAttributes<HTMLElement>;
 
-const ProjectHeader = ({
+const EditProjectHeader = ({
   author,
   title,
   tagFlags,
@@ -18,7 +18,7 @@ const ProjectHeader = ({
   setTitle,
   setTagFlags,
   ...rest
-}: ProjectHeaderProps): ReactElement => (
+}: EditProjectHeaderProps): ReactElement => (
   <div {...rest}>
     <input
       type="text"
@@ -35,4 +35,4 @@ const ProjectHeader = ({
   </div>
 );
 
-export default ProjectHeader;
+export default EditProjectHeader;

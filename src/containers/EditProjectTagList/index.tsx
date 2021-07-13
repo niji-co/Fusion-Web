@@ -4,20 +4,20 @@ import EditTagList from "components/EditTagList";
 import TagModel from "models/Tag";
 import { ProfileModel } from "models/User";
 
-interface ProjectTagListProps extends HTMLAttributes<HTMLElement> {
+interface EditProjectTagListProps extends HTMLAttributes<HTMLElement> {
   author: string;
   tagFlags: number;
   authorProfile: ProfileModel | undefined;
   setTagFlags: (value: number) => void;
 }
 
-const ProjectTagList = ({
+const EditProjectTagList = ({
   author,
   tagFlags,
   authorProfile,
   setTagFlags,
   ...rest
-}: ProjectTagListProps): ReactElement => {
+}: EditProjectTagListProps): ReactElement => {
   const tagObjects = authorProfile?.tags?.map(
     (tag, index): TagModel => ({
       flag: 1 << index,
@@ -36,4 +36,4 @@ const ProjectTagList = ({
   );
 };
 
-export default ProjectTagList;
+export default EditProjectTagList;

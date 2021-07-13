@@ -3,7 +3,7 @@ import React, { ReactElement, HTMLAttributes } from "react";
 import ListView from "components/ListView";
 import TagModel from "models/Tag";
 
-import Tag from "./_Tag";
+import EditTag from "./_Tag";
 
 interface EditTagListProps extends HTMLAttributes<HTMLElement> {
   tags: TagModel[];
@@ -21,7 +21,7 @@ const EditTagList = ({
     items={tags}
     getItemKey={tag => `${tag.flag}`}
     onRenderRow={tag => (
-      <Tag
+      <EditTag
         {...tag}
         currentFilter={currentFilter || 0}
         setTagFlags={setTagFlags}

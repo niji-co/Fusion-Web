@@ -2,18 +2,18 @@ import React, { ReactElement, HTMLAttributes } from "react";
 
 import TagModel from "models/Tag";
 
-type TagProps = TagModel & {
+type EditTagProps = TagModel & {
   currentFilter: number;
   setTagFlags: (value: number) => void;
 } & HTMLAttributes<HTMLElement>;
 
-const Tag = ({
+const EditTag = ({
   flag,
   name,
   currentFilter,
   setTagFlags,
   ...rest
-}: TagProps): ReactElement => {
+}: EditTagProps): ReactElement => {
   return (
     <button
       type="button"
@@ -25,4 +25,4 @@ const Tag = ({
   );
 };
 
-export default Tag;
+export default EditTag;
