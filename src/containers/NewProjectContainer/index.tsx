@@ -1,7 +1,7 @@
 import React, { ReactElement, HTMLAttributes, useState } from "react";
 
-import EditProjectHeader from "components/EditProjectHeader";
 import ProjectHeader from "components/ProjectHeader";
+import EditProjectHeader from "components/ProjectHeader/Edit";
 import TabGroup from "components/TabGroup";
 import { ProfileModel } from "models/User";
 

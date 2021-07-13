@@ -1,6 +1,6 @@
 import React, { ReactElement, HTMLAttributes } from "react";
 
-import EditTagList from "components/EditTagList";
+import EditTagList from "components/TagList/Edit";
 import TagModel from "models/Tag";
 import { ProfileModel } from "models/User";
 
