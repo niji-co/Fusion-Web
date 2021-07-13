@@ -13,7 +13,7 @@ const NewProject = (): ReactElement => {
     bio: "",
     contactEmail: "",
     contactNumber: "",
-    tags: [],
+    tags: ["Mobile", "Web"],
   };
 
   return <NewProjectLayout username="" profile={profile} />;
