@@ -14,7 +14,6 @@ const ProjectHeader = ({
   author,
   title,
   tagFlags,
-  thumbnail,
   authorProfile,
   setTitle,
   setTagFlags,
