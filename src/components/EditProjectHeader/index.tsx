@@ -22,6 +22,7 @@ const ProjectHeader = ({
   <div {...rest}>
     <input
       type="text"
+      placeholder="Project Title"
       value={title}
       onChange={event => setTitle(event.target.value)}
     />
