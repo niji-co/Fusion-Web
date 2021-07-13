@@ -2,6 +2,7 @@ import React, { ReactElement, useState } from "react";
 
 import NewProjectLayout from "layouts/NewProject";
 import ProjectModel from "models/Project";
+import ProjectRowModel from "models/ProjectRow";
 
 const NewProject = (): ReactElement => {
   const profile = {
@@ -27,11 +28,15 @@ const NewProject = (): ReactElement => {
     },
   });
 
+  const [rows, setRows] = useState<ProjectRowModel[]>([]);
+
   return (
     <NewProjectLayout
       project={project}
       profile={profile}
       setProject={setProject}
+      rows={rows}
+      setRows={setRows}
     />
   );
 };
