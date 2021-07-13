@@ -1,6 +1,6 @@
 import React, { ReactElement, HTMLAttributes } from "react";
 
-import ProjectTagList from "containers/ProjectTagList";
+import EditTagList from "containers/EditProjectTagList";
 import ProjectModel from "models/Project";
 import { ProfileModel } from "models/User";
 
@@ -25,6 +25,12 @@ const ProjectHeader = ({
       type="text"
       value={title}
       onChange={event => setTitle(event.target.value)}
+    />
+    <EditTagList
+      author={author}
+      tagFlags={tagFlags}
+      authorProfile={authorProfile}
+      setTagFlags={setTagFlags}
     />
   </div>
 );
