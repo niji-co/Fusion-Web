@@ -1,6 +1,7 @@
-import React, { ReactElement } from "react";
+import React, { ReactElement, useState } from "react";
 
 import NewProjectLayout from "layouts/NewProject";
+import ProjectModel from "models/Project";
 
 const NewProject = (): ReactElement => {
   const profile = {
@@ -16,7 +17,23 @@ const NewProject = (): ReactElement => {
     tags: ["Mobile", "Web"],
   };
 
-  return <NewProjectLayout username="" profile={profile} />;
+  const [project, setProject] = useState<ProjectModel>({
+    author: "",
+    title: "",
+    tagFlags: 0,
+    thumbnail: {
+      url: "",
+      name: "",
+    },
+  });
+
+  return (
+    <NewProjectLayout
+      project={project}
+      profile={profile}
+      setProject={setProject}
+    />
+  );
 };
 
 export default NewProject;

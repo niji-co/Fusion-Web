@@ -1,21 +1,28 @@
 import React, { ReactElement } from "react";
 import { Link } from "react-router-dom";
 
-import NewProjectContainer from "containers/NewProjectContainer";
+import EditProjectContainer from "containers/EditProjectContainer";
+import ProjectModel from "models/Project";
 import { ProfileModel } from "models/User";
 
 interface NewProjecctLayoutProps {
-  username: string;
+  project: ProjectModel;
+  setProject: (value: ProjectModel) => void;
   profile: ProfileModel;
 }
 
 const NewProjectLayout = ({
-  username,
+  project,
+  setProject,
   profile,
 }: NewProjecctLayoutProps): ReactElement => (
   <>
     <Link to="/">Home</Link>
-    <NewProjectContainer username={username} profile={profile} />
+    <EditProjectContainer
+      project={project}
+      setProject={setProject}
+      profile={profile}
+    />
   </>
 );
 
