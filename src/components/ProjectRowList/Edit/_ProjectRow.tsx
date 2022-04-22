@@ -2,10 +2,8 @@ import React, { ReactElement, HTMLAttributes } from "react";
 
 import ProjectRowModel, {
   ProjectRowType,
+  ProjectRowAssetModel,
   ProjectRowTextModel,
-  ProjectRowImageModel,
-  ProjectRowVideoModel,
-  ProjectRowFileModel,
 } from "models/ProjectRow";
 
 import EditProjectRowFile from "./_ProjectRowFile";
@@ -33,17 +31,17 @@ const EditProjectRow = ({
       break;
     case ProjectRowType.Image:
       row = (
-        <EditProjectRowImage model={model as ProjectRowImageModel} {...rest} />
+        <EditProjectRowImage model={model as ProjectRowAssetModel} {...rest} />
       );
       break;
     case ProjectRowType.Video:
       row = (
-        <EditProjectRowVideo model={model as ProjectRowVideoModel} {...rest} />
+        <EditProjectRowVideo model={model as ProjectRowAssetModel} {...rest} />
       );
       break;
     case ProjectRowType.File:
       row = (
-        <EditProjectRowFile model={model as ProjectRowFileModel} {...rest} />
+        <EditProjectRowFile model={model as ProjectRowAssetModel} {...rest} />
       );
       break;
     default:

@@ -1,9 +1,9 @@
 import React, { ReactElement, HTMLAttributes } from "react";
 
-import { ProjectRowVideoModel } from "models/ProjectRow";
+import { ProjectRowAssetModel } from "models/ProjectRow";
 
 interface EditProjectRowVideoProps extends HTMLAttributes<HTMLElement> {
-  model: ProjectRowVideoModel;
+  model: ProjectRowAssetModel;
 }
 
 const EditProjectRowVideo = ({
