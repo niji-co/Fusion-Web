@@ -23,8 +23,9 @@ const EditProjectRowList = ({
         model={model}
         updateRow={(value: ProjectRowModel) => {
           if (rows === undefined) return;
-          setRows(rows.map(r => (r.id === value.id ? value : r)));
+          setRows(rows.map(r => (r.id === model.id ? value : r)));
         }}
+        deleteRow={() => setRows(rows?.filter(r => r.id !== model.id) || [])}
       />
     )}
     {...rest}

@@ -30,13 +30,19 @@ const NewProject = (): ReactElement => {
 
   const [rows, setRows] = useState<ProjectRowModel[]>([]);
 
+  const processRows = (list: ProjectRowModel[]): ProjectRowModel[] => {
+    return list.map(
+      (value, index): ProjectRowModel => ({ ...value, id: index.toString() })
+    );
+  };
+
   return (
     <NewProjectLayout
       project={project}
       profile={profile}
       setProject={setProject}
       rows={rows}
-      setRows={setRows}
+      setRows={value => setRows(processRows(value))}
     />
   );
 };

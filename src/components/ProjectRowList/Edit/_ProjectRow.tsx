@@ -16,32 +16,47 @@ import EditProjectRowVideo from "./_ProjectRowVideo";
 interface EditProjectRowProps extends HTMLAttributes<HTMLElement> {
   model: ProjectRowModel;
   updateRow: (value: ProjectRowModel) => void;
+  deleteRow: () => void;
 }
 
 const EditProjectRow = ({
   model,
+  deleteRow,
   ...rest
 }: EditProjectRowProps): ReactElement | null => {
+  let row: ReactElement;
   switch (model.type) {
     case ProjectRowType.Text:
-      return (
+      row = (
         <EditProjectRowText model={model as ProjectRowTextModel} {...rest} />
       );
+      break;
     case ProjectRowType.Image:
-      return (
+      row = (
         <EditProjectRowImage model={model as ProjectRowImageModel} {...rest} />
       );
+      break;
     case ProjectRowType.Video:
-      return (
+      row = (
         <EditProjectRowVideo model={model as ProjectRowVideoModel} {...rest} />
       );
+      break;
     case ProjectRowType.File:
-      return (
+      row = (
         <EditProjectRowFile model={model as ProjectRowFileModel} {...rest} />
       );
+      break;
     default:
       return null;
   }
+  return (
+    <>
+      {row}
+      <button type="button" onClick={() => deleteRow()}>
+        Delete
+      </button>
+    </>
+  );
 };
 
 export default EditProjectRow;
