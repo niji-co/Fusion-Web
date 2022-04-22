@@ -12,26 +12,24 @@ const Radio = ({
   onSelected,
   className,
   ...rest
-}: RadioProps): ReactElement => {
-  return (
-    <div className={`radio ${className || ""}`} {...rest}>
-      {options.map((o, index) => {
-        const key = `${o}_${index}`;
-        return (
-          <label key={key} htmlFor={key}>
-            <input
-              type="radio"
-              value={o}
-              id={key}
-              checked={index === selected}
-              onChange={() => onSelected(index)}
-            />
-            {o}
-          </label>
-        );
-      })}
-    </div>
-  );
-};
+}: RadioProps): ReactElement => (
+  <div className={`radio ${className || ""}`} {...rest}>
+    {options.map((o, index) => {
+      const key = `${o}_${index}`;
+      return (
+        <label key={key} htmlFor={key}>
+          <input
+            type="radio"
+            value={o}
+            id={key}
+            checked={index === selected}
+            onChange={() => onSelected(index)}
+          />
+          {o}
+        </label>
+      );
+    })}
+  </div>
+);
 
 export default Radio;
