@@ -1,9 +1,9 @@
 import React, { ReactElement, HTMLAttributes } from "react";
 
-import { ProjectRowImageModel } from "models/ProjectRow";
+import { ProjectRowAssetModel } from "models/ProjectRow";
 
 interface ProjectRowImageProps extends HTMLAttributes<HTMLElement> {
-  model: ProjectRowImageModel;
+  model: ProjectRowAssetModel;
 }
 
 const ProjectRowImage = ({

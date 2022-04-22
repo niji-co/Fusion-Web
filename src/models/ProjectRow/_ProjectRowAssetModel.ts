@@ -2,8 +2,8 @@ import AssetModel from "models/Asset";
 
 import ProjectRowModel from "./_ProjectRowModel";
 
-interface ProjectRowImageModel extends ProjectRowModel {
+interface ProjectRowAssetModel extends ProjectRowModel {
   asset: AssetModel;
 }
 
-export default ProjectRowImageModel;
+export default ProjectRowAssetModel;

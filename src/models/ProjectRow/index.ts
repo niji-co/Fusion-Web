@@ -1,15 +1,6 @@
-import ProjectRowFileModel from "./_ProjectRowFileModel";
-import ProjectRowImageModel from "./_ProjectRowImageModel";
+import ProjectRowAssetModel from "./_ProjectRowAssetModel";
 import ProjectRowModel, { ProjectRowType } from "./_ProjectRowModel";
 import ProjectRowTextModel, { TextStyle } from "./_ProjectRowTextModel";
-import ProjectRowVideoModel from "./_ProjectRowVideoModel";
 
 export default ProjectRowModel;
-export {
-  ProjectRowType,
-  ProjectRowFileModel,
-  ProjectRowImageModel,
-  ProjectRowTextModel,
-  TextStyle,
-  ProjectRowVideoModel,
-};
+export { ProjectRowType, ProjectRowAssetModel, ProjectRowTextModel, TextStyle };
