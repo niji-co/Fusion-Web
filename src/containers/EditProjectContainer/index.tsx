@@ -3,6 +3,7 @@ import React, { ReactElement, HTMLAttributes, useState } from "react";
 import ProjectHeader from "components/ProjectHeader";
 import EditProjectHeader from "components/ProjectHeader/Edit";
 import ProjectRowList from "components/ProjectRowList";
+import EditProjectRowList from "components/ProjectRowList/Edit";
 import TabGroup from "components/TabGroup";
 import ProjectModel from "models/Project";
 import ProjectRowModel, {
@@ -27,7 +28,7 @@ const addNewRow = (
   const newRow: ProjectRowTextModel = {
     id: `${rows.length}`,
     type: ProjectRowType.Text,
-    content: "Hello",
+    content: "",
     style: TextStyle.p,
   };
   setRows([...rows, newRow]);
@@ -55,6 +56,7 @@ const EditProjectContainer = ({
           <button type="button" onClick={() => addNewRow(rows, setRows)}>
             New Row
           </button>
+          <EditProjectRowList rows={rows} setRows={setRows} />
         </TabGroup.Item>
         <TabGroup.Item title="Preview">
           <ProjectHeader {...project} authorProfile={profile} />
