@@ -8,6 +8,7 @@ import TabGroup from "components/TabGroup";
 import ProjectModel from "models/Project";
 import ProjectRowModel, {
   ProjectRowType,
+  ProjectRowAssetModel,
   ProjectRowTextModel,
   TextStyle,
 } from "models/ProjectRow";
@@ -21,7 +22,7 @@ interface EditProjectContainerProps extends HTMLAttributes<HTMLElement> {
   setRows: (value: ProjectRowModel[]) => void;
 }
 
-const addNewRow = (
+const addTextRow = (
   rows: ProjectRowModel[],
   setRows: (value: ProjectRowModel[]) => void
 ): void => {
@@ -30,6 +31,22 @@ const addNewRow = (
     type: ProjectRowType.Text,
     content: "",
     style: TextStyle.p,
+  };
+  setRows([...rows, newRow]);
+};
+
+const addAssetRow = (
+  rows: ProjectRowModel[],
+  type: ProjectRowType,
+  setRows: (value: ProjectRowModel[]) => void
+): void => {
+  const newRow: ProjectRowAssetModel = {
+    id: `${rows.length}`,
+    type,
+    asset: {
+      name: "",
+      url: "",
+    },
   };
   setRows([...rows, newRow]);
 };
@@ -53,8 +70,26 @@ const EditProjectContainer = ({
             setTitle={title => setProject({ ...project, title })}
             setTagFlags={tagFlags => setProject({ ...project, tagFlags })}
           />
-          <button type="button" onClick={() => addNewRow(rows, setRows)}>
-            New Row
+          <button type="button" onClick={() => addTextRow(rows, setRows)}>
+            New Text Row
+          </button>
+          <button
+            type="button"
+            onClick={() => addAssetRow(rows, ProjectRowType.Image, setRows)}
+          >
+            New Image Row
+          </button>
+          <button
+            type="button"
+            onClick={() => addAssetRow(rows, ProjectRowType.Video, setRows)}
+          >
+            New Video Row
+          </button>
+          <button
+            type="button"
+            onClick={() => addAssetRow(rows, ProjectRowType.File, setRows)}
+          >
+            New File Row
           </button>
           <EditProjectRowList rows={rows} setRows={setRows} />
         </TabGroup.Item>
