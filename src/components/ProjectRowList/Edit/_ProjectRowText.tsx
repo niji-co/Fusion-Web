@@ -1,11 +1,7 @@
 import React, { ReactElement, HTMLAttributes, ChangeEvent } from "react";
 
 import Radio from "components/Radio";
-
-import ProjectRowModel, {
-  ProjectRowTextModel,
-  TextStyle,
-} from "models/ProjectRow";
+import ProjectRowModel, { ProjectRowTextModel } from "models/ProjectRow";
 
 interface EditProjectRowTextProps extends HTMLAttributes<HTMLElement> {
   model: ProjectRowTextModel;
