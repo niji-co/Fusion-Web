@@ -1,4 +1,4 @@
-import React, { ReactElement, HTMLAttributes } from "react";
+import React, { ReactElement } from "react";
 import { useParams } from "react-router-dom";
 
 import ExhibitionLayout from "layouts/Exhibition";
