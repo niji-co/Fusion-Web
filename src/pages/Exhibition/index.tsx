@@ -2,7 +2,7 @@ import React, { ReactElement, HTMLAttributes } from "react";
 import { useParams } from "react-router-dom";
 
 import ExhibitionLayout from "layouts/Exhibition";
-import { ExhibitionModel } from "models/Exhibition";
+import ExhibitionModel from "models/Exhibition";
 
 const Exhibition = (): ReactElement => {
   const {
