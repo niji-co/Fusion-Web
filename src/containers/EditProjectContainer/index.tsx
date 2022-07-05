@@ -70,6 +70,7 @@ const EditProjectContainer = ({
             setTitle={title => setProject({ ...project, title })}
             setTagFlags={tagFlags => setProject({ ...project, tagFlags })}
           />
+          <EditProjectRowList rows={rows} setRows={setRows} />
           <button type="button" onClick={() => addTextRow(rows, setRows)}>
             New Text Row
           </button>
@@ -91,7 +92,6 @@ const EditProjectContainer = ({
           >
             New File Row
           </button>
-          <EditProjectRowList rows={rows} setRows={setRows} />
         </TabGroup.Item>
         <TabGroup.Item title="Preview">
           <ProjectHeader {...project} authorProfile={profile} />
