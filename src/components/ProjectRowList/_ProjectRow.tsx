@@ -2,10 +2,8 @@ import React, { ReactElement, HTMLAttributes } from "react";
 
 import ProjectRowModel, {
   ProjectRowType,
+  ProjectRowAssetModel,
   ProjectRowTextModel,
-  ProjectRowImageModel,
-  ProjectRowVideoModel,
-  ProjectRowFileModel,
 } from "models/ProjectRow";
 
 import ProjectRowFile from "./_ProjectRowFile";
@@ -26,14 +24,14 @@ const ProjectRow = ({
       return <ProjectRowText model={model as ProjectRowTextModel} {...rest} />;
     case ProjectRowType.Image:
       return (
-        <ProjectRowImage model={model as ProjectRowImageModel} {...rest} />
+        <ProjectRowImage model={model as ProjectRowAssetModel} {...rest} />
       );
     case ProjectRowType.Video:
       return (
-        <ProjectRowVideo model={model as ProjectRowVideoModel} {...rest} />
+        <ProjectRowVideo model={model as ProjectRowAssetModel} {...rest} />
       );
     case ProjectRowType.File:
-      return <ProjectRowFile model={model as ProjectRowFileModel} {...rest} />;
+      return <ProjectRowFile model={model as ProjectRowAssetModel} {...rest} />;
     default:
       return null;
   }
