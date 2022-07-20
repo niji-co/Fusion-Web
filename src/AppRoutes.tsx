@@ -5,10 +5,10 @@ import Exhibition from "pages/Exhibition";
 import HostExhibition from "pages/Exhibition/Host";
 import ForgotPassword from "pages/ForgotPassword";
 import Home from "pages/Home";
-import Profile from "pages/Profile";
 import Project from "pages/Project";
 import SignIn from "pages/SignIn";
 import SignUp from "pages/SignUp";
+import User from "pages/User";
 
 const AppRoutes = (): ReactElement => (
   <HashRouter>
@@ -22,7 +22,7 @@ const AppRoutes = (): ReactElement => (
       <Route exact path="/exhibition" component={Exhibition} />
       <Route path="/exhibition/host" component={HostExhibition} />
 
-      <Route exact path="/:username" component={Profile} />
+      <Route exact path="/:username" component={User} />
       <Route exact path="/:authorUsername/:projectTitle" component={Project} />
     </Switch>
   </HashRouter>

@@ -1,19 +1,27 @@
 import React, { ReactElement } from "react";
 import { Link } from "react-router-dom";
 
-import ProjectViewContainer from "containers/ProjectView";
-import { ProjectQueryModel } from "models/Project";
+import ProjectHeader from "components/ProjectHeader";
+import ProjectRowList from "components/ProjectRowList";
+import ProjectModel from "models/Project";
+import ProjectRowModel from "models/ProjectRow";
+import { ProfileModel } from "models/User";
+
+interface ProjectLayoutProps {
+  project: ProjectModel;
+  authorProfile: ProfileModel | undefined;
+  rows: ProjectRowModel[] | undefined;
+}
 
 const ProjectLayout = ({
-  authorUsername,
-  projectTitle,
-}: ProjectQueryModel): ReactElement => (
+  project,
+  authorProfile,
+  rows,
+}: ProjectLayoutProps): ReactElement => (
   <>
     <Link to="/">Home</Link>
-    <ProjectViewContainer
-      authorUsername={authorUsername}
-      projectTitle={projectTitle}
-    />
+    <ProjectHeader {...project} authorProfile={authorProfile} />
+    <ProjectRowList rows={rows} />
   </>
 );
 
