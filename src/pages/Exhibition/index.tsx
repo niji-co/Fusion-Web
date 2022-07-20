@@ -8,31 +8,31 @@ const Exhibition = (): ReactElement => {
   const {
     UUID,
     host,
-    coHost,
+    // coHost,
     title,
     description,
-    keywords,
-    sections,
-    roles,
-    openingDate,
-    closingDate,
-    visibility,
-    invitedAttendees,
+    // keywords,
+    // sections,
+    // roles,
+    // openingDate,
+    // closingDate,
+    // visibility,
+    // invitedAttendees,
   } = useParams<ExhibitionModel>();
   return (
     <ExhibitionLayout
       UUID={UUID}
       host={host}
-      coHost={coHost}
+      // coHost={coHost}
       title={title}
       description={description}
-      keywords={keywords}
-      sections={sections}
-      roles={roles}
-      openingDate={openingDate}
-      closingDate={closingDate}
-      visibility={visibility}
-      invitedAttendees={invitedAttendees}
+      // keywords={keywords}
+      // sections={sections}
+      // roles={roles}
+      // openingDate={openingDate}
+      // closingDate={closingDate}
+      // visibility={visibility}
+      // invitedAttendees={invitedAttendees}
     />
   );
 };

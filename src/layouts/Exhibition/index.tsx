@@ -1,21 +1,13 @@
 import React, { ReactElement, HTMLAttributes } from "react";
 import { Link } from "react-router-dom";
 
-import { ExhibitionModel } from "models/Exhibition";
+import ExhibitionModel from "models/Exhibition";
 
 const ExhibitionLayout = ({
   UUID,
   host,
-  coHost,
   title,
   description,
-  keywords,
-  sections,
-  roles,
-  openingDate,
-  closingDate,
-  visibility,
-  invitedAttendees, // will add these variables below later if this is done correctly
 }: ExhibitionModel): ReactElement => (
   <>
     <h1>Exhibitions</h1>
